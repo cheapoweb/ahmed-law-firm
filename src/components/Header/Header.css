@@ -1,0 +1,159 @@
+/* Header Container */
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  width: 100%;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+/* Left Section - Brand */
+.header-brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.header-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Center Section - Navigation */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.nav-link {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #222222;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+  position: relative;
+  letter-spacing: 0.3px;
+}
+
+.nav-link:hover {
+  color: #D4AF37; /* Gold accent from logo */
+}
+
+/* Right Section - Contact */
+.header-contact {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-shrink: 0;
+}
+
+.header-phone {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.phone-icon {
+  color: #222222;
+  flex-shrink: 0;
+}
+
+.phone-number {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #222222;
+  white-space: nowrap;
+}
+
+.header-cta-button {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #3C5068;
+  border: 2px solid #D4AF37;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.header-cta-button:hover {
+  background-color: #2d3f52;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.header-cta-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .header-nav {
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .nav-link {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 968px) {
+  .header-container {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 1rem;
+  }
+  
+  .header-nav {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 1rem 0 0 0;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .header-contact {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-container {
+    padding: 0 1rem;
+  }
+  
+  .header-phone {
+    display: none;
+  }
+  
+  .header-cta-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+}

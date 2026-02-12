@@ -1,0 +1,62 @@
+.shape-divider {
+  width: 100%;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 1;
+  margin-top: -1px;
+}
+
+.shape-divider-svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 80px;
+  vertical-align: middle;
+}
+
+.shape-divider.dark-to-light svg path {
+  fill: #ffffff;
+}
+
+.shape-divider.light-to-dark svg path {
+  fill: #1a2332;
+}
+
+.shape-divider svg path {
+  stroke: none;
+}
+
+.shape-divider.top {
+  top: 0;
+}
+
+.shape-divider.bottom {
+  bottom: 0;
+}
+
+.shape-divider.flip {
+  transform: rotateY(180deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .shape-divider {
+    height: 60px;
+  }
+  
+  .shape-divider-svg {
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shape-divider {
+    height: 50px;
+  }
+  
+  .shape-divider-svg {
+    height: 50px;
+  }
+}

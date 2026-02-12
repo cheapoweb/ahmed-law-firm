@@ -1,0 +1,82 @@
+.recovery-section {
+  width: 100%;
+  background-color: #fafafa;
+  padding: 7rem 2rem;
+}
+
+.recovery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.recovery-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.recovery-icon {
+  font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  font-weight: 700;
+  color: #D4AF37;
+  margin-bottom: 1.5rem;
+  line-height: 1;
+}
+
+.recovery-heading {
+  font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.recovery-description {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: #4a4a4a;
+  line-height: 1.85;
+  max-width: 950px;
+  margin: 0;
+  font-weight: 400;
+}
+
+@media (max-width: 968px) {
+  .recovery-section {
+    padding: 4rem 1.5rem;
+  }
+  
+  .recovery-icon {
+    font-size: 4rem;
+  }
+  
+  .recovery-heading {
+    font-size: 2rem;
+  }
+  
+  .recovery-description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .recovery-section {
+    padding: 3rem 1rem;
+  }
+  
+  .recovery-icon {
+    font-size: 3.5rem;
+  }
+  
+  .recovery-heading {
+    font-size: 1.8rem;
+  }
+  
+  .recovery-description {
+    font-size: 1rem;
+  }
+}

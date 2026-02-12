@@ -1,0 +1,121 @@
+.locations-section {
+  width: 100%;
+  background-color: #fafafa;
+  padding: 8rem 2rem;
+}
+
+.locations-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.locations-heading {
+  font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 600;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 5rem;
+  line-height: 1.25;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.location-card {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.location-name {
+  font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222222;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #D4AF37;
+}
+
+.location-address {
+  margin-bottom: 1.5rem;
+}
+
+.address-line,
+.address-city {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 1rem;
+  color: #333333;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.location-contact {
+  margin-bottom: 1.5rem;
+}
+
+.contact-phone {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #D4AF37;
+}
+
+.location-button {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #3C5068;
+  border: 2px solid #D4AF37;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.location-button:hover {
+  background-color: #2d3f52;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 968px) {
+  .locations-section {
+    padding: 4rem 1.5rem;
+  }
+  
+  .locations-heading {
+    font-size: 2.5rem;
+  }
+  
+  .locations-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .locations-section {
+    padding: 3rem 1rem;
+  }
+  
+  .locations-heading {
+    font-size: 2rem;
+  }
+  
+  .locations-grid {
+    grid-template-columns: 1fr;
+  }
+}
