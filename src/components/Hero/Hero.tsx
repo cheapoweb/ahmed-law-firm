@@ -1,24 +1,24 @@
+import teamImage from '../../assets/team-full.webp'
+import bannerBuildings from '../../assets/banner-buildings.webp'
 import './Hero.css'
 
 const Hero = () => {
-  // Using professional team photo from Unsplash - replace with your own image later
-  const teamImageUrl = 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80'
-  
   return (
     <section className="hero">
       <div className="hero-background">
-        <img src={teamImageUrl} alt="Ahmed Law Firm Team" className="hero-image" />
+        <img src={bannerBuildings} alt="Buildings Background" className="hero-background-image" />
+        <img src={teamImage} alt="Ahmed Law Firm Team" className="hero-team-image" />
         <div className="hero-gradient"></div>
       </div>
       
       <div className="hero-content">
-        <div className="hero-firm-name">AHMED LAW FIRM</div>
         <h1 className="hero-headline">
-          <span className="hero-line-1">We turn accidents</span>
-          <span className="hero-line-2">
-            <span className="hero-text-into">into </span>
-            <span className="hero-text-new-beginnings">new beginnings</span>
-          </span>
+          <div className="hero-line-1">
+            When things go <span className="hero-text-wrong">wrong</span>,
+          </div>
+          <div className="hero-line-2">
+            we make them <span className="hero-text-right">right</span>
+          </div>
         </h1>
         
         <div className="hero-buttons">
