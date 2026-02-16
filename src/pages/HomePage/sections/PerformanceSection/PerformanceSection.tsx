@@ -17,7 +17,7 @@ export const PerformanceSection = () => {
   const [counters, setCounters] = useState<number[]>([0, 0, 0, 0])
   const hasAnimatedRef = useRef(false)
   const sectionRef = useRef<HTMLElement>(null)
-  const intervalsRef = useRef<NodeJS.Timeout[]>([])
+  const intervalsRef = useRef<number[]>([])
 
   useEffect(() => {
     const observer = new IntersectionObserver(

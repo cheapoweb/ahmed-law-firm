@@ -16,7 +16,7 @@ export const TrustExperienceSection = () => {
 
   useEffect(() => {
     const currentWord = words[currentWordIndex]
-    let timeout: NodeJS.Timeout
+    let timeout: number
 
     if (!isDeleting && displayedText.length < currentWord.length) {
       // Typing: add one letter at a time

@@ -22,7 +22,7 @@ export const AwardsSection = () => {
   const startXRef = useRef(0)
   const translateXRef = useRef(0)
   const carouselRef = useRef<HTMLDivElement>(null)
-  const autoScrollRef = useRef<NodeJS.Timeout | null>(null)
+  const autoScrollRef = useRef<number | null>(null)
   const awardWidth = 120
   const gap = 24 // 1.5rem = 24px
   const itemWidth = awardWidth + gap
