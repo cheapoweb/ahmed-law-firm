@@ -48,26 +48,52 @@ export const TestimonialsSection = () => (
       <div className="testimonials-grid">
         {testimonials.map((t, i) => (
           <div key={i} className="testimonial-card">
-            <div className="testimonial-header">
-              <div className="testimonial-logo">ALF</div>
-              <div className="testimonial-firm">Ahmed Law Firm<br />EST 1981</div>
-            </div>
-            <p className="testimonial-text">"{t.text}"</p>
-            <div className="testimonial-author">
-              <img src={t.image} alt={t.name} className="author-photo" />
-              <div className="author-info">
-                <div className="author-name">{t.name}</div>
-                <div className="author-role">{t.role}</div>
+            <div className="testimonial-top">
+              <div className="testimonial-firm-info">
+                <div className="testimonial-avatar"></div>
+                <div className="testimonial-firm-details">
+                  <div className="testimonial-firm-name">AHMED LAW FIRM</div>
+                  <div className="testimonial-firm-year">EST 1981</div>
+                </div>
               </div>
+              <div className="testimonial-stars">
+                <span className="star">★</span>
+                <span className="star">★</span>
+                <span className="star">★</span>
+                <span className="star">★</span>
+                <span className="star">★</span>
+              </div>
+            </div>
+            <div className="testimonial-quote">
+              <p className="testimonial-text">{t.text}</p>
+            </div>
+            <div className="testimonial-author">
+              <div className="author-name-section">
+                <div className="author-name-primary">{t.name.toUpperCase()} CLIENT</div>
+              </div>
+              <div className="author-signature">{t.name.split(' ')[0]}</div>
             </div>
           </div>
         ))}
       </div>
       
       <div className="testimonials-rating">
-        <div className="rating-score">4.9/5</div>
-        <div className="rating-label">Based on 500+ Google Reviews</div>
-        <button className="rating-button">See all 500+ reviews</button>
+        <div className="rating-widget">
+          <div className="rating-stars">
+            <span className="star">★</span>
+            <span className="star">★</span>
+            <span className="star">★</span>
+            <span className="star">★</span>
+            <span className="star">★</span>
+          </div>
+          <div className="rating-text">
+            <span className="rating-score">4.9/5</span>
+            <span className="rating-label">Based on 500+ Google Reviews</span>
+          </div>
+          <button className="rating-nav-button">
+            <span className="nav-arrow">→</span>
+          </button>
+        </div>
       </div>
     </div>
   </section>
