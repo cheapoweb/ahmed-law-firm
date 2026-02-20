@@ -1,4 +1,3 @@
-import ShapeDivider from '../../../../components/ShapeDivider'
 import './AllPracticeAreasSection.css'
 
 const practiceAreaCategories = [
