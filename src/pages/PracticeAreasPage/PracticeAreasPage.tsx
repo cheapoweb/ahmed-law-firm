@@ -1,6 +1,5 @@
 import Footer from '../../components/Footer'
 import PageBanner from '../../components/PageBanner'
-import ShapeDivider from '../../components/ShapeDivider'
 import { AllPracticeAreasSection } from './sections/AllPracticeAreasSection'
 import { LocationSpecificSection } from './sections/LocationSpecificSection'
 import { WhyChooseUsSection } from './sections/WhyChooseUsSection'

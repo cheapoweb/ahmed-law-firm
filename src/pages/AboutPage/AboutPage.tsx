@@ -1,7 +1,5 @@
 import Footer from '../../components/Footer'
 import PageBanner from '../../components/PageBanner'
-import ShapeDivider from '../../components/ShapeDivider'
-import { MeetTeamSection } from './sections/MeetTeamSection'
 import { AboutFirmSection } from './sections/AboutFirmSection'
 import { ExperienceCommitmentSection } from './sections/ExperienceCommitmentSection'
 import { AboutCTASection } from './sections/AboutCTASection'

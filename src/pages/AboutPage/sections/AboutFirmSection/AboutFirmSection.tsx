@@ -1,4 +1,3 @@
-import ShapeDivider from '../../../../components/ShapeDivider'
 import { PracticeAreasSidebar } from '../PracticeAreasSidebar'
 import './AboutFirmSection.css'
 
