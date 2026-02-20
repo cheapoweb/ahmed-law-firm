@@ -15,8 +15,7 @@ const AutoAccidentsPage = () => {
         <div className="practice-area-container">
           {/* Sidebar */}
           <PracticeAreaSidebar 
-            category="vehicle-accidents" 
-            activePage="auto-accidents"
+            category="vehicle-accidents"
           />
 
           {/* Main Content */}

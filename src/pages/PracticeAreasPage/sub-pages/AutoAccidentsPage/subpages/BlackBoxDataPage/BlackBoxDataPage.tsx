@@ -14,8 +14,7 @@ const BlackBoxDataPage = () => {
       <div className="practice-area-content-wrapper">
         <div className="practice-area-container">
           <PracticeAreaSidebar 
-            category="vehicle-accidents" 
-            activePage="black-box-data"
+            category="vehicle-accidents"
           />
 
           <main className="practice-area-main-content">

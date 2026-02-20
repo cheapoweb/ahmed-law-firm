@@ -14,8 +14,7 @@ const NotAtFaultPage = () => {
       <div className="practice-area-content-wrapper">
         <div className="practice-area-container">
           <PracticeAreaSidebar 
-            category="vehicle-accidents" 
-            activePage="not-at-fault"
+            category="vehicle-accidents"
           />
 
           <main className="practice-area-main-content">

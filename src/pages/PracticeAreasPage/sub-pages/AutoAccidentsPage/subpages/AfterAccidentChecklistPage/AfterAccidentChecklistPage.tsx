@@ -14,8 +14,7 @@ const AfterAccidentChecklistPage = () => {
       <div className="practice-area-content-wrapper">
         <div className="practice-area-container">
           <PracticeAreaSidebar 
-            category="vehicle-accidents" 
-            activePage="after-accident-checklist"
+            category="vehicle-accidents"
           />
 
           <main className="practice-area-main-content">

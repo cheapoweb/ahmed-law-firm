@@ -4,7 +4,6 @@ import './PracticeAreaSidebar.css'
 
 interface PracticeAreaSidebarProps {
   category: 'vehicle-accidents' | 'workers-benefits' | 'medical-malpractice' | 'nursing-home' | 'healthcare-litigation'
-  activePage: string
 }
 
 const vehicleAccidentLinks = [
@@ -45,7 +44,7 @@ const autoAccidentSubpages = [
   { path: '/practice-areas/auto-accidents/t-bone-crashes', label: 'Liability in T-Bone Crashes' },
 ]
 
-export const PracticeAreaSidebar = ({ category, activePage }: PracticeAreaSidebarProps) => {
+export const PracticeAreaSidebar = ({ category }: PracticeAreaSidebarProps) => {
   const location = useLocation()
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
     'auto-accidents': false
@@ -86,12 +85,6 @@ export const PracticeAreaSidebar = ({ category, activePage }: PracticeAreaSideba
   const isAutoAccidentPage = location.pathname.startsWith('/practice-areas/auto-accidents')
   const isAutoAccidentMainPage = location.pathname === '/practice-areas/auto-accidents'
   const isAutoAccidentSubpage = isAutoAccidentPage && !isAutoAccidentMainPage
-
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log('Form submitted')
-  }
 
   return (
     <aside className="practice-area-sidebar">

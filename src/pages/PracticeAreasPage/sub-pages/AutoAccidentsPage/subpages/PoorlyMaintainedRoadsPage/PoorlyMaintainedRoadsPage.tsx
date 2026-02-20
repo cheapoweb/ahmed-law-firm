@@ -14,8 +14,7 @@ const PoorlyMaintainedRoadsPage = () => {
       <div className="practice-area-content-wrapper">
         <div className="practice-area-container">
           <PracticeAreaSidebar 
-            category="vehicle-accidents" 
-            activePage="poorly-maintained-roads"
+            category="vehicle-accidents"
           />
 
           <main className="practice-area-main-content">

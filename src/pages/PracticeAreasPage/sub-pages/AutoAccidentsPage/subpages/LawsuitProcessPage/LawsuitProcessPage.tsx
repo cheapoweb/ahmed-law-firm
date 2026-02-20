@@ -14,8 +14,7 @@ const LawsuitProcessPage = () => {
       <div className="practice-area-content-wrapper">
         <div className="practice-area-container">
           <PracticeAreaSidebar 
-            category="vehicle-accidents" 
-            activePage="lawsuit-process"
+            category="vehicle-accidents"
           />
 
           <main className="practice-area-main-content">
