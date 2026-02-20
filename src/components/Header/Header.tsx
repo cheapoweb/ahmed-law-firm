@@ -22,7 +22,26 @@ const Header = () => {
               <Link to="/attorneys" className="nav-dropdown-item">Attorneys</Link>
             </div>
           </div>
-          <Link to="/practice-areas" className="nav-link">Practice Areas</Link>
+          <div className="nav-dropdown">
+            <Link to="/practice-areas" className="nav-link nav-link-trigger">
+              Practice Areas
+              <span className="nav-dropdown-arrow">▼</span>
+            </Link>
+            <div className="nav-dropdown-menu">
+              <Link to="/practice-areas/auto-accidents" className="nav-dropdown-item">Auto Accidents</Link>
+              <Link to="/practice-areas/car-accidents" className="nav-dropdown-item">Car Accidents</Link>
+              <Link to="/practice-areas/motorcycle-accidents" className="nav-dropdown-item">Motorcycle Accidents</Link>
+              <Link to="/practice-areas/truck-accidents" className="nav-dropdown-item">Truck Accidents</Link>
+              <Link to="/practice-areas/bicycle-accidents" className="nav-dropdown-item">Bicycle Accidents</Link>
+              <Link to="/practice-areas/pedestrian-accidents" className="nav-dropdown-item">Pedestrian Accidents</Link>
+              <Link to="/practice-areas/bus-accidents" className="nav-dropdown-item">Bus Accidents</Link>
+              <Link to="/practice-areas/subway-accidents" className="nav-dropdown-item">Subway Accidents</Link>
+              <Link to="/practice-areas/rideshare-accidents" className="nav-dropdown-item">Rideshare Accidents (Uber/Lyft)</Link>
+              <Link to="/practice-areas/boating-accidents" className="nav-dropdown-item">Boating Accidents</Link>
+              <Link to="/practice-areas/plane-accidents" className="nav-dropdown-item">Plane Accidents</Link>
+              <Link to="/practice-areas/train-accidents" className="nav-dropdown-item">Train Accidents</Link>
+            </div>
+          </div>
           <a href="/#results" className="nav-link">Results</a>
           <a href="/#locations" className="nav-link">Locations</a>
           <a href="/#resources" className="nav-link">Resources</a>
