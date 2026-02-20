@@ -1,0 +1,118 @@
+.page-banner {
+  position: relative;
+  width: 100%;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.page-banner-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.page-banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+.page-banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(35, 48, 65, 0.6);
+  z-index: 2;
+}
+
+.page-banner-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 3rem 2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.page-banner-title {
+  font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  margin: 0;
+  max-width: 900px;
+}
+
+.page-banner-subtitle {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.6;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  max-width: 700px;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .page-banner {
+    min-height: 35vh;
+  }
+  
+  .page-banner-content {
+    padding: 2.5rem 1.5rem 1.5rem;
+    gap: 1.25rem;
+  }
+  
+  .page-banner-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+  }
+  
+  .page-banner-subtitle {
+    font-size: clamp(0.95rem, 2vw, 1.15rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .page-banner {
+    min-height: 30vh;
+  }
+  
+  .page-banner-content {
+    padding: 2rem 1rem 1rem;
+    gap: 1rem;
+  }
+  
+  .page-banner-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+  }
+  
+  .page-banner-subtitle {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
+}

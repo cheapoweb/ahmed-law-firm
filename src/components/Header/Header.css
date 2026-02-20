@@ -23,6 +23,7 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  text-decoration: none;
 }
 
 .header-logo {
@@ -55,6 +56,67 @@
 
 .nav-link:hover {
   color: #D4AF37; /* Gold accent from logo */
+}
+
+/* About dropdown */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-link-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.nav-dropdown-arrow {
+  font-size: 0.6rem;
+  opacity: 0.8;
+  transition: transform 0.2s ease;
+}
+
+.nav-dropdown:hover .nav-dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.5rem;
+  min-width: 160px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  z-index: 100;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown-item {
+  display: block;
+  padding: 0.6rem 1.25rem;
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #222222;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-dropdown-item:hover {
+  background-color: #F5F5F5;
+  color: #D4AF37;
 }
 
 /* Right Section - Contact */
@@ -136,6 +198,10 @@
     padding: 1rem 0 0 0;
     flex-wrap: wrap;
     gap: 1rem;
+  }
+  
+  .nav-dropdown-menu {
+    margin-top: 0.25rem;
   }
   
   .header-contact {

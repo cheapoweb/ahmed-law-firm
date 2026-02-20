@@ -1,0 +1,60 @@
+.about-hero-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0 2rem 4rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.about-hero-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.about-hero-title {
+  font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.about-hero-subtitle {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-weight: 400;
+  color: #666666;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+}
+
+.about-hero-underline {
+  width: 100px;
+  height: 2px;
+  background-color: #D4AF37;
+  margin: 0 auto;
+}
+
+@media (max-width: 968px) {
+  .about-hero-section {
+    padding: 0 1.5rem 3rem;
+  }
+  
+  .about-hero-container {
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-hero-section {
+    padding: 0 1rem 2rem;
+  }
+  
+  .about-hero-container {
+    padding-top: 1.5rem;
+  }
+}

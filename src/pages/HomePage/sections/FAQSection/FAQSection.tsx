@@ -18,12 +18,12 @@ export const FAQSection = () => {
     <section className="faq-section">
       <ShapeDivider color="#233041" />
       <div className="faq-container">
+        <div className="faq-label">FREQUENTLY ASKED QUESTIONS</div>
         <h2 className="faq-heading">
-          Your Legal Questions<br />
-          Answered
+          Your Legal Questions <span className="faq-heading-accent">Answered</span>
         </h2>
         <p className="faq-subheading">
-          Get answers to common questions about personal injury claims
+          Get answers to common questions about personal injury claims in New York
         </p>
         
         <div className="faq-list">
@@ -31,12 +31,15 @@ export const FAQSection = () => {
             <div key={index} className={`faq-item ${openIndex === index ? 'open' : ''}`}>
               <button className="faq-question" onClick={() => toggle(index)}>
                 <span>{faq.question}</span>
-                <span className="faq-icon">{openIndex === index ? '−' : '+'}</span>
+                <span className={`faq-icon ${openIndex === index ? 'open' : ''}`}>▼</span>
               </button>
               {openIndex === index && (
-                <div className="faq-answer">
-                  <p>{faq.answer}</p>
-                </div>
+                <>
+                  <div className="faq-separator"></div>
+                  <div className="faq-answer">
+                    <p>{faq.answer}</p>
+                  </div>
+                </>
               )}
             </div>
           ))}
@@ -46,7 +49,7 @@ export const FAQSection = () => {
           <p className="faq-footer-text">Have more questions? We're here to help.</p>
           <div className="faq-buttons">
             <button className="faq-cta-primary">SCHEDULE FREE CONSULTATION</button>
-            <button className="faq-cta-secondary">CALL (516) 227-2662</button>
+            <button className="faq-cta-secondary">CALL (718) 848-9595</button>
           </div>
         </div>
       </div>

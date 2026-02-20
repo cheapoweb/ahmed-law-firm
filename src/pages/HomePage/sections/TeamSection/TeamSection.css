@@ -12,45 +12,70 @@
   margin: 0 auto;
 }
 
+.team-label {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
 .team-heading {
   font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
-  font-weight: 600;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
   color: #ffffff;
   text-align: center;
   margin-bottom: 5rem;
-  line-height: 1.25;
+  line-height: 1.3;
+}
+
+.team-heading em {
+  font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
+  font-style: italic;
+  font-weight: inherit;
+  color: #ffffff;
 }
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .team-member {
-  background-color: #ffffff;
-  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  box-shadow: none;
+  transition: transform 0.3s ease;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .team-member:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  background-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-4px);
 }
 
 .member-photo {
   width: 100%;
-  height: 300px;
+  height: 500px;
   background-color: #e0e0e0;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
 }
 
 .member-image {
@@ -58,46 +83,37 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 15px;
 }
 
 .member-info {
-  padding: 2rem;
-  text-align: center;
+  padding: 0;
+  text-align: left;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .member-name {
   font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400;
   color: #ffffff;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
+  line-height: 1.3;
+  background-color: transparent;
 }
 
 .member-title {
   font-family: 'Inter', 'Inter Fallback', sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 1.5rem;
-}
-
-.member-bio {
-  font-family: 'Inter', 'Inter Fallback', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #D4AF37;
-  background: transparent;
-  border: 2px solid #D4AF37;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.member-bio:hover {
-  background-color: #D4AF37;
-  color: #ffffff;
+  letter-spacing: 0.1em;
+  margin-bottom: 0;
+  line-height: 1.4;
 }
 
 .team-footer {
@@ -106,22 +122,23 @@
 
 .view-all-button {
   font-family: 'Inter', 'Inter Fallback', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #1a2332;
-  background-color: #D4AF37;
-  border: 2px solid #D4AF37;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #233041;
+  border: 1px solid #ffffff;
   padding: 1rem 2.5rem;
-  border-radius: 6px;
+  border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .view-all-button:hover {
-  background-color: #ffffff;
-  color: #1a2332;
+  background-color: #1C242E;
+  border-color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 968px) {
@@ -134,7 +151,13 @@
   }
   
   .team-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    gap: 2rem;
+  }
+  
+  .member-photo {
+    height: 450px;
   }
 }
 
@@ -143,11 +166,24 @@
     padding: 3rem 1rem;
   }
   
+  .team-label {
+    font-size: 0.7rem;
+  }
+  
   .team-heading {
     font-size: 2rem;
   }
   
   .team-grid {
     grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+  
+  .member-photo {
+    height: 400px;
+  }
+  
+  .member-name {
+    font-size: 1.5rem;
   }
 }

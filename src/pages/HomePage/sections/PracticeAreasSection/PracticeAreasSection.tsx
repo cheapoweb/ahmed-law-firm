@@ -1,22 +1,25 @@
 import { useState } from 'react'
 import ShapeDivider from '../../../../components/ShapeDivider'
+import personalInjuryImage from '../../../../assets/Personal-injury.webp'
+import workersBenefitsImage from '../../../../assets/workers-benefits.webp'
 import './PracticeAreasSection.css'
 
 const practiceAreas: Record<string, { areas: string[], image: string }> = {
   'Personal Injury': {
     areas: [
-      'Auto Accidents', 'Car Accidents', 'Building Collapse Injuries', 'Bus Accidents',
-      'Burn Injuries', 'Dog Bites', 'Pedestrian Accidents', 'E-Bike & E-Scooter Injuries',
-      'Premises Liability', 'Products Liability', 'Slip & Fall', 'Trucking Accidents',
-      'Wrongful Death', 'Construction Accidents', 'Medical Malpractice', 'Motorcycle Accidents'
+      'Auto Accidents', 'Car Accidents', 'Building Collapse Injuries',
+      'Burn Injuries', 'Dog Bites', 'Pedestrian Accidents',
+      'Premises Liability', 'Products Liability', 'Slip & Fall'
     ],
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: personalInjuryImage
   },
   'Workers Benefits': {
     areas: [
-      'Construction Accidents', 'Crane Accidents', 'Forklift Accidents', 'Scaffolding Injury'
+      'Construction Accidents', 'Crane Accidents', 'Forklift Accidents',
+      'Scaffolding Injury', 'Workplace Falls', 'Equipment Accidents',
+      'Industrial Accidents', 'Workplace Burns', 'Repetitive Stress Injuries'
     ],
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f056037?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: workersBenefitsImage
   }
 }
 
@@ -47,6 +50,11 @@ const getServiceIcon = (serviceName: string): string => {
     'Crane Accidents': '🏗️',
     'Forklift Accidents': '🚜',
     'Scaffolding Injury': '🪜',
+    'Workplace Falls': '⬇️',
+    'Equipment Accidents': '⚙️',
+    'Industrial Accidents': '🏭',
+    'Workplace Burns': '🔥',
+    'Repetitive Stress Injuries': '🔄',
     'No-Fault Collections & Litigation': '📋',
     'Arbitration': '⚖️',
     'Denied Benefits': '❌',
@@ -69,13 +77,14 @@ export const PracticeAreasSection = () => {
           <em>across all areas of injury law</em>
         </h2>
         
-        <div className="practice-categories-container">
+        <div className={`practice-categories-container ${hoveredCategory ? 'has-hovered' : ''}`}>
           {Object.entries(practiceAreas).map(([category, data]) => {
             const isHovered = hoveredCategory === category
+            const isOtherHovered = hoveredCategory !== null && hoveredCategory !== category
             return (
               <div 
                 key={category} 
-                className={`showcase-container ${isHovered ? 'expanded' : ''}`}
+                className={`showcase-container ${isHovered ? 'expanded' : ''} ${isOtherHovered ? 'other-hovered' : ''}`}
                 onMouseEnter={() => setHoveredCategory(category)}
                 onMouseLeave={() => setHoveredCategory(null)}
               >
@@ -85,6 +94,7 @@ export const PracticeAreasSection = () => {
                     className="showcase-main-image"
                     style={{ backgroundImage: `url(${data.image})` }}
                   ></div>
+                  <div className="showcase-image-overlay"></div>
                   <div className="showcase-main-content">
                     <h3 className="showcase-main-title">{category}</h3>
                     <div className="showcase-main-underline"></div>

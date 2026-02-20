@@ -1,0 +1,109 @@
+.experience-commitment-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0 2rem 4rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.experience-commitment-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 3rem;
+}
+
+.experience-commitment-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.section-column-title {
+  font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.section-column-intro {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.experience-list,
+.commitment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-list li {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.experience-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #233041;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.commitment-list li {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.commitment-list li .checkmark {
+  color: #22c55e;
+  font-size: 1.25rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+@media (max-width: 968px) {
+  .experience-commitment-section {
+    padding: 0 1.5rem 3rem;
+  }
+  
+  .experience-commitment-container {
+    padding-top: 2rem;
+  }
+  
+  .experience-commitment-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .experience-commitment-section {
+    padding: 0 1rem 2rem;
+  }
+  
+  .experience-commitment-container {
+    padding-top: 1.5rem;
+  }
+}
