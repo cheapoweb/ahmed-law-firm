@@ -13,6 +13,7 @@ const Header = () => {
 
         {/* Center Section - Navigation */}
         <nav className="header-nav">
+          <Link to="/" className="nav-link">Home</Link>
           <div className="nav-dropdown">
             <Link to="/about" className="nav-link nav-link-trigger">
               About
@@ -42,10 +43,28 @@ const Header = () => {
               <Link to="/practice-areas/train-accidents" className="nav-dropdown-item">Train Accidents</Link>
             </div>
           </div>
-          <a href="/#results" className="nav-link">Results</a>
-          <a href="/#locations" className="nav-link">Locations</a>
-          <a href="/#resources" className="nav-link">Resources</a>
-          <a href="/#contact" className="nav-link">Contact us</a>
+          <div className="nav-dropdown">
+            <Link to="/verdicts-settlements" className="nav-link nav-link-trigger">
+              Results
+              <span className="nav-dropdown-arrow">▼</span>
+            </Link>
+            <div className="nav-dropdown-menu">
+              <Link to="/verdicts-settlements" className="nav-dropdown-item">Verdicts & Settlements</Link>
+              <Link to="/reviews-ratings" className="nav-dropdown-item">Reviews & Ratings</Link>
+            </div>
+          </div>
+          <div className="nav-dropdown">
+            <Link to="/legal-resources" className="nav-link nav-link-trigger">
+              Resources
+              <span className="nav-dropdown-arrow">▼</span>
+            </Link>
+            <div className="nav-dropdown-menu">
+              <Link to="/legal-blog" className="nav-dropdown-item">Legal Blog</Link>
+              <Link to="/faq" className="nav-dropdown-item">FAQ</Link>
+              <Link to="/legal-resources" className="nav-dropdown-item">Legal Resources</Link>
+            </div>
+          </div>
+          <Link to="/contact" className="nav-link">Contact us</Link>
         </nav>
 
         {/* Right Section - Contact Info and CTA */}

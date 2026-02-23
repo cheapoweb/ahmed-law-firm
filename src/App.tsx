@@ -25,6 +25,12 @@ import RecklessDisregardPage from './pages/PracticeAreasPage/sub-pages/AutoAccid
 import NotAtFaultPage from './pages/PracticeAreasPage/sub-pages/AutoAccidentsPage/subpages/NotAtFaultPage/NotAtFaultPage'
 import MultiCarAccidentsPage from './pages/PracticeAreasPage/sub-pages/AutoAccidentsPage/subpages/MultiCarAccidentsPage/MultiCarAccidentsPage'
 import TBoneCrashesPage from './pages/PracticeAreasPage/sub-pages/AutoAccidentsPage/subpages/TBoneCrashesPage/TBoneCrashesPage'
+import VerdictsSettlementsPage from './pages/VerdictsSettlementsPage/VerdictsSettlementsPage'
+import ReviewsRatingsPage from './pages/ReviewsRatingsPage/ReviewsRatingsPage'
+import LegalBlogPage from './pages/LegalBlogPage/LegalBlogPage'
+import FAQPage from './pages/FAQPage/FAQPage'
+import LegalResourcesPage from './pages/LegalResourcesPage/LegalResourcesPage'
+import ContactPage from './pages/ContactPage/ContactPage'
 import './App.css'
 
 function App() {
@@ -59,6 +65,12 @@ function App() {
             <Route path="/practice-areas/auto-accidents/not-at-fault" element={<NotAtFaultPage />} />
             <Route path="/practice-areas/auto-accidents/multi-car-accidents" element={<MultiCarAccidentsPage />} />
             <Route path="/practice-areas/auto-accidents/t-bone-crashes" element={<TBoneCrashesPage />} />
+            <Route path="/verdicts-settlements" element={<VerdictsSettlementsPage />} />
+            <Route path="/reviews-ratings" element={<ReviewsRatingsPage />} />
+            <Route path="/legal-blog" element={<LegalBlogPage />} />
+            <Route path="/faq" element={<FAQPage />} />
+            <Route path="/legal-resources" element={<LegalResourcesPage />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>
       </div>

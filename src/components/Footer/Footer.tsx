@@ -50,10 +50,11 @@ const Footer = () => {
               <Link to="/about" className="footer-nav-link">About</Link>
               <Link to="/attorneys" className="footer-nav-link">Attorneys</Link>
               <Link to="/practice-areas" className="footer-nav-link">Practice Areas</Link>
-              <a href="/#results" className="footer-nav-link">Results</a>
+              <Link to="/verdicts-settlements" className="footer-nav-link">Verdicts & Settlements</Link>
+              <Link to="/reviews-ratings" className="footer-nav-link">Reviews & Ratings</Link>
               <a href="/#locations" className="footer-nav-link">Locations</a>
-              <a href="/#resources" className="footer-nav-link">Resources</a>
-              <a href="/#contact" className="footer-nav-link">Contact</a>
+              <Link to="/legal-resources" className="footer-nav-link">Resources</Link>
+              <Link to="/contact" className="footer-nav-link">Contact</Link>
             </nav>
             <button className="footer-search-icon" aria-label="Search">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
