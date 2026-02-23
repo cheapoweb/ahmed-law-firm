@@ -53,11 +53,6 @@ const ContactPage = () => {
           </aside>
 
           <div className="contact-content">
-            <nav className="contact-breadcrumb" aria-label="Breadcrumb">
-              <Link to="/">Home</Link>
-              <span className="contact-breadcrumb-sep">&gt;</span>
-              <span>Contact</span>
-            </nav>
             <h1 className="contact-title">Contact Us for a Free Lawyer Consultation</h1>
             <div className="contact-intro">
               <p>
