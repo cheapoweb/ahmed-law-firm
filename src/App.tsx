@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import HomePage from './pages/HomePage'
+import HomePage2 from './pages/HomePage2/HomePage2'
+import HomePage3 from './pages/HomePage3/HomePage3'
 import AboutPage from './pages/AboutPage'
 import AttorneysPage from './pages/AttorneysPage'
 import PracticeAreasPage from './pages/PracticeAreasPage'
@@ -41,6 +43,8 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/home-2" element={<HomePage2 />} />
+            <Route path="/home-3" element={<HomePage3 />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/attorneys" element={<AttorneysPage />} />
             <Route path="/practice-areas" element={<PracticeAreasPage />} />

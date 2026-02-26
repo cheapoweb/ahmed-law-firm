@@ -29,6 +29,7 @@ const statuteItems = [
   { label: 'Personal Injury', limit: '3 years' },
   { label: 'Medical Malpractice', limit: '2.5 years (30 months)' },
   { label: 'Wrongful Death', limit: '2 years' },
+  { label: 'No Fault File', limit: '30 days to open your own NF' },
   { label: 'Property Damage', limit: '3 years' },
 ]
 

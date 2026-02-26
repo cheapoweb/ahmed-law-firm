@@ -1,0 +1,282 @@
+.hp3-practice-section {
+  width: 100%;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fb 50%, #ffffff 100%);
+  padding: 5rem 0;
+}
+
+.hp3-practice-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hp3-practice-subtitle {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: clamp(0.875rem, 1.2vw, 1rem);
+  font-weight: 500;
+  color: #6B778D;
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hp3-practice-heading {
+  font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
+  font-size: clamp(1.875rem, 4vw, 2.75rem);
+  font-weight: 600;
+  color: #233041;
+  text-align: center;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.hp3-practice-heading-decoration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.hp3-practice-heading-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #233041;
+  flex-shrink: 0;
+}
+
+.hp3-practice-heading-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.hp3-practice-heading-line {
+  display: block;
+  height: 1px;
+  width: 48px;
+  background-color: #233041;
+  opacity: 0.4;
+}
+
+.hp3-practice-slider-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hp3-practice-arrow {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid rgba(35, 48, 65, 0.15);
+  background-color: #ffffff;
+  color: #233041;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.hp3-practice-arrow:hover {
+  background-color: #233041;
+  color: #ffffff;
+  border-color: #233041;
+  box-shadow: 0 4px 16px rgba(35, 48, 65, 0.25);
+}
+
+.hp3-practice-arrow--prev {
+  margin-right: 0.25rem;
+}
+
+.hp3-practice-arrow--next {
+  margin-left: 0.25rem;
+}
+
+.hp3-practice-slider {
+  flex: 1;
+  overflow: hidden;
+  min-width: 0;
+  border-radius: 16px;
+}
+
+/* Track width = (26 cards) * (1/3 of viewport) so one card = exactly 1/3 viewport */
+.hp3-practice-track {
+  display: flex;
+  width: calc(100% * 26 / 3);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* Each slot = 1/26 of track = one card = 1/3 of viewport, so one full card scrolls out per step */
+.hp3-practice-card-wrap {
+  flex: 0 0 auto;
+  width: calc(100% / 26);
+  padding: 0 0.75rem;
+  box-sizing: border-box;
+}
+
+.hp3-practice-card {
+  display: block;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(35, 48, 65, 0.08);
+  transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.hp3-practice-card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(212, 175, 55, 0.3);
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 55, 0.25);
+}
+
+.hp3-practice-card-image {
+  width: 100%;
+  padding-top: 62%;
+  background-size: cover;
+  background-position: center;
+  background-color: #eef1f6;
+  transition: transform 0.4s ease;
+}
+
+.hp3-practice-card:hover .hp3-practice-card-image {
+  transform: scale(1.03);
+}
+
+.hp3-practice-card-title {
+  display: block;
+  font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  font-weight: 600;
+  color: #233041;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  line-height: 1.3;
+  transition: color 0.2s;
+}
+
+.hp3-practice-card:hover .hp3-practice-card-title {
+  color: #1a2634;
+}
+
+.hp3-practice-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.hp3-practice-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(35, 48, 65, 0.2);
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.hp3-practice-dot:hover {
+  background-color: rgba(35, 48, 65, 0.4);
+}
+
+.hp3-practice-dot--active {
+  background-color: #233041;
+  transform: scale(1.2);
+}
+
+.hp3-practice-cta-wrap {
+  text-align: center;
+}
+
+.hp3-practice-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #233041 0%, #2d3d52 100%);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 16px rgba(35, 48, 65, 0.35);
+}
+
+.hp3-practice-cta:hover {
+  opacity: 0.98;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(35, 48, 65, 0.4);
+}
+
+.hp3-practice-cta-icon {
+  display: inline-flex;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+@media (max-width: 968px) {
+  .hp3-practice-section {
+    padding: 3.5rem 0;
+  }
+
+  .hp3-practice-card-wrap {
+    flex: 0 0 50%;
+  }
+
+  .hp3-practice-heading-decoration {
+    margin-bottom: 2.5rem;
+  }
+
+  .hp3-practice-dots {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hp3-practice-section {
+    padding: 2.5rem 0;
+  }
+
+  .hp3-practice-container {
+    padding: 0 1rem;
+  }
+
+  .hp3-practice-card-wrap {
+    flex: 0 0 100%;
+  }
+
+  .hp3-practice-arrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .hp3-practice-dots {
+    margin-bottom: 1.5rem;
+  }
+
+  .hp3-practice-cta {
+    width: 100%;
+    max-width: 320px;
+  }
+}

@@ -13,7 +13,17 @@ const Header = () => {
 
         {/* Center Section - Navigation */}
         <nav className="header-nav">
-          <Link to="/" className="nav-link">Home</Link>
+          <div className="nav-dropdown">
+            <Link to="/" className="nav-link nav-link-trigger">
+              Home
+              <span className="nav-dropdown-arrow">▼</span>
+            </Link>
+            <div className="nav-dropdown-menu">
+              <Link to="/" className="nav-dropdown-item">Home</Link>
+              <Link to="/home-2" className="nav-dropdown-item">Home Variant</Link>
+              <Link to="/home-3" className="nav-dropdown-item">Home Variant 3</Link>
+            </div>
+          </div>
           <div className="nav-dropdown">
             <Link to="/about" className="nav-link nav-link-trigger">
               About

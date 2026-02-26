@@ -13,7 +13,7 @@ export const AboutFirmSection = () => {
           <div className="about-firm-main-content">
             <div className="about-firm-text">
               <p>
-                Ahmed Law Firm was founded in 1981 with a commitment to providing exceptional legal representation to individuals and families who have been injured due to the negligence of others. Our firm has built a reputation for excellence through decades of dedicated service to our clients throughout New York, including Long Island, Nassau County, Queens County, The Bronx, Brooklyn, NYC, and Suffolk County.
+                Ahmed Law Firm was founded in 1981 with a commitment to providing exceptional legal representation to individuals and families who have been injured due to the negligence of others. Our firm has built a reputation for excellence through decades of dedicated service to our clients throughout New York, including Long Island, Nassau County, Queens County, Kings County, The Bronx, Brooklyn, NYC, and Suffolk County.
               </p>
               <p>
                 We understand that facing a personal injury can be overwhelming, both emotionally and financially. That's why we work on a contingency fee basis, meaning you don't pay unless we win your case. Our experienced attorneys are committed to fighting for your rights and securing the compensation you deserve.

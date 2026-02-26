@@ -1,0 +1,218 @@
+/* Hero: full-width BG_HEROSECTION image + overlay, left content + right team image */
+.hp3-hero {
+  position: relative;
+  width: 100%;
+  min-height: 61vh;
+  display: flex;
+  align-items: stretch;
+  padding: 2.5rem 0 0 0;
+  overflow: hidden;
+}
+
+.hp3-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 88%;
+  background-repeat: no-repeat;
+  background-color: #233041;
+}
+
+.hp3-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(35, 48, 65, 0.92) 0%,
+    rgba(35, 48, 65, 0.78) 45%,
+    rgba(35, 48, 65, 0.5) 70%,
+    rgba(35, 48, 65, 0.35) 100%
+  );
+}
+
+.hp3-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 4.5rem;
+  align-items: center;
+}
+
+.hp3-hero-left {
+  color: #ffffff;
+}
+
+.hp3-hero-headline {
+  margin: 0 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.hp3-hero-headline-italic {
+  font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 400;
+  font-style: italic;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.hp3-hero-headline-bold {
+  font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
+  font-size: clamp(2.5rem, 5.5vw, 4rem);
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.1;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+}
+
+.hp3-hero-desc {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.6;
+  margin: 0 0 1.75rem 0;
+  max-width: 520px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hp3-hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hp3-hero-btn {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.875rem 1.75rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+  display: inline-block;
+}
+
+.hp3-hero-btn:hover {
+  transform: translateY(-2px);
+}
+
+.hp3-hero-btn--primary {
+  background: #D4AF37;
+  color: #233041;
+  border: none;
+}
+
+.hp3-hero-btn--primary:hover {
+  background: #e5c04a;
+  color: #233041;
+}
+
+.hp3-hero-btn--secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #D4AF37;
+}
+
+.hp3-hero-btn--secondary:hover {
+  background: rgba(212, 175, 55, 0.15);
+  border-color: #D4AF37;
+}
+
+/* Right: team image – bottom-aligned in section */
+.hp3-hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  align-self: end;
+}
+
+.hp3-hero-team-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: bottom;
+  object-fit: cover;
+  object-position: center bottom;
+  transform: scale(1.15);
+  transform-origin: center bottom;
+  /* Subtle fade on left and right edges */
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 2%,
+    black 98%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 2%,
+    black 98%,
+    transparent 100%
+  );
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}
+
+@media (max-width: 968px) {
+  .hp3-hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 0 1.5rem;
+  }
+
+  .hp3-hero-desc {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hp3-hero-buttons {
+    justify-content: center;
+  }
+
+  .hp3-hero-right {
+    order: -1;
+    align-self: center;
+    align-items: center;
+  }
+
+  .hp3-hero-team-img {
+    max-width: 680px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hp3-hero {
+    min-height: auto;
+    padding: 2rem 0 0 0;
+  }
+
+  .hp3-hero-inner {
+    padding: 0 1rem;
+  }
+
+  .hp3-hero-buttons {
+    flex-direction: column;
+  }
+
+  .hp3-hero-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hp3-hero-team-img {
+    max-width: 100%;
+  }
+}
