@@ -33,15 +33,6 @@ const processSteps = [
   { step: 4, title: 'Resolution', desc: 'Settlement or trial—we fight for maximum recovery.' },
 ]
 
-const practiceAreasGrid = [
-  { title: 'Auto Accidents', to: '/practice-areas/auto-accidents', icon: '🚗' },
-  { title: 'Truck Accidents', to: '/practice-areas/truck-accidents', icon: '🚚' },
-  { title: 'Slip & Fall', to: '/practice-areas', icon: '⬇️' },
-  { title: 'Construction', to: '/practice-areas', icon: '🏗️' },
-  { title: 'Wrongful Death', to: '/practice-areas', icon: '⚖' },
-  { title: 'Medical Malpractice', to: '/practice-areas', icon: '🩺' },
-]
-
 const blogCards = [
   { title: 'What Is the Statute of Limitations for Car Accidents in New York?', to: '/legal-blog', date: 'Feb 2025', excerpt: 'Understanding the deadlines that apply to your auto accident claim can make the difference between recovering compensation and losing your right to sue.' },
   { title: 'How Much Is My Personal Injury Case Worth?', to: '/legal-blog', date: 'Jan 2025', excerpt: 'Case value depends on your injuries, medical treatment, lost wages, and the impact on your life. We help you understand what to expect.' },
