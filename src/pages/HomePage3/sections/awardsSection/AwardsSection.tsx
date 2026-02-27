@@ -19,7 +19,10 @@ const AwardsSection = () => {
   return (
     <section className="hp3-awards-section">
       <div className="hp3-awards-container">
-        <h2 className="hp3-awards-title">OUR AWARDS</h2>
+        <p className="hp3-awards-label">OUR AWARDS</p>
+        <h2 className="hp3-awards-heading">
+          Recognized For <em>Excellence</em>
+        </h2>
         <div className="hp3-awards-carousel">
           <div className="hp3-awards-track">
             {[...lawAwards, ...lawAwards].map((award) => (

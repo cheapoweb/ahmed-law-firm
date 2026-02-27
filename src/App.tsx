@@ -42,7 +42,8 @@ function App() {
         <Header />
         <main className="main-content">
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<HomePage3 />} />
+            <Route path="/home-1" element={<HomePage />} />
             <Route path="/home-2" element={<HomePage2 />} />
             <Route path="/home-3" element={<HomePage3 />} />
             <Route path="/about" element={<AboutPage />} />

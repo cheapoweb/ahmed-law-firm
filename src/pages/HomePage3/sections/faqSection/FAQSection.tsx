@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import ShapeDivider from '../../../../components/ShapeDivider'
 import './FAQSection.css'
 
 const faqs = [
@@ -9,33 +8,34 @@ const faqs = [
   { question: 'Do I need to come to your office for a consultation?', answer: 'While we welcome you to visit our offices, we understand you may be unable to travel due to your injuries. We offer free phone consultations and can visit you at your home or hospital if necessary. Contact us 24/7 to discuss your case.' },
 ]
 
-export const FAQSection = () => {
+const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const toggle = (index: number) => setOpenIndex(openIndex === index ? null : index)
 
   return (
-    <section className="faq-section">
-      <ShapeDivider color="#233041" />
-      <div className="faq-container">
-        <div className="faq-label">FREQUENTLY ASKED QUESTIONS</div>
-        <h2 className="faq-heading">
-          Your Legal Questions <span className="faq-heading-accent">Answered</span>
+    <section className="hp3-faq-section">
+      <div className="hp3-faq-container">
+        <p className="hp3-faq-label">FREQUENTLY ASKED QUESTIONS</p>
+        <h2 className="hp3-faq-heading">
+          Your Legal Questions <em>Answered</em>
         </h2>
-        <p className="faq-subheading">
-          Get answers to common questions about personal injury claims in New York
-        </p>
-        
-        <div className="faq-list">
+
+        <div className="hp3-faq-list">
           {faqs.map((faq, index) => (
-            <div key={index} className={`faq-item ${openIndex === index ? 'open' : ''}`}>
-              <button className="faq-question" onClick={() => toggle(index)}>
+            <div key={index} className={`hp3-faq-item ${openIndex === index ? 'hp3-faq-item--open' : ''}`}>
+              <button
+                type="button"
+                className="hp3-faq-question"
+                onClick={() => toggle(index)}
+                aria-expanded={openIndex === index}
+              >
                 <span>{faq.question}</span>
-                <span className={`faq-icon ${openIndex === index ? 'open' : ''}`}>▼</span>
+                <span className={`hp3-faq-icon ${openIndex === index ? 'hp3-faq-icon--open' : ''}`} aria-hidden>▼</span>
               </button>
               {openIndex === index && (
                 <>
-                  <div className="faq-separator"></div>
-                  <div className="faq-answer">
+                  <div className="hp3-faq-separator" />
+                  <div className="hp3-faq-answer">
                     <p>{faq.answer}</p>
                   </div>
                 </>
@@ -43,15 +43,9 @@ export const FAQSection = () => {
             </div>
           ))}
         </div>
-        
-        <div className="faq-footer">
-          <p className="faq-footer-text">Have more questions? We're here to help.</p>
-          <div className="faq-buttons">
-            <button className="faq-cta-primary">SCHEDULE FREE CONSULTATION</button>
-            <button className="faq-cta-secondary">CALL (718) 848-9595</button>
-          </div>
-        </div>
       </div>
     </section>
   )
 }
+
+export default FAQSection

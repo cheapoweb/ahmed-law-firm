@@ -1,6 +1,6 @@
 .hp3-practice-section {
   width: 100%;
-  background: linear-gradient(180deg, #ffffff 0%, #f8f9fb 50%, #ffffff 100%);
+  background-color: #233041;
   padding: 5rem 0;
 }
 
@@ -10,56 +10,32 @@
   padding: 0 2rem;
 }
 
-.hp3-practice-subtitle {
+.hp3-practice-label {
   font-family: 'Inter', 'Inter Fallback', sans-serif;
-  font-size: clamp(0.875rem, 1.2vw, 1rem);
+  font-size: 0.85rem;
   font-weight: 500;
-  color: #6B778D;
+  color: rgba(255, 255, 255, 0.7);
   text-align: center;
-  margin: 0 0 0.5rem 0;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
+  margin: 0 0 1.5rem 0;
 }
 
 .hp3-practice-heading {
   font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
-  font-size: clamp(1.875rem, 4vw, 2.75rem);
-  font-weight: 600;
-  color: #233041;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  color: #ffffff;
   text-align: center;
-  margin: 0 0 0.75rem 0;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  line-height: 1.2;
+  margin: 0 0 2rem 0;
+  line-height: 1.3;
 }
 
-.hp3-practice-heading-decoration {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-bottom: 3rem;
-}
-
-.hp3-practice-heading-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: #233041;
-  flex-shrink: 0;
-}
-
-.hp3-practice-heading-icon svg {
-  width: 28px;
-  height: 28px;
-}
-
-.hp3-practice-heading-line {
-  display: block;
-  height: 1px;
-  width: 48px;
-  background-color: #233041;
-  opacity: 0.4;
+.hp3-practice-heading em {
+  font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
+  font-style: italic;
+  font-weight: inherit;
+  color: #D4AF37;
 }
 
 .hp3-practice-slider-wrap {
@@ -126,11 +102,11 @@
 
 .hp3-practice-card {
   display: block;
-  background: #ffffff;
-  border-radius: 16px;
+  background: linear-gradient(145deg, #ffffff 0%, #f5f7fb 60%, #eef1f7 100%);
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
-  border: 1px solid rgba(35, 48, 65, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.65);
   transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
   text-decoration: none;
   color: inherit;
@@ -138,9 +114,9 @@
 }
 
 .hp3-practice-card:hover {
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(212, 175, 55, 0.35);
   transform: translateY(-6px);
-  border-color: rgba(212, 175, 55, 0.25);
+  border-color: rgba(212, 175, 55, 0.4);
 }
 
 .hp3-practice-card-image {
@@ -163,7 +139,7 @@
   font-weight: 600;
   color: #233041;
   text-align: center;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 1.25rem 1.6rem;
   line-height: 1.3;
   transition: color 0.2s;
 }
@@ -211,28 +187,28 @@
   justify-content: center;
   gap: 0.6rem;
   font-family: 'Inter', 'Inter Fallback', sans-serif;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: #ffffff;
-  background: linear-gradient(135deg, #233041 0%, #2d3d52 100%);
-  padding: 1rem 2rem;
-  border-radius: 10px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  padding: 1rem 2.25rem;
+  border-radius: 9999px;
   text-decoration: none;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 16px rgba(35, 48, 65, 0.35);
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
 }
 
 .hp3-practice-cta:hover {
-  opacity: 0.98;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 24px rgba(35, 48, 65, 0.4);
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
 .hp3-practice-cta-icon {
   display: inline-flex;
-  color: rgba(255, 255, 255, 0.95);
+  color: #ffffff;
 }
 
 @media (max-width: 968px) {
@@ -242,10 +218,6 @@
 
   .hp3-practice-card-wrap {
     flex: 0 0 50%;
-  }
-
-  .hp3-practice-heading-decoration {
-    margin-bottom: 2.5rem;
   }
 
   .hp3-practice-dots {
@@ -260,6 +232,14 @@
 
   .hp3-practice-container {
     padding: 0 1rem;
+  }
+
+  .hp3-practice-label {
+    font-size: 0.8rem;
+  }
+
+  .hp3-practice-heading {
+    font-size: 2rem;
   }
 
   .hp3-practice-card-wrap {

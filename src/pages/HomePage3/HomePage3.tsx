@@ -4,6 +4,10 @@ import AwardsSection from './sections/awardsSection/AwardsSection'
 import ValueSection from './sections/valueSection/ValueSection'
 import PerformanceSection from './sections/performanceSection/PerformanceSection'
 import PracticeAreasSection from './sections/practiceAreasSection/PracticeAreasSection'
+import TeamSection from './sections/teamSection/TeamSection'
+import ReviewsSection from './sections/reviewsSection/ReviewsSection'
+import FAQSection from './sections/faqSection/FAQSection'
+import LocationsSection from './sections/locationsSection/LocationsSection'
 import './HomePage3.css'
 
 const HomePage3 = () => {
@@ -14,7 +18,10 @@ const HomePage3 = () => {
       <ValueSection />
       <PerformanceSection />
       <PracticeAreasSection />
-      {/* Rest of layout will be added step by step */}
+      <TeamSection />
+      <ReviewsSection />
+      <FAQSection />
+      <LocationsSection />
       <Footer />
     </div>
   )

@@ -1,0 +1,142 @@
+.hp3-reviews-section {
+  width: 100%;
+  background: #233041;
+  padding: 4rem 2rem 5rem;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.hp3-reviews-section::before {
+  content: '';
+  position: absolute;
+  inset: -20% -10%;
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 55%);
+  transform: skewX(-12deg);
+  pointer-events: none;
+}
+
+.hp3-reviews-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.hp3-reviews-label {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 1.5rem 0;
+}
+
+.hp3-reviews-heading {
+  font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 0 2.5rem 0;
+  line-height: 1.3;
+}
+
+.hp3-reviews-heading em {
+  font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
+  font-style: italic;
+  font-weight: inherit;
+  color: #D4AF37;
+}
+
+.hp3-reviews-card {
+  max-width: 860px;
+  margin: 0 auto 1.75rem;
+  padding: 2.5rem 2.25rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.22);
+}
+
+.hp3-reviews-quote {
+  font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  font-style: italic;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 1.5rem 0;
+}
+
+.hp3-reviews-name {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.hp3-reviews-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.hp3-reviews-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 9999px;
+  border: none;
+  background: rgba(255, 255, 255, 0.28);
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s, background-color 0.2s, width 0.2s;
+}
+
+.hp3-reviews-dot:hover {
+  background: rgba(255, 255, 255, 0.45);
+  transform: scale(1.1);
+}
+
+.hp3-reviews-dot--active {
+  width: 22px;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 968px) {
+  .hp3-reviews-section {
+    padding: 3.5rem 1.5rem 4.5rem;
+  }
+
+  .hp3-reviews-card {
+    padding: 2.25rem 1.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hp3-reviews-section {
+    padding: 3rem 1rem 4rem;
+  }
+
+  .hp3-reviews-container {
+    padding: 0 1rem;
+  }
+
+  .hp3-reviews-label {
+    font-size: 0.7rem;
+  }
+
+  .hp3-reviews-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .hp3-reviews-card {
+    padding: 2rem 1.25rem;
+  }
+}

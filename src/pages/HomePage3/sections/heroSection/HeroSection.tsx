@@ -19,7 +19,7 @@ const HeroSection = () => {
           </p>
           <div className="hp3-hero-buttons">
             <Link to="/contact" className="hp3-hero-btn hp3-hero-btn--primary">
-              Get Your Free Consultation
+              Free Consultation
             </Link>
             <Link to="/attorneys" className="hp3-hero-btn hp3-hero-btn--secondary">
               Our Attorneys

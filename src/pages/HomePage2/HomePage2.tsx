@@ -61,7 +61,7 @@ const HomePage2 = () => {
           <div className="hp2-hero-content">
             <h1 className="hp2-hero-headline">Injured? Get Justice Now.</h1>
             <p className="hp2-hero-sub">
-              We are personal injury attorneys fighting for victims throughout New York and beyond. Established in 1981, Ahmed Law Firm has recovered millions for our clients. Free consultation—no fee unless we win.
+              We are personal injury attorneys fighting for victims throughout New York and beyond. Established in 2016, Ahmed Law Firm has recovered millions for our clients. Free consultation—no fee unless we win.
             </p>
             <Link to="/contact" className="hp2-hero-cta">Contact an Attorney</Link>
             <a href="tel:7188489595" className="hp2-hero-phone">(718) 848-9595</a>
@@ -108,7 +108,7 @@ const HomePage2 = () => {
           <div className="hp2-about-content">
             <h2 className="hp2-about-title">About Ahmed Law Firm</h2>
             <p className="hp2-about-text">
-              Ahmed Law Firm was founded in 1981 with a commitment to providing exceptional legal representation to individuals and families who have been injured due to the negligence of others. Our firm has built a reputation for excellence through decades of dedicated service to clients throughout New York, including Long Island, Nassau County, Queens County, Kings County, The Bronx, Brooklyn, NYC, and Suffolk County.
+              Ahmed Law Firm was founded in 2016 with a commitment to providing exceptional legal representation to individuals and families who have been injured due to the negligence of others. Our firm has built a reputation for excellence through decades of dedicated service to clients throughout New York, including Long Island, Nassau County, Queens County, Kings County, The Bronx, Brooklyn, NYC, and Suffolk County.
             </p>
             <p className="hp2-about-text">
               We handle auto accidents, truck accidents, slip and fall, construction accidents, wrongful death, medical malpractice, and more. When you choose us, you get experienced litigators who care about your recovery and your future.

@@ -33,19 +33,6 @@ const trackItems = [
 const TRACK_LENGTH = trackItems.length
 const MAX_INDEX = TRACK_LENGTH - VISIBLE_CARDS
 
-const scalesIcon = (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-    <path d="M12 3v18M8 9l4-4 4 4M8 15l4 4 4-4M3 12h4l2-6 2 6h4" />
-  </svg>
-)
-
-const gavelIcon = (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-    <path d="M14 12l-4 4 2 2 4-4M4 8l4 4-2 2-4-4M4 16l4-4 2 2 4 4" />
-    <path d="M18 6L6 18M6 6l12 12" />
-  </svg>
-)
-
 const chevronLeft = (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
     <path d="M15 18l-6-6 6-6" />
@@ -102,15 +89,10 @@ const PracticeAreasSection = () => {
   return (
     <section className="hp3-practice-section">
       <div className="hp3-practice-container">
-        <p className="hp3-practice-subtitle">Practicing Law Since 1992</p>
-        <h2 className="hp3-practice-heading">OUR PRACTICE AREAS</h2>
-        <div className="hp3-practice-heading-decoration">
-          <span className="hp3-practice-heading-line" aria-hidden />
-          <span className="hp3-practice-heading-icon" aria-hidden>
-            {scalesIcon}
-          </span>
-          <span className="hp3-practice-heading-line" aria-hidden />
-        </div>
+        <p className="hp3-practice-label">PRACTICE AREAS</p>
+        <h2 className="hp3-practice-heading">
+          Our Practice Areas, <em>All In One Place</em>
+        </h2>
 
         <div className="hp3-practice-slider-wrap">
           <button
@@ -166,7 +148,6 @@ const PracticeAreasSection = () => {
 
         <div className="hp3-practice-cta-wrap">
           <Link to="/practice-areas" className="hp3-practice-cta">
-            <span className="hp3-practice-cta-icon">{gavelIcon}</span>
             VIEW ALL PRACTICE AREAS
           </Link>
         </div>

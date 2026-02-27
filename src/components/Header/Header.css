@@ -153,22 +153,23 @@
   font-family: 'Inter', 'Inter Fallback', sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #ffffff;
-  background-color: #3C5068;
-  border: 2px solid #D4AF37;
-  border-radius: 6px;
+  color: #233041;
+  background-color: transparent;
+  border: 2px solid #233041;
+  border-radius: 9999px;
   padding: 0.75rem 1.5rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
   white-space: nowrap;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   position: relative;
 }
 
 .header-cta-button:hover {
-  background-color: #2d3f52;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(35, 48, 65, 0.08);
+  color: #233041;
+  transform: translateY(-2px);
 }
 
 .header-cta-button:active {

@@ -82,8 +82,10 @@ const PerformanceSection = () => {
           <div className="hp3-performance-text">
             <h3 className="hp3-performance-label">OUR PERFORMANCE</h3>
             <h2 className="hp3-performance-heading">
-              Across 1000's of cases,<br />
-              <em>a half-billion+ recovered.</em>
+              Across 1000's Of Cases,<br />
+              <span className="hp3-performance-heading-line2">
+                <em>A Half-Billion+ Recovered</em>
+              </span>
             </h2>
             <div className="hp3-performance-footnote">
               <p className="hp3-performance-footnote-text">

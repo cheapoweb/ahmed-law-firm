@@ -19,9 +19,9 @@ const Header = () => {
               <span className="nav-dropdown-arrow">▼</span>
             </Link>
             <div className="nav-dropdown-menu">
-              <Link to="/" className="nav-dropdown-item">Home</Link>
-              <Link to="/home-2" className="nav-dropdown-item">Home Variant</Link>
-              <Link to="/home-3" className="nav-dropdown-item">Home Variant 3</Link>
+              <Link to="/" className="nav-dropdown-item">Home (Current)</Link>
+              <Link to="/home-1" className="nav-dropdown-item">Home (Original)</Link>
+              <Link to="/home-2" className="nav-dropdown-item">Home Variant 2</Link>
             </div>
           </div>
           <div className="nav-dropdown">
