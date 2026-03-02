@@ -2,28 +2,39 @@ import { useState, useCallback, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import personalInjuryImage from '../../../../assets/Personal-injury.webp'
 import workersBenefitsImage from '../../../../assets/workers-benefits.webp'
+import autoAccidentsImage from '../../../../assets/Auto Accidents.webp'
+import constructionAccidentsImage from '../../../../assets/Construction Accidents.webp'
+import medicalMalpracticeImage from '../../../../assets/Medical Malpractice.webp'
+import slipFallImage from '../../../../assets/Slip & Fall.webp'
+import wrongfulDeathImage from '../../../../assets/Wrongful Death.webp'
+import pedestrianAccidentsImage from '../../../../assets/Pedestrian Accidents.webp'
+import truckAccidentsImage from '../../../../assets/Truck Accidents.webp'
+import premisesLiabilityImage from '../../../../assets/Premises Liability.webp'
+import workplaceInjuriesImage from '../../../../assets/Workplace Injuries.webp'
+import motorcycleAccidentsImage from '../../../../assets/Motorcycle Accidents.webp'
+import nursingHomeAbuseImage from '../../../../assets/Nursing Home Abuse.webp'
 import './PracticeAreasSection.css'
 
 const AUTO_SCROLL_INTERVAL_MS = 4500
 const VISIBLE_CARDS = 3
 
-/* All practice areas we deal in – no divorce, no immigration */
 const practiceAreas = [
-  { id: 1, title: 'Auto Accidents', image: personalInjuryImage, path: '/practice-areas' },
-  { id: 2, title: 'Construction Accidents', image: workersBenefitsImage, path: '/practice-areas' },
-  { id: 3, title: 'Medical Malpractice', image: personalInjuryImage, path: '/practice-areas' },
-  { id: 4, title: 'Slip & Fall', image: personalInjuryImage, path: '/practice-areas' },
-  { id: 5, title: 'Wrongful Death', image: personalInjuryImage, path: '/practice-areas' },
-  { id: 6, title: 'Pedestrian Accidents', image: personalInjuryImage, path: '/practice-areas' },
-  { id: 7, title: 'Truck Accidents', image: personalInjuryImage, path: '/practice-areas' },
-  { id: 8, title: 'Premises Liability', image: personalInjuryImage, path: '/practice-areas' },
-  { id: 9, title: 'Workplace Injuries', image: workersBenefitsImage, path: '/practice-areas' },
-  { id: 10, title: 'Birth Injury', image: personalInjuryImage, path: '/practice-areas' },
-  { id: 11, title: 'Motorcycle Accidents', image: personalInjuryImage, path: '/practice-areas' },
-  { id: 12, title: 'Nursing Home Abuse', image: personalInjuryImage, path: '/practice-areas' },
+  { id: 1, title: 'Personal Injury', image: personalInjuryImage, path: '/practice-areas' },
+  { id: 2, title: 'Workers Benefits', image: workersBenefitsImage, path: '/practice-areas' },
+  { id: 3, title: 'Auto Accidents', image: autoAccidentsImage, path: '/practice-areas' },
+  { id: 4, title: 'Construction Accidents', image: constructionAccidentsImage, path: '/practice-areas' },
+  { id: 5, title: 'Medical Malpractice', image: medicalMalpracticeImage, path: '/practice-areas' },
+  { id: 6, title: 'Slip & Fall', image: slipFallImage, path: '/practice-areas' },
+  { id: 7, title: 'Wrongful Death', image: wrongfulDeathImage, path: '/practice-areas' },
+  { id: 8, title: 'Pedestrian Accidents', image: pedestrianAccidentsImage, path: '/practice-areas' },
+  { id: 9, title: 'Truck Accidents', image: truckAccidentsImage, path: '/practice-areas' },
+  { id: 10, title: 'Premises Liability', image: premisesLiabilityImage, path: '/practice-areas' },
+  { id: 11, title: 'Workplace Injuries', image: workplaceInjuriesImage, path: '/practice-areas' },
+  { id: 12, title: 'Motorcycle Accidents', image: motorcycleAccidentsImage, path: '/practice-areas' },
+  { id: 13, title: 'Nursing Home Abuse', image: nursingHomeAbuseImage, path: '/practice-areas' },
 ]
 
-/* Duplicated track for seamless loop: [1..12, 1..12, 1, 2] so after 12 we show 1,2 again */
+/* Duplicated track for seamless loop: [1..N, 1..N, 1, 2] so after N we show 1,2 again */
 const trackItems = [
   ...practiceAreas,
   ...practiceAreas,
