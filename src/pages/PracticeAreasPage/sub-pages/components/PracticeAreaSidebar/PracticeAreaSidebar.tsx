@@ -6,12 +6,14 @@ import './PracticeAreaSidebar.css'
 interface PracticeAreaSidebarProps {
   /** Current page slug – used to expand/highlight the right category. */
   currentSlug?: string
+  /** Category slug (e.g. "vehicle-accidents") – used to expand/highlight the right section. */
+  category?: string
 }
 
-export const PracticeAreaSidebar = ({ currentSlug }: PracticeAreaSidebarProps) => {
+export const PracticeAreaSidebar = ({ currentSlug, category }: PracticeAreaSidebarProps) => {
   const location = useLocation()
   const pathSlug = location.pathname.replace('/practice-areas/', '').split('/')[0] ?? ''
-  const slug = currentSlug ?? pathSlug
+  const slug = currentSlug ?? category ?? pathSlug
   const activeCategorySlug = getCategorySlugForPage(slug)
 
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>(() => {
