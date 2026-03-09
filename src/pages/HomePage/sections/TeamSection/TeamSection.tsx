@@ -1,4 +1,3 @@
-import ShapeDivider from '../../../../components/ShapeDivider'
 import abuAhmedImage from '../../../../assets/Abu Ahmed.webp'
 import usmanAhmedImage from '../../../../assets/Usman Ahmed.webp'
 import './TeamSection.css'
@@ -10,7 +9,6 @@ const attorneys = [
 
 export const TeamSection = () => (
   <section className="team-section">
-    <ShapeDivider color="#FFFFFF" />
     <div className="team-container">
       <div className="team-label">OUR PERFORMANCE</div>
       <h2 className="team-heading">

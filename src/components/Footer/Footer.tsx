@@ -1,8 +1,32 @@
-import { Link } from 'react-router-dom'
+import { useState, useRef, useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import logo from '../../assets/logo.png'
 import './Footer.css'
 
 const Footer = () => {
+  const { t } = useTranslation()
+  const [searchOpen, setSearchOpen] = useState(false)
+  const [searchQuery, setSearchQuery] = useState('')
+  const searchInputRef = useRef<HTMLInputElement>(null)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (searchOpen && searchInputRef.current) {
+      searchInputRef.current.focus()
+    }
+  }, [searchOpen])
+
+  const handleSearchSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    const q = searchQuery.trim()
+    if (q) {
+      navigate(`/search?q=${encodeURIComponent(q)}`)
+      setSearchQuery('')
+      setSearchOpen(false)
+    }
+  }
+
   return (
     <footer className="footer">
       {/* Top Section - White Background */}
@@ -11,11 +35,11 @@ const Footer = () => {
           {/* First Row: Logo and Social Icons */}
           <div className="footer-row-1">
             <Link to="/" className="footer-top-left">
-              <img src={logo} alt="Ahmed Law Firm Logo" className="footer-logo" />
+              <img src={logo} alt={t('footer.logoAlt')} className="footer-logo" />
             </Link>
             
             <div className="footer-social">
-              <span className="footer-social-label">Follow Us</span>
+              <span className="footer-social-label">{t('footer.followUs')}</span>
               <div className="footer-social-icons">
                 <a href="#" className="social-icon" aria-label="YouTube">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -44,24 +68,69 @@ const Footer = () => {
           {/* Separator */}
           <div className="footer-separator"></div>
           
-          {/* Second Row: Menu and Search Icon */}
+          {/* Second Row: Menu and Search */}
           <div className="footer-row-2">
             <nav className="footer-nav">
-              <Link to="/about" className="footer-nav-link">About</Link>
-              <Link to="/attorneys" className="footer-nav-link">Attorneys</Link>
-              <Link to="/practice-areas" className="footer-nav-link">Practice Areas</Link>
-              <Link to="/verdicts-settlements" className="footer-nav-link">Verdicts & Settlements</Link>
-              <Link to="/reviews-ratings" className="footer-nav-link">Reviews & Ratings</Link>
-              <a href="/#locations" className="footer-nav-link">Locations</a>
-              <Link to="/legal-resources" className="footer-nav-link">Resources</Link>
-              <Link to="/contact" className="footer-nav-link">Contact</Link>
+              <Link to="/about" className="footer-nav-link">{t('footer.about')}</Link>
+              <Link to="/attorneys" className="footer-nav-link">{t('footer.attorneys')}</Link>
+              <Link to="/practice-areas" className="footer-nav-link">{t('footer.practiceAreas')}</Link>
+              <Link to="/verdicts-settlements" className="footer-nav-link">{t('footer.verdictsSettlements')}</Link>
+              <Link to="/reviews-ratings" className="footer-nav-link">{t('footer.reviewsRatings')}</Link>
+              <a href="/#locations" className="footer-nav-link">{t('footer.locations')}</a>
+              <Link to="/legal-resources" className="footer-nav-link">{t('footer.resources')}</Link>
+              <Link to="/contact" className="footer-nav-link">{t('footer.contact')}</Link>
             </nav>
-            <button className="footer-search-icon" aria-label="Search">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.35-4.35"></path>
-              </svg>
-            </button>
+            <div className="footer-search-wrap">
+              <form className={`footer-search-form ${searchOpen ? 'footer-search-form--open' : ''}`} onSubmit={handleSearchSubmit}>
+                <input
+                  ref={searchInputRef}
+                  type="search"
+                  className="footer-search-input"
+                  placeholder={t('footer.searchPlaceholder')}
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onBlur={() => !searchQuery && setSearchOpen(false)}
+                  aria-label={t('common.search')}
+                />
+                <button type="submit" className="footer-search-submit" aria-label={t('footer.submitSearch')}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                  </svg>
+                </button>
+              </form>
+              <button
+                type="button"
+                className="footer-search-icon footer-search-toggle"
+                onClick={() => setSearchOpen((open) => !open)}
+                aria-label={searchOpen ? t('footer.searchClose') : t('footer.searchOpen')}
+                aria-expanded={searchOpen}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.35-4.35"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          {/* Mobile: full-width search bar (always visible, not as icon) */}
+          <div className="footer-search-mobile">
+            <form className="footer-search-form footer-search-form--mobile" onSubmit={handleSearchSubmit}>
+              <input
+                type="search"
+                className="footer-search-input"
+                placeholder={t('footer.searchPlaceholder')}
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                aria-label={t('common.search')}
+              />
+              <button type="submit" className="footer-search-submit" aria-label={t('footer.submitSearch')}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.35-4.35"></path>
+                </svg>
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -71,21 +140,21 @@ const Footer = () => {
         <div className="footer-bottom-container">
           <div className="footer-bottom-content">
             <div className="footer-bottom-left">
-              <p>Ahmed Law Firm is located in South Richmond Hill, NY and serves clients throughout Long Island, including Nassau County, Queens County, The Bronx, Brooklyn, NYC, and Suffolk County.</p>
+              <p>{t('footer.locationText')}</p>
             </div>
             
             <div className="footer-bottom-right">
-              <p className="footer-disclaimer">Attorney Advertising. This website is designed for general information only. The information presented at this site should not be construed to be formal legal advice nor the formation of a lawyer/client relationship.</p>
+              <p className="footer-disclaimer">{t('footer.disclaimer')}</p>
               <div className="footer-links-bottom">
-                <a href="#sitemap">Site Map</a>
+                <a href="#sitemap">{t('footer.sitemap')}</a>
                 <span> | </span>
-                <a href="https://www.lawyers.com" target="_blank" rel="noopener noreferrer">See our profile at Lawyers.com</a>
+                <a href="https://www.lawyers.com" target="_blank" rel="noopener noreferrer">{t('footer.lawyersProfile')}</a>
               </div>
             </div>
           </div>
           
           <div className="footer-copyright">
-            <p>&copy; 2026 Ahmed Law Firm. All rights reserved.</p>
+            <p>{t('footer.copyright')}</p>
           </div>
         </div>
       </div>

@@ -1,37 +1,50 @@
+import { useTranslation } from 'react-i18next'
 import './AwardsSection.css'
 
-const lawAwards = [
-  { id: 1, name: 'Best Lawyers' },
-  { id: 2, name: 'Super Lawyers' },
-  { id: 3, name: 'Martindale-Hubbell' },
-  { id: 4, name: 'AV Preeminent' },
-  { id: 5, name: 'Legal 500' },
-  { id: 6, name: 'Chambers USA' },
-  { id: 7, name: 'Law360' },
-  { id: 8, name: 'Trial Lawyers' },
-  { id: 9, name: 'Million Dollar' },
-  { id: 10, name: 'Multi-Million Dollar' },
-  { id: 11, name: 'Top Verdict' },
-  { id: 12, name: 'National Trial Lawyers' },
+const awardKeys = [
+  'sections.awards.bestLawyers',
+  'sections.awards.superLawyers',
+  'sections.awards.martindaleHubbell',
+  'sections.awards.avPreeminent',
+  'sections.awards.legal500',
+  'sections.awards.chambersUSA',
+  'sections.awards.law360',
+  'sections.awards.trialLawyers',
+  'sections.awards.millionDollar',
+  'sections.awards.multiMillionDollar',
+  'sections.awards.topVerdict',
+  'sections.awards.nationalTrialLawyers',
 ]
 
 const AwardsSection = () => {
+  const { t } = useTranslation()
   return (
     <section className="hp3-awards-section">
       <div className="hp3-awards-container">
-        <p className="hp3-awards-label">OUR AWARDS</p>
+        <p className="hp3-awards-label">{t('sections.awards.label')}</p>
         <h2 className="hp3-awards-heading">
-          Recognized For <em>Excellence</em>
+          {t('sections.awards.heading')} <em>{t('sections.awards.headingEm')}</em>
         </h2>
         <div className="hp3-awards-carousel">
           <div className="hp3-awards-track">
-            {[...lawAwards, ...lawAwards].map((award) => (
-              <div key={`${award.id}-${award.name}`} className="hp3-awards-item">
-                <div className="hp3-awards-placeholder">
-                  <span className="hp3-awards-placeholder-text">{award.name}</span>
+            <div className="hp3-awards-track-half" aria-hidden>
+              {awardKeys.map((key, index) => (
+                <div key={`award-a-${index}`} className="hp3-awards-item">
+                  <div className="hp3-awards-placeholder">
+                    <span className="hp3-awards-placeholder-text">{t(key)}</span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            <div className="hp3-awards-track-half" aria-hidden>
+              {awardKeys.map((key, index) => (
+                <div key={`award-b-${index}`} className="hp3-awards-item">
+                  <div className="hp3-awards-placeholder">
+                    <span className="hp3-awards-placeholder-text">{t(key)}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

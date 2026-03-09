@@ -4,8 +4,55 @@
   background-color: #ffffff;
 }
 
+/* Intro section – homepage style */
+.legal-blog-intro {
+  width: 100%;
+  padding: 3rem 2rem 3.5rem;
+  background-color: #f8f8f8;
+}
+
+.legal-blog-intro-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.legal-blog-intro-label {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #6B778D;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+}
+
+.legal-blog-intro-heading {
+  font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: #233041;
+  margin: 0 0 1rem 0;
+  line-height: 1.3;
+}
+
+.legal-blog-intro-heading em {
+  font-style: italic;
+  font-weight: inherit;
+  color: #D4AF37;
+}
+
+.legal-blog-intro-text {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 1.05rem;
+  color: #555555;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Main content area */
 .legal-blog-main {
-  padding: 0 0 4rem 0;
+  padding: 4rem 2rem 5rem;
   background-color: #ffffff;
 }
 
@@ -14,66 +61,145 @@
   margin: 0 auto;
   padding: 0 2rem;
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 320px 1fr;
   gap: 3rem;
   align-items: start;
 }
 
+/* Sidebar – same structure and style as Practice Areas page sidebar */
 .legal-blog-sidebar {
+  width: 320px;
+  background-color: #233041;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  min-height: fit-content;
   position: sticky;
-  top: 2rem;
+  top: 100px;
+  align-self: flex-start;
+  overflow: visible;
+  box-sizing: border-box;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
-.legal-blog-sidebar-block {
-  margin-bottom: 2rem;
+.legal-blog-sidebar-inner {
+  width: 100%;
+  flex-shrink: 0;
 }
 
-.legal-blog-sidebar-title {
-  font-family: 'Inter', 'Inter Fallback', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: #233041;
+.legal-blog-sidebar .sidebar-section-title {
+  font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
   margin: 0 0 1rem 0;
-  text-transform: uppercase;
+  line-height: 1.3;
 }
 
-.legal-blog-sidebar-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.legal-blog-sidebar .sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow: visible;
 }
 
-.legal-blog-sidebar-list li {
-  margin-bottom: 0.5rem;
+.legal-blog-sidebar .sidebar-collapsible-block {
+  margin-top: 0.5rem;
 }
 
-.legal-blog-sidebar-link {
+.legal-blog-sidebar .sidebar-section-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-family: 'Inter', 'Inter Fallback', sans-serif;
   font-size: 0.95rem;
-  color: #1a56b0;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s ease;
+  margin-bottom: 0.25rem;
+}
+
+.legal-blog-sidebar .sidebar-section-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.legal-blog-sidebar .sidebar-section-toggle .dropdown-chevron {
+  transform: rotate(0deg);
+  transition: transform 0.2s ease;
+  font-size: 0.7rem;
+  display: inline-block;
+}
+
+.legal-blog-sidebar .sidebar-section-toggle.expanded .dropdown-chevron {
+  transform: rotate(180deg);
+}
+
+.legal-blog-sidebar .sidebar-collapsible-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.legal-blog-sidebar .sidebar-nav-link {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #ffffff;
   text-decoration: none;
-  transition: color 0.2s ease;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: block;
 }
 
-.legal-blog-sidebar-link:hover {
-  color: #233041;
-  text-decoration: underline;
+.legal-blog-sidebar .sidebar-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }
 
+/* Blog content */
 .legal-blog-content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 0;
+}
+
+.legal-blog-posts-heading {
+  font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
+  font-size: clamp(1.5rem, 2.5vw, 1.85rem);
+  font-weight: 600;
+  color: #233041;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #D4AF37;
 }
 
 .legal-blog-card {
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  border: 1px solid rgba(35, 48, 65, 0.1);
+  border-radius: 12px;
+  padding: 1.75rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  border-left: 4px solid #D4AF37;
 }
 
-.legal-blog-card:last-child {
-  border-bottom: none;
+.legal-blog-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border-color: rgba(212, 175, 55, 0.35);
 }
 
 .legal-blog-card-title {
@@ -81,38 +207,40 @@
   font-size: clamp(1.25rem, 2vw, 1.5rem);
   font-weight: 600;
   margin: 0 0 0.75rem 0;
-  line-height: 1.3;
+  line-height: 1.35;
 }
 
 .legal-blog-card-title-link {
-  color: #1a56b0;
+  color: #233041;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .legal-blog-card-title-link:hover {
-  color: #233041;
-  text-decoration: underline;
+  color: #D4AF37;
 }
 
 .legal-blog-card-excerpt {
   font-family: 'Inter', 'Inter Fallback', sans-serif;
   font-size: 1rem;
-  color: #444444;
+  color: #555555;
   line-height: 1.65;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.75rem 0;
 }
 
 .legal-blog-card-date {
   font-family: 'Inter', 'Inter Fallback', sans-serif;
-  font-size: 0.875rem;
-  color: #888888;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #D4AF37;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-/* CTA section */
+/* CTA section – navy with gold accents */
 .legal-blog-cta-section {
   background-color: #233041;
-  padding: 4rem 0;
+  padding: 4rem 2rem 5rem;
   color: #ffffff;
 }
 
@@ -122,12 +250,31 @@
   padding: 0 2rem;
 }
 
+.legal-blog-cta-label {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
 .legal-blog-cta-heading {
   font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
   font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-weight: 600;
   margin: 0 0 1rem 0;
   text-align: center;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.legal-blog-cta-heading em {
+  font-style: italic;
+  font-weight: inherit;
+  color: #D4AF37;
 }
 
 .legal-blog-cta-sub {
@@ -157,15 +304,23 @@
   font-family: 'Inter', 'Inter Fallback', sans-serif;
   font-size: 1rem;
   padding: 0.75rem 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.08);
   color: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.legal-blog-cta-input:focus,
+.legal-blog-cta-textarea:focus {
+  outline: none;
+  border-color: #D4AF37;
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
 }
 
 .legal-blog-cta-input::placeholder,
 .legal-blog-cta-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .legal-blog-cta-textarea {
@@ -180,20 +335,21 @@
   padding: 0.875rem 1.5rem;
   background: #D4AF37;
   color: #233041;
-  border: none;
-  border-radius: 6px;
+  border: 2px solid #D4AF37;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .legal-blog-cta-submit:hover {
-  background: #e5c04a;
+  background: transparent;
+  color: #D4AF37;
 }
 
 .legal-blog-cta-media {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
@@ -202,48 +358,99 @@
   align-items: center;
   gap: 0.5rem;
   padding: 1rem 1.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
   color: #ffffff;
   text-decoration: none;
   font-family: 'Inter', 'Inter Fallback', sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .legal-blog-cta-media-card:hover {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(212, 175, 55, 0.2);
+  border-color: #D4AF37;
+  color: #D4AF37;
 }
 
 .legal-blog-cta-media-icon {
   font-size: 1.1rem;
 }
 
+/* Responsive */
 @media (max-width: 968px) {
+  .legal-blog-intro {
+    padding: 2.5rem 1.5rem 3rem;
+  }
+
+  .legal-blog-main {
+    padding: 3rem 1.5rem 4rem;
+  }
+
   .legal-blog-container {
     grid-template-columns: 1fr;
     padding: 0 1.5rem;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Mobile: show articles first, sidebar at bottom */
+  .legal-blog-content {
+    order: 1;
   }
 
   .legal-blog-sidebar {
-    position: static;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
+    order: 2;
+    position: relative;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5rem 1.25rem;
+    border-radius: 15px;
   }
 
   .legal-blog-cta-form-row {
     grid-template-columns: 1fr;
   }
+
+  .legal-blog-cta-section {
+    padding: 3rem 1.5rem 4rem;
+  }
 }
 
 @media (max-width: 640px) {
+  .legal-blog-intro {
+    padding: 2rem 1rem 2.5rem;
+  }
+
+  .legal-blog-intro-label {
+    font-size: 0.8rem;
+  }
+
+  .legal-blog-main {
+    padding: 2.5rem 1rem 3rem;
+  }
+
   .legal-blog-container {
     padding: 0 1rem;
   }
 
+  .legal-blog-sidebar {
+    padding: 1.25rem 1rem;
+  }
+
+  .legal-blog-card {
+    padding: 1.25rem;
+  }
+
   .legal-blog-cta-container {
     padding: 0 1rem;
+  }
+
+  .legal-blog-cta-section {
+    padding: 2.5rem 1rem 3rem;
   }
 }

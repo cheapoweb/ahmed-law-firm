@@ -4,8 +4,66 @@
   background-color: #ffffff;
 }
 
+/* Intro section */
+.contact-intro-section {
+  width: 100%;
+  padding: 3rem 2rem 3.5rem;
+  background-color: #f8f8f8;
+}
+
+.contact-intro-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-intro-label {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #6B778D;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+}
+
+.contact-intro-heading {
+  font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: #233041;
+  margin: 0 0 1rem 0;
+  line-height: 1.3;
+}
+
+.contact-intro-heading em {
+  font-style: italic;
+  font-weight: inherit;
+  color: #D4AF37;
+}
+
+.contact-intro-text {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 1.05rem;
+  color: #555555;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.contact-intro-text a {
+  color: #233041;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid #D4AF37;
+}
+
+.contact-intro-text a:hover {
+  color: #D4AF37;
+}
+
+/* Main layout */
 .contact-main {
-  padding: 0 0 4rem 0;
+  padding: 4rem 2rem 5rem;
   background-color: #ffffff;
 }
 
@@ -14,137 +72,174 @@
   margin: 0 auto;
   padding: 0 2rem;
   display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 2.5rem;
+  grid-template-columns: 320px 1fr;
+  gap: 3rem;
   align-items: start;
 }
 
-/* Sidebar */
+/* Sidebar – same as Legal Blog / Practice Areas */
 .contact-sidebar {
-  position: sticky;
-  top: 2rem;
+  width: 320px;
   background-color: #233041;
-  color: #ffffff;
-  padding: 1.5rem;
-  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  min-height: fit-content;
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+  overflow: visible;
+  box-sizing: border-box;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
-.contact-sidebar-heading {
+.contact-sidebar-inner {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.contact-sidebar .sidebar-section-title {
   font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin: 0 0 0.5rem 0;
+  color: #ffffff;
+  margin: 0 0 1rem 0;
+  line-height: 1.3;
 }
 
-.contact-sidebar-sub {
-  font-family: 'Inter', 'Inter Fallback', sans-serif;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.85);
-  margin: 0 0 1.25rem 0;
-  line-height: 1.4;
-}
-
-.contact-sidebar-nav {
+.contact-sidebar .sidebar-nav {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  overflow: visible;
 }
 
-.contact-sidebar-link {
-  display: block;
+.contact-sidebar .sidebar-collapsible-block {
+  margin-top: 0.5rem;
+}
+
+.contact-sidebar .sidebar-section-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-family: 'Inter', 'Inter Fallback', sans-serif;
   font-size: 0.95rem;
-  padding: 0.65rem 1rem;
-  background: rgba(255, 255, 255, 0.12);
+  font-weight: 600;
   color: #ffffff;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s ease;
+  margin-bottom: 0.25rem;
 }
 
-.contact-sidebar-link:hover {
-  background: rgba(255, 255, 255, 0.22);
+.contact-sidebar .sidebar-section-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.contact-sidebar .sidebar-section-toggle .dropdown-chevron {
+  transform: rotate(0deg);
+  transition: transform 0.2s ease;
+  font-size: 0.7rem;
+  display: inline-block;
+}
+
+.contact-sidebar .sidebar-section-toggle.expanded .dropdown-chevron {
+  transform: rotate(180deg);
+}
+
+.contact-sidebar .sidebar-collapsible-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.contact-sidebar .sidebar-nav-link {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: block;
+}
+
+.contact-sidebar .sidebar-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.contact-sidebar-contact .sidebar-nav-link {
+  word-break: break-word;
 }
 
 /* Content */
 .contact-content {
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.contact-breadcrumb {
-  font-family: 'Inter', 'Inter Fallback', sans-serif;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
+.contact-content-card {
+  background: #ffffff;
+  border: 1px solid rgba(35, 48, 65, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #D4AF37;
 }
 
-.contact-breadcrumb a {
-  color: #1a56b0;
-  text-decoration: none;
-}
-
-.contact-breadcrumb a:hover {
-  text-decoration: underline;
-}
-
-.contact-breadcrumb-sep {
-  margin: 0 0.4rem;
-  color: #888888;
-}
-
-.contact-title {
+.contact-heading {
   font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-size: clamp(1.5rem, 2.5vw, 1.85rem);
   font-weight: 600;
   color: #233041;
-  margin: 0 0 1.25rem 0;
-  line-height: 1.3;
+  margin: 0 0 0.75rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #D4AF37;
 }
 
-.contact-intro {
-  margin-bottom: 2rem;
-}
-
-.contact-intro p {
+.contact-content-intro {
   font-family: 'Inter', 'Inter Fallback', sans-serif;
   font-size: 1rem;
-  color: #444444;
+  color: #555555;
   line-height: 1.65;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.5rem 0;
 }
 
-.contact-intro a {
-  color: #1a56b0;
+.contact-content-intro a {
+  color: #233041;
+  font-weight: 600;
   text-decoration: none;
+  border-bottom: 1px solid #D4AF37;
 }
 
-.contact-intro a:hover {
-  text-decoration: underline;
+.contact-content-intro a:hover {
+  color: #D4AF37;
 }
 
 /* Form */
 .contact-form {
-  margin-bottom: 2.5rem;
-}
-
-.contact-fieldset {
-  border: none;
-  margin: 0 0 1.5rem 0;
-  padding: 0;
-}
-
-.contact-legend {
-  font-family: 'Inter', 'Inter Fallback', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #233041;
-  margin-bottom: 0.75rem;
-  padding: 0;
+  margin-top: 0.5rem;
 }
 
 .contact-form-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .contact-form-group {
@@ -153,11 +248,15 @@
   gap: 0.35rem;
 }
 
+.contact-form-group-full {
+  grid-column: 1 / -1;
+}
+
 .contact-form-group label {
   font-family: 'Inter', 'Inter Fallback', sans-serif;
   font-size: 0.9rem;
-  font-weight: 500;
-  color: #333333;
+  font-weight: 600;
+  color: #233041;
 }
 
 .contact-form-group input,
@@ -165,29 +264,32 @@
 .contact-form-group textarea {
   font-family: 'Inter', 'Inter Fallback', sans-serif;
   font-size: 1rem;
-  padding: 0.6rem 0.75rem;
-  border: 1px solid #cccccc;
-  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(35, 48, 65, 0.2);
+  border-radius: 8px;
   background: #ffffff;
   color: #333333;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form-group input:focus,
+.contact-form-group select:focus,
+.contact-form-group textarea:focus {
+  outline: none;
+  border-color: #D4AF37;
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.15);
 }
 
 .contact-form-group textarea {
   resize: vertical;
-  min-height: 120px;
-}
-
-.contact-pref-label {
-  font-family: 'Inter', 'Inter Fallback', sans-serif;
-  font-size: 0.95rem;
-  color: #555555;
-  margin: 0 0 0.5rem 0;
+  min-height: 100px;
 }
 
 .contact-checkbox-group {
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
 .contact-checkbox-label {
@@ -203,15 +305,7 @@
 .contact-checkbox-label input {
   width: 1.1rem;
   height: 1.1rem;
-}
-
-.contact-checkbox-label a {
-  color: #1a56b0;
-  text-decoration: none;
-}
-
-.contact-checkbox-label a:hover {
-  text-decoration: underline;
+  accent-color: #D4AF37;
 }
 
 .contact-disclaimer {
@@ -222,40 +316,47 @@
   font-family: 'Inter', 'Inter Fallback', sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  background: #555555;
-  color: #ffffff;
-  border: none;
-  border-radius: 6px;
+  padding: 0.9rem 1.75rem;
+  background: #D4AF37;
+  color: #233041;
+  border: 2px solid #D4AF37;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .contact-submit:hover {
-  background: #233041;
+  background: transparent;
+  color: #D4AF37;
 }
 
-/* Map */
-.contact-map-section {
-  margin-top: 2rem;
+/* Map card */
+.contact-map-card {
+  background: #ffffff;
+  border: 1px solid rgba(35, 48, 65, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
 }
 
 .contact-map-heading {
   font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
-  font-size: 1.35rem;
+  font-size: clamp(1.35rem, 2vw, 1.6rem);
   font-weight: 600;
   color: #233041;
   margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #D4AF37;
 }
 
 .contact-map-wrapper {
   position: relative;
   width: 100%;
   height: 320px;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
   background: #e8e8e8;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .contact-map-iframe {
@@ -276,7 +377,8 @@
 .contact-map-name {
   font-weight: 700;
   color: #233041;
-  margin: 0 0 0.25rem 0;
+  margin: 0 0 0.35rem 0;
+  font-size: 1.05rem;
 }
 
 .contact-map-address,
@@ -289,35 +391,38 @@
 }
 
 .contact-map-phone a {
-  color: #1a56b0;
+  color: #233041;
+  font-weight: 600;
   text-decoration: none;
 }
 
 .contact-map-phone a:hover {
-  text-decoration: underline;
+  color: #D4AF37;
 }
 
 .contact-map-directions {
   display: inline-block;
   font-family: 'Inter', 'Inter Fallback', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.25rem;
   background: #233041;
   color: #ffffff;
   text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.2s ease;
+  border-radius: 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+  border: 2px solid #233041;
 }
 
 .contact-map-directions:hover {
-  background: #1a2635;
+  background: transparent;
+  color: #233041;
 }
 
 /* Media section */
 .contact-media-section {
   background-color: #233041;
-  padding: 4rem 0;
+  padding: 4rem 2rem 5rem;
   color: #ffffff;
 }
 
@@ -327,12 +432,31 @@
   padding: 0 2rem;
 }
 
+.contact-media-label {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
 .contact-media-heading {
   font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
-  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-weight: 600;
   text-align: center;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 2rem 0;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.contact-media-heading em {
+  font-style: italic;
+  font-weight: inherit;
+  color: #D4AF37;
 }
 
 .contact-media-cards {
@@ -345,16 +469,19 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1.25rem;
+  padding: 1.5rem;
   background: rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
   color: #ffffff;
   text-decoration: none;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .contact-media-card:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(212, 175, 55, 0.2);
+  border-color: #D4AF37;
+  color: #D4AF37;
 }
 
 .contact-media-icon {
@@ -365,22 +492,40 @@
 .contact-media-text {
   font-family: 'Inter', 'Inter Fallback', sans-serif;
   font-size: 0.95rem;
+  font-weight: 500;
   line-height: 1.4;
 }
 
+/* Responsive */
 @media (max-width: 968px) {
+  .contact-intro-section {
+    padding: 2.5rem 1.5rem 3rem;
+  }
+
+  .contact-main {
+    padding: 3rem 1.5rem 4rem;
+  }
+
   .contact-container {
     grid-template-columns: 1fr;
     padding: 0 1.5rem;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-content {
+    order: 1;
   }
 
   .contact-sidebar {
-    position: static;
-  }
-
-  .contact-sidebar-nav {
-    flex-direction: row;
-    flex-wrap: wrap;
+    order: 2;
+    position: relative;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5rem 1.25rem;
+    border-radius: 15px;
   }
 
   .contact-form-grid {
@@ -390,15 +535,44 @@
   .contact-media-cards {
     grid-template-columns: 1fr;
   }
+
+  .contact-media-section {
+    padding: 3rem 1.5rem 4rem;
+  }
 }
 
 @media (max-width: 640px) {
+  .contact-intro-section {
+    padding: 2rem 1rem 2.5rem;
+  }
+
+  .contact-intro-label {
+    font-size: 0.8rem;
+  }
+
+  .contact-main {
+    padding: 2.5rem 1rem 3rem;
+  }
+
   .contact-container {
     padding: 0 1rem;
   }
 
+  .contact-content-card,
+  .contact-map-card {
+    padding: 1.5rem;
+  }
+
+  .contact-sidebar {
+    padding: 1.25rem 1rem;
+  }
+
   .contact-media-container {
     padding: 0 1rem;
+  }
+
+  .contact-media-section {
+    padding: 2.5rem 1rem 3rem;
   }
 
   .contact-map-wrapper {

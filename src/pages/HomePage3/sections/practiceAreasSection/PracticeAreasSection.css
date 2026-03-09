@@ -69,6 +69,11 @@
   box-shadow: 0 4px 16px rgba(35, 48, 65, 0.25);
 }
 
+.hp3-practice-arrow:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .hp3-practice-arrow--prev {
   margin-right: 0.25rem;
 }
@@ -84,18 +89,18 @@
   border-radius: 16px;
 }
 
-/* Track width = (26 cards) * (1/3 of viewport) so one card = exactly 1/3 viewport */
+/* Track width = (14 items) * (1/3 of viewport) so 3 cards visible; matches TRACK_LENGTH in JS */
 .hp3-practice-track {
   display: flex;
-  width: calc(100% * 26 / 3);
+  width: calc(100% * 14 / 3);
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
 }
 
-/* Each slot = 1/26 of track = one card = 1/3 of viewport, so one full card scrolls out per step */
+/* Each slot = 1/14 of track = one card = 1/3 of viewport */
 .hp3-practice-card-wrap {
   flex: 0 0 auto;
-  width: calc(100% / 26);
+  width: calc(100% / 14);
   padding: 0 0.75rem;
   box-sizing: border-box;
 }
@@ -146,6 +151,52 @@
 
 .hp3-practice-card:hover .hp3-practice-card-title {
   color: #1a2634;
+}
+
+/* Skeleton state while i18n/translations are loading */
+.hp3-practice-skeleton-track {
+  width: 100%;
+}
+
+.hp3-practice-skeleton-track .hp3-practice-card-wrap {
+  width: calc(100% / 3);
+}
+
+.hp3-practice-card--skeleton {
+  cursor: default;
+  pointer-events: none;
+}
+
+.hp3-practice-card-image--skeleton {
+  background: linear-gradient(
+    90deg,
+    #e8eaef 0%,
+    #f0f2f6 50%,
+    #e8eaef 100%
+  ) !important;
+  background-size: 200% 100%;
+  animation: hp3-practice-shimmer 1.2s ease-in-out infinite;
+}
+
+.hp3-practice-card-title--skeleton {
+  display: block;
+  height: 1.25rem;
+  margin: 0 1rem;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    #e8eaef 0%,
+    #f0f2f6 50%,
+    #e8eaef 100%
+  );
+  background-size: 200% 100%;
+  animation: hp3-practice-shimmer 1.2s ease-in-out infinite;
+  animation-delay: 0.1s;
+}
+
+@keyframes hp3-practice-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
 .hp3-practice-dots {
@@ -234,6 +285,10 @@
     padding: 0 1rem;
   }
 
+  .hp3-practice-slider-wrap {
+    gap: 0.5rem;
+  }
+
   .hp3-practice-label {
     font-size: 0.8rem;
   }
@@ -242,8 +297,26 @@
     font-size: 2rem;
   }
 
+  /* 1 card = 1 slide: track has 14 items, each card = 100% of slider (matches TRACK_LENGTH) */
+  .hp3-practice-track {
+    width: calc(100% * 14);
+  }
+
   .hp3-practice-card-wrap {
-    flex: 0 0 100%;
+    flex: 0 0 auto;
+    width: calc(100% / 14);
+    padding: 0 0.5rem;
+  }
+
+  /* Shorter card on mobile: fixed image height so card isn’t overly tall */
+  .hp3-practice-card-image {
+    padding-top: 0;
+    height: 165px;
+  }
+
+  .hp3-practice-card-title {
+    padding: 1rem 1rem 1.2rem;
+    font-size: 1rem;
   }
 
   .hp3-practice-arrow {
@@ -256,7 +329,8 @@
   }
 
   .hp3-practice-cta {
-    width: 100%;
-    max-width: 320px;
+    padding: 0.7rem 1rem;
+    font-size: 0.75rem;
+    width: auto;
   }
 }

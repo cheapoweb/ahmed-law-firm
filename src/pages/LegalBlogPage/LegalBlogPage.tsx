@@ -1,22 +1,10 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import Footer from '../../components/Footer'
 import PageBanner from '../../components/PageBanner'
-import ShapeDivider from '../../components/ShapeDivider'
+import { PRACTICE_AREAS_CATEGORIES } from '../PracticeAreasPage/practiceAreasConfig'
 import './LegalBlogPage.css'
-
-const practiceAreas = [
-  { label: 'Car Accidents', to: '/practice-areas/car-accidents' },
-  { label: 'Construction Accidents', to: '/practice-areas' },
-  { label: 'Personal Injury', to: '/practice-areas' },
-  { label: 'Motorcycle Accidents', to: '/practice-areas/motorcycle-accidents' },
-  { label: 'Medical Malpractice', to: '/practice-areas' },
-  { label: 'Wrongful Death', to: '/practice-areas' },
-  { label: 'Premises Liability', to: '/practice-areas' },
-  { label: 'Truck Accidents', to: '/practice-areas/truck-accidents' },
-  { label: 'Mass Transit Accidents', to: '/practice-areas/bus-accidents' },
-  { label: 'Workers\' Compensation', to: '/practice-areas' },
-  { label: 'Nursing Home Neglect', to: '/practice-areas' },
-]
 
 const faqLinks = [
   'What is the average settlement for a car accident in NY?',
@@ -58,50 +46,108 @@ const blogPosts = [
 ]
 
 const LegalBlogPage = () => {
+  const { t } = useTranslation()
+  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
+    practiceAreas: true,
+    faq: true,
+    recentNews: true,
+  })
+
+  const toggleSection = (key: string) => {
+    setExpandedSections((prev) => ({ ...prev, [key]: !prev[key] }))
+  }
+
   return (
     <div className="legal-blog-page">
       <PageBanner
-        title="Ahmed Law Firm's Blog"
-        subtitle="Insights on personal injury law, your rights, and how we help clients across New York"
+        title={t('pages.legalBlog.bannerTitle')}
+        subtitle={t('pages.legalBlog.bannerSubtitle')}
       />
 
+      <section className="legal-blog-intro">
+        <div className="legal-blog-intro-container">
+          <p className="legal-blog-intro-label">{t('pages.contact.learnMore')}</p>
+          <h2 className="legal-blog-intro-heading">
+            {t('pages.legalBlog.introHeading', 'Our Blog,')} <em>{t('pages.legalBlog.introHeadingEm', 'Your Rights')}</em>
+          </h2>
+          <p className="legal-blog-intro-text">
+            {t('pages.legalBlog.bannerSubtitle')}
+          </p>
+        </div>
+      </section>
+
       <section className="legal-blog-main">
-        <ShapeDivider color="#FFFFFF" />
         <div className="legal-blog-container">
           <aside className="legal-blog-sidebar">
-            <div className="legal-blog-sidebar-block">
-              <h3 className="legal-blog-sidebar-title">Practice Areas</h3>
-              <ul className="legal-blog-sidebar-list">
-                {practiceAreas.map((pa) => (
-                  <li key={pa.label}>
-                    <Link to={pa.to} className="legal-blog-sidebar-link">{pa.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="legal-blog-sidebar-block">
-              <h3 className="legal-blog-sidebar-title">FAQ</h3>
-              <ul className="legal-blog-sidebar-list">
-                {faqLinks.map((q) => (
-                  <li key={q}>
-                    <Link to="/faq" className="legal-blog-sidebar-link">{q}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="legal-blog-sidebar-block">
-              <h3 className="legal-blog-sidebar-title">Recent News</h3>
-              <ul className="legal-blog-sidebar-list">
-                {recentPosts.map((p) => (
-                  <li key={p.title}>
-                    <Link to={p.to} className="legal-blog-sidebar-link">{p.title}</Link>
-                  </li>
-                ))}
-              </ul>
+            <div className="legal-blog-sidebar-inner">
+              <h2 className="sidebar-section-title">{t('pages.contact.quickLinks')}</h2>
+              <nav className="sidebar-nav">
+                <div className="sidebar-collapsible-block">
+                  <button
+                    type="button"
+                    className={`sidebar-section-toggle ${expandedSections.practiceAreas ? 'expanded' : ''}`}
+                    onClick={() => toggleSection('practiceAreas')}
+                    aria-expanded={expandedSections.practiceAreas}
+                  >
+                    <span>{t('header.practiceAreas')}</span>
+                    <span className="dropdown-chevron">▼</span>
+                  </button>
+                  {expandedSections.practiceAreas && (
+                    <div className="sidebar-collapsible-content">
+                      {PRACTICE_AREAS_CATEGORIES.map((cat) => (
+                        <Link key={cat.slug} to={cat.path} className="sidebar-nav-link">
+                          {t(`practiceAreas.${cat.slug}`)}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <div className="sidebar-collapsible-block">
+                  <button
+                    type="button"
+                    className={`sidebar-section-toggle ${expandedSections.faq ? 'expanded' : ''}`}
+                    onClick={() => toggleSection('faq')}
+                    aria-expanded={expandedSections.faq}
+                  >
+                    <span>{t('header.faq')}</span>
+                    <span className="dropdown-chevron">▼</span>
+                  </button>
+                  {expandedSections.faq && (
+                    <div className="sidebar-collapsible-content">
+                      {faqLinks.map((q) => (
+                        <Link key={q} to="/faq" className="sidebar-nav-link">
+                          {q}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <div className="sidebar-collapsible-block">
+                  <button
+                    type="button"
+                    className={`sidebar-section-toggle ${expandedSections.recentNews ? 'expanded' : ''}`}
+                    onClick={() => toggleSection('recentNews')}
+                    aria-expanded={expandedSections.recentNews}
+                  >
+                    <span>{t('pages.legalBlog.recentNews', 'Recent News')}</span>
+                    <span className="dropdown-chevron">▼</span>
+                  </button>
+                  {expandedSections.recentNews && (
+                    <div className="sidebar-collapsible-content">
+                      {recentPosts.map((p) => (
+                        <Link key={p.title} to={p.to} className="sidebar-nav-link">
+                          {p.title}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </nav>
             </div>
           </aside>
 
           <div className="legal-blog-content">
+            <h2 className="legal-blog-posts-heading">{t('pages.legalBlog.recentArticles', 'Recent Articles')}</h2>
             {blogPosts.map((post) => (
               <article key={post.id} className="legal-blog-card">
                 <h2 className="legal-blog-card-title">
@@ -116,11 +162,11 @@ const LegalBlogPage = () => {
       </section>
 
       <section className="legal-blog-cta-section">
-        <ShapeDivider color="#233041" />
         <div className="legal-blog-cta-container">
-          <h2 className="legal-blog-cta-heading">Speak with a Qualified New York Injury Lawyer Today</h2>
+          <p className="legal-blog-cta-label">{t('pages.contact.introLabel')}</p>
+          <h2 className="legal-blog-cta-heading">{t('pages.legalBlog.ctaHeading', 'Speak with a Qualified New York Injury Lawyer Today')}</h2>
           <p className="legal-blog-cta-sub">
-            Get a free consultation. Our team is ready to listen and help you understand your options.
+            {t('pages.legalBlog.ctaSub', 'Get a free consultation. Our team is ready to listen and help you understand your options.')}
           </p>
           <form className="legal-blog-cta-form" onSubmit={(e) => e.preventDefault()}>
             <div className="legal-blog-cta-form-row">

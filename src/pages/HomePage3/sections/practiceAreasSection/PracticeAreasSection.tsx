@@ -1,38 +1,35 @@
 import { useState, useCallback, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { useLanguage } from '../../../../context/LanguageContext'
+import { PRACTICE_AREAS_CATEGORIES } from '../../../../pages/PracticeAreasPage/practiceAreasConfig'
 import personalInjuryImage from '../../../../assets/Personal-injury.webp'
 import workersBenefitsImage from '../../../../assets/workers-benefits.webp'
 import autoAccidentsImage from '../../../../assets/Auto Accidents.webp'
-import constructionAccidentsImage from '../../../../assets/Construction Accidents.webp'
 import medicalMalpracticeImage from '../../../../assets/Medical Malpractice.webp'
-import slipFallImage from '../../../../assets/Slip & Fall.webp'
-import wrongfulDeathImage from '../../../../assets/Wrongful Death.webp'
-import pedestrianAccidentsImage from '../../../../assets/Pedestrian Accidents.webp'
 import truckAccidentsImage from '../../../../assets/Truck Accidents.webp'
-import premisesLiabilityImage from '../../../../assets/Premises Liability.webp'
-import workplaceInjuriesImage from '../../../../assets/Workplace Injuries.webp'
-import motorcycleAccidentsImage from '../../../../assets/Motorcycle Accidents.webp'
-import nursingHomeAbuseImage from '../../../../assets/Nursing Home Abuse.webp'
+import wrongfulDeathImage from '../../../../assets/Wrongful Death.webp'
 import './PracticeAreasSection.css'
 
 const AUTO_SCROLL_INTERVAL_MS = 4500
 const VISIBLE_CARDS = 3
 
-const practiceAreas = [
-  { id: 1, title: 'Personal Injury', image: personalInjuryImage, path: '/practice-areas' },
-  { id: 2, title: 'Workers Benefits', image: workersBenefitsImage, path: '/practice-areas' },
-  { id: 3, title: 'Auto Accidents', image: autoAccidentsImage, path: '/practice-areas' },
-  { id: 4, title: 'Construction Accidents', image: constructionAccidentsImage, path: '/practice-areas' },
-  { id: 5, title: 'Medical Malpractice', image: medicalMalpracticeImage, path: '/practice-areas' },
-  { id: 6, title: 'Slip & Fall', image: slipFallImage, path: '/practice-areas' },
-  { id: 7, title: 'Wrongful Death', image: wrongfulDeathImage, path: '/practice-areas' },
-  { id: 8, title: 'Pedestrian Accidents', image: pedestrianAccidentsImage, path: '/practice-areas' },
-  { id: 9, title: 'Truck Accidents', image: truckAccidentsImage, path: '/practice-areas' },
-  { id: 10, title: 'Premises Liability', image: premisesLiabilityImage, path: '/practice-areas' },
-  { id: 11, title: 'Workplace Injuries', image: workplaceInjuriesImage, path: '/practice-areas' },
-  { id: 12, title: 'Motorcycle Accidents', image: motorcycleAccidentsImage, path: '/practice-areas' },
-  { id: 13, title: 'Nursing Home Abuse', image: nursingHomeAbuseImage, path: '/practice-areas' },
-]
+const MAIN_IMAGES: Record<string, string> = {
+  'personal-injury': personalInjuryImage,
+  'workers-compensation': workersBenefitsImage,
+  'medical-malpractice': medicalMalpracticeImage,
+  'vehicle-accidents': autoAccidentsImage,
+  'transportation-accidents': truckAccidentsImage,
+  'catastrophic-abuse-cases': wrongfulDeathImage,
+}
+
+const practiceAreas = PRACTICE_AREAS_CATEGORIES.map((cat, i) => ({
+  id: i + 1,
+  titleKey: `practiceAreas.${cat.slug}`,
+  fallbackTitle: cat.title,
+  path: cat.path,
+  image: MAIN_IMAGES[cat.slug] ?? personalInjuryImage,
+}))
 
 /* Duplicated track for seamless loop: [1..N, 1..N, 1, 2] so after N we show 1,2 again */
 const trackItems = [
@@ -57,6 +54,9 @@ const chevronRight = (
 )
 
 const PracticeAreasSection = () => {
+  const { t } = useTranslation()
+  const { language } = useLanguage()
+  const isRtl = language === 'ar'
   const [index, setIndex] = useState(0)
   const [skipTransition, setSkipTransition] = useState(false)
 
@@ -93,16 +93,17 @@ const PracticeAreasSection = () => {
     }
   }, [skipTransition])
 
-  /* One full card scrolls out per step: move by (index / TRACK_LENGTH) of track = index card widths */
+  /* One full card scrolls out per step; in RTL use positive % so direction matches reading order */
   const translatePercent = (index / TRACK_LENGTH) * 100
   const logicalIndex = index % practiceAreas.length
+  const translateX = isRtl ? `${translatePercent}%` : `-${translatePercent}%`
 
   return (
     <section className="hp3-practice-section">
       <div className="hp3-practice-container">
-        <p className="hp3-practice-label">PRACTICE AREAS</p>
+        <p className="hp3-practice-label">{t('home.practiceAreasLabel')}</p>
         <h2 className="hp3-practice-heading">
-          Our Practice Areas, <em>All In One Place</em>
+          {t('home.practiceAreasHeading')} <em>{t('home.practiceAreasHeadingEm')}</em>
         </h2>
 
         <div className="hp3-practice-slider-wrap">
@@ -110,24 +111,24 @@ const PracticeAreasSection = () => {
             type="button"
             className="hp3-practice-arrow hp3-practice-arrow--prev"
             onClick={goPrev}
-            aria-label="Previous practice areas"
+            aria-label={t('home.prevSlide')}
           >
-            {chevronLeft}
+            {isRtl ? chevronRight : chevronLeft}
           </button>
 
           <div className="hp3-practice-slider">
             <div
               className="hp3-practice-track"
               style={{
-                transform: `translateX(-${translatePercent}%)`,
+                transform: `translateX(${translateX})`,
                 transition: skipTransition ? 'none' : undefined,
               }}
             >
               {trackItems.map((area, i) => (
-                <div key={`${area.id}-${i}`} className="hp3-practice-card-wrap">
+                <div key={`${area.path}-${i}`} className="hp3-practice-card-wrap">
                   <Link to={area.path} className="hp3-practice-card">
                     <div className="hp3-practice-card-image" style={{ backgroundImage: `url(${area.image})` }} />
-                    <span className="hp3-practice-card-title">{area.title}</span>
+                    <span className="hp3-practice-card-title">{t(area.titleKey) || area.fallbackTitle}</span>
                   </Link>
                 </div>
               ))}
@@ -138,9 +139,9 @@ const PracticeAreasSection = () => {
             type="button"
             className="hp3-practice-arrow hp3-practice-arrow--next"
             onClick={goNext}
-            aria-label="Next practice areas"
+            aria-label={t('home.nextSlide')}
           >
-            {chevronRight}
+            {isRtl ? chevronLeft : chevronRight}
           </button>
         </div>
 
@@ -151,7 +152,7 @@ const PracticeAreasSection = () => {
               type="button"
               className={`hp3-practice-dot ${i === logicalIndex ? 'hp3-practice-dot--active' : ''}`}
               onClick={() => setIndex(i)}
-              aria-label={`Go to slide ${i + 1}`}
+              aria-label={t('home.goToSlide', { number: i + 1 })}
               aria-current={i === logicalIndex ? 'true' : undefined}
             />
           ))}
@@ -159,7 +160,7 @@ const PracticeAreasSection = () => {
 
         <div className="hp3-practice-cta-wrap">
           <Link to="/practice-areas" className="hp3-practice-cta">
-            VIEW ALL PRACTICE AREAS
+            {t('home.viewAllPracticeAreas')}
           </Link>
         </div>
       </div>

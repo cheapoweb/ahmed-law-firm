@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 import Footer from '../../components/Footer'
 import PageBanner from '../../components/PageBanner'
 import './VerdictsSettlementsPage.css'
@@ -77,6 +78,7 @@ function ScaleIcon() {
 }
 
 const VerdictsSettlementsPage = () => {
+  const { t } = useTranslation()
   const [selectedFilter, setSelectedFilter] = useState<PracticeArea>('All')
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE)
 
@@ -106,13 +108,13 @@ const VerdictsSettlementsPage = () => {
   return (
     <div className="verdicts-settlements-page">
       <PageBanner
-        title="Verdicts & Settlements"
-        subtitle="Our track record of success for injured clients throughout New York"
+        title={t('pages.verdicts.bannerTitle')}
+        subtitle={t('pages.verdicts.bannerSubtitle')}
       />
 
       <section className="verdicts-intro">
         <div className="verdicts-intro-container">
-          <h2 className="verdicts-intro-heading">Proven Results for Our Clients</h2>
+          <h2 className="verdicts-intro-heading">{t('pages.verdicts.introHeading', 'Proven Results for Our Clients')}</h2>
           <p className="verdicts-intro-text">
             For over 40 years, Ahmed Law Firm has fought tirelessly for injured victims and their families
             throughout New York. The results below represent a sample of our recoveries. Every case is different,
@@ -138,12 +140,12 @@ const VerdictsSettlementsPage = () => {
 
       <section className="verdicts-results">
         <div className="verdicts-results-container">
-          <h2 className="verdicts-results-heading">Recent Verdicts & Settlements</h2>
+          <h2 className="verdicts-results-heading">{t('pages.verdicts.resultsHeading', 'Recent Verdicts & Settlements')}</h2>
 
           <div className="verdicts-filter">
             <h3 className="verdicts-filter-heading">
               <ScaleIcon />
-              Filter by Practice Area
+              {t('pages.verdicts.filterBy')}
             </h3>
             <div className="verdicts-filter-buttons">
               {PRACTICE_AREAS.map((area) => (
@@ -158,12 +160,12 @@ const VerdictsSettlementsPage = () => {
               ))}
             </div>
             <p className="verdicts-filter-count">
-              Showing {displayedVerdicts.length} of {totalFiltered} results
+              {t('pages.verdicts.showingResults', { count: displayedVerdicts.length, total: totalFiltered })}
             </p>
           </div>
 
           {displayedVerdicts.length === 0 ? (
-            <p className="verdicts-no-results">No verdicts or settlements found for this practice area.</p>
+            <p className="verdicts-no-results">{t('pages.verdicts.noResults')}</p>
           ) : (
             <>
               <div className="verdicts-grid">
@@ -182,7 +184,7 @@ const VerdictsSettlementsPage = () => {
               {showLoadMore && (
                 <div className="verdicts-load-more-wrap">
                   <button type="button" className="verdicts-load-more-btn" onClick={handleLoadMore}>
-                    Load More
+                    {t('pages.verdicts.loadMore')}
                   </button>
                 </div>
               )}

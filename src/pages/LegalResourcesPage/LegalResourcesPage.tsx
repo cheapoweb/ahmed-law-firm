@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import Footer from '../../components/Footer'
 import PageBanner from '../../components/PageBanner'
-import ShapeDivider from '../../components/ShapeDivider'
 import './LegalResourcesPage.css'
 
 const resourceCards = [
@@ -71,15 +71,15 @@ const helpfulLinks: { category: string; links: { label: string; url: string; ext
 ]
 
 const LegalResourcesPage = () => {
+  const { t } = useTranslation()
   return (
     <div className="legal-resources-page">
       <PageBanner
-        title="Legal Resources"
-        subtitle="Access helpful information, guides, and resources to better understand your legal rights and options."
+        title={t('pages.legalResources.bannerTitle')}
+        subtitle={t('pages.legalResources.bannerSubtitle')}
       />
 
       <section className="legal-resources-main">
-        <ShapeDivider color="#FFFFFF" />
         <div className="legal-resources-container">
           <div className="legal-resources-cards">
             {resourceCards.map((card) => (
@@ -163,7 +163,6 @@ const LegalResourcesPage = () => {
       </section>
 
       <section className="legal-resources-cta">
-        <ShapeDivider color="#233041" />
         <div className="legal-resources-cta-inner">
           <h2 className="legal-resources-cta-heading">Get Expert Legal Guidance for Your Case</h2>
           <p className="legal-resources-cta-sub">Don't navigate the legal system alone. Our experienced attorneys are here to help you every step of the way.</p>

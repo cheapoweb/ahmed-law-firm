@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import ShapeDivider from '../../../../components/ShapeDivider'
 import './TrustExperienceSection.css'
 
 export const TrustExperienceSection = () => {
@@ -46,7 +45,6 @@ export const TrustExperienceSection = () => {
 
   return (
     <section className="trust-experience-section">
-      <ShapeDivider color="#FAFAFA" />
       <div className="trust-experience-container">
         <div className="trust-experience-header">
           <div className="established-header">

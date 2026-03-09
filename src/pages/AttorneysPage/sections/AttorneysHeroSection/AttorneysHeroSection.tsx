@@ -1,10 +1,8 @@
-import ShapeDivider from '../../../../components/ShapeDivider'
 import './AttorneysHeroSection.css'
 
 export const AttorneysHeroSection = () => {
   return (
     <section className="attorneys-hero-section">
-      <ShapeDivider color="#FFFFFF" />
       <div className="attorneys-hero-container">
         <h1 className="attorneys-hero-title">Our New York Personal Injury Legal Team</h1>
         <div className="attorneys-hero-content">

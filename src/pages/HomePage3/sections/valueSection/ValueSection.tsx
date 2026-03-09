@@ -1,5 +1,9 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import './ValueSection.css'
+
+const YOUTUBE_ID = 'i5Z00p-bHiE'
+const EMBED_URL = `https://www.youtube.com/embed/${YOUTUBE_ID}?rel=0&modestbranding=1`
 
 const handshakeIcon = (
   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
@@ -19,47 +23,55 @@ const scalesCardIcon = (
   </svg>
 )
 
+const shieldIcon = (
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+  </svg>
+)
+
 const cards = [
-  {
-    id: 1,
-    title: 'Attention You Deserve',
-    description: 'We will allay your anxieties and earn your confidence by giving to you our expert legal advice and guiding you every step.',
-    icon: handshakeIcon,
-  },
-  {
-    id: 2,
-    title: 'Built on Referrals',
-    description: 'By giving our clients, and therefore their cases, the attention they deserve, we get the results that keep our clients happy.',
-    icon: buildingIcon,
-  },
-  {
-    id: 3,
-    title: 'Results You Expect',
-    description: 'Through thorough investigating we will see to it that you get every benefit and every right that you are entitled to by law.',
-    icon: scalesCardIcon,
-  },
+  { id: 1, titleKey: 'sections.value.card1Title', descKey: 'sections.value.card1Desc', icon: handshakeIcon },
+  { id: 2, titleKey: 'sections.value.card2Title', descKey: 'sections.value.card2Desc', icon: buildingIcon },
+  { id: 3, titleKey: 'sections.value.card3Title', descKey: 'sections.value.card3Desc', icon: scalesCardIcon },
+  { id: 4, titleKey: 'sections.value.card4Title', descKey: 'sections.value.card4Desc', icon: shieldIcon },
 ]
 
 const ValueSection = () => {
+  const { t } = useTranslation()
   return (
     <section className="hp3-value-section">
       <div className="hp3-value-container">
-        <p className="hp3-value-label">WHY CHOOSE US</p>
+        <p className="hp3-value-label">{t('sections.value.label')}</p>
         <h2 className="hp3-value-heading">
-          We Give You <em>Personal Attention</em>
+          {t('sections.value.heading')} <em>{t('sections.value.headingEm')}</em>
         </h2>
-        <div className="hp3-value-cards">
-          {cards.map((card) => (
-            <div key={card.id} className="hp3-value-card">
-              <div className="hp3-value-card-icon">{card.icon}</div>
-              <h3 className="hp3-value-card-title">{card.title}</h3>
-              <p className="hp3-value-card-desc">{card.description}</p>
+        <div className="hp3-value-layout">
+          <div className="hp3-value-cards-col">
+            {cards.map((card) => (
+              <div key={card.id} className="hp3-value-card">
+                <div className="hp3-value-card-icon">{card.icon}</div>
+                <h3 className="hp3-value-card-title">{t(card.titleKey)}</h3>
+                <p className="hp3-value-card-desc">{t(card.descKey)}</p>
+              </div>
+            ))}
+          </div>
+          <div className="hp3-value-video-col">
+            <div className="hp3-value-video-wrap">
+              <div className="hp3-value-video-aspect">
+                <iframe
+                  src={EMBED_URL}
+                  title={t('sections.value.videoTitle')}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="hp3-value-video-iframe"
+                />
+              </div>
             </div>
-          ))}
+          </div>
         </div>
         <div className="hp3-value-cta-wrap">
           <Link to="/contact" className="hp3-value-cta">
-            FREE CASE EVALUATION
+            {t('sections.value.cta')}
           </Link>
         </div>
       </div>

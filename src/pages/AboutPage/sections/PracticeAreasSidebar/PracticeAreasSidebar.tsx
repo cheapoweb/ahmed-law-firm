@@ -3,7 +3,7 @@ import './PracticeAreasSidebar.css'
 const practiceAreas = [
   {
     icon: '👷',
-    title: 'Workers Benefits',
+    title: 'Workers Compensation',
     description: 'Construction Accidents, Workplace Falls, Equipment Accidents, and More'
   },
   {

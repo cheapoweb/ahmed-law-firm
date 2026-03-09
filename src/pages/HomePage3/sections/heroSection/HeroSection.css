@@ -44,8 +44,14 @@
   align-items: center;
 }
 
+/* Desktop: text left (order 1), team image right (order 2) */
 .hp3-hero-left {
+  order: 1;
   color: #ffffff;
+}
+
+.hp3-hero-right {
+  order: 2;
 }
 
 .hp3-hero-headline {
@@ -131,7 +137,7 @@
   color: #ffffff;
 }
 
-/* Right: team image – bottom-aligned in section */
+/* Team image – bottom-aligned on desktop */
 .hp3-hero-right {
   display: flex;
   justify-content: center;
@@ -187,8 +193,13 @@
     justify-content: center;
   }
 
-  .hp3-hero-right {
+  /* Mobile/tablet: text on top, image below */
+  .hp3-hero-left {
     order: -1;
+  }
+
+  .hp3-hero-right {
+    order: 0;
     align-self: center;
     align-items: center;
   }

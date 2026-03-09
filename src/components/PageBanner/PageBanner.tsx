@@ -1,4 +1,5 @@
 import bannerBuildings from '../../assets/banner-buildings.webp'
+import { useTranslation } from 'react-i18next'
 import './PageBanner.css'
 
 interface PageBannerProps {
@@ -7,10 +8,11 @@ interface PageBannerProps {
 }
 
 const PageBanner = ({ title, subtitle }: PageBannerProps) => {
+  const { t } = useTranslation()
   return (
     <section className="page-banner">
       <div className="page-banner-background">
-        <img src={bannerBuildings} alt="Buildings Background" className="page-banner-image" />
+        <img src={bannerBuildings} alt={t('banner.buildingsAlt')} className="page-banner-image" />
         <div className="page-banner-overlay"></div>
       </div>
       

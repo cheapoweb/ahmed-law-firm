@@ -1,0 +1,68 @@
+.search-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.search-results-section {
+  padding: 3rem 2rem 4rem;
+}
+
+.search-results-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.search-results-count {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 0.95rem;
+  color: #666666;
+  margin: 0 0 1rem 0;
+}
+
+.search-results-empty {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 1.05rem;
+  color: #555555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.search-results-empty a {
+  color: #233041;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid #D4AF37;
+}
+
+.search-results-empty a:hover {
+  color: #D4AF37;
+}
+
+.search-results-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-results-list li {
+  margin-bottom: 0.5rem;
+}
+
+.search-results-link {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #233041;
+  text-decoration: none;
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.search-results-link:hover {
+  background-color: rgba(212, 175, 55, 0.12);
+  border-left-color: #D4AF37;
+}

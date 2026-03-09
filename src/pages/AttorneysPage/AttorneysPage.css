@@ -3,3 +3,7 @@
   min-height: 100vh;
   overflow-x: hidden;
 }
+
+.attorneys-page .locations-section {
+  padding-top: 4rem;
+}

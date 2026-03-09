@@ -1,4 +1,4 @@
-import ShapeDivider from '../../../../components/ShapeDivider'
+import { useTranslation } from 'react-i18next'
 import './LocationsSection.css'
 
 const location = {
@@ -10,13 +10,14 @@ const location = {
   mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.1234567890123!2d-73.8273456!3d40.6963456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQxJzQ2LjkiTiA3M8KwNDknMzguNCJX!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus'
 }
 
-export const LocationsSection = () => (
+export const LocationsSection = () => {
+  const { t } = useTranslation()
+  return (
   <section className="locations-section">
-    <ShapeDivider color="#F8F8F8" />
-      <div className="locations-container">
-        <div className="locations-label">OUR LOCATION</div>
+    <div className="locations-container">
+        <div className="locations-label">{t('sections.locationsHome.label')}</div>
         <h2 className="locations-heading">
-          Find Us <em>at Our Office</em>
+          {t('sections.locationsHome.heading')} <em>{t('sections.locationsHome.headingEm')}</em>
         </h2>
         
         <div className="location-content">
@@ -29,24 +30,24 @@ export const LocationsSection = () => (
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Ahmed Law Firm Location"
+              title={t('pages.contact.mapTitle')}
             ></iframe>
           </div>
           
           <div className="location-info">
             <h3 className="location-name">{location.name}</h3>
             <div className="location-address">
-              <span className="contact-label">ADDRESS:</span>
+              <span className="contact-label">{t('sections.locationsHome.address')}</span>
               <p className="address-line">{location.address}</p>
               <p className="address-city">{location.city}</p>
             </div>
             <div className="location-contact">
               <div className="contact-item">
-                <span className="contact-label">PHONE:</span>
+                <span className="contact-label">{t('sections.locationsHome.phone')}</span>
                 <a href={`tel:${location.phone.replace(/\s/g, '')}`} className="contact-phone">{location.phone}</a>
               </div>
               <div className="contact-item">
-                <span className="contact-label">EMAIL:</span>
+                <span className="contact-label">{t('sections.locationsHome.email')}</span>
                 <a href={`mailto:${location.email}`} className="contact-email">{location.email}</a>
               </div>
             </div>
@@ -56,10 +57,11 @@ export const LocationsSection = () => (
               rel="noopener noreferrer"
               className="location-button"
             >
-              Get Directions
+              {t('sections.locationsHome.getDirections')}
             </a>
           </div>
         </div>
     </div>
   </section>
-)
+  )
+}

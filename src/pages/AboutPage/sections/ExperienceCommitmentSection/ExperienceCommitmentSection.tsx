@@ -1,10 +1,8 @@
-import ShapeDivider from '../../../../components/ShapeDivider'
 import './ExperienceCommitmentSection.css'
 
 export const ExperienceCommitmentSection = () => {
   return (
     <section className="experience-commitment-section">
-      <ShapeDivider color="#F8F8F8" />
       <div className="experience-commitment-container">
         <div className="experience-commitment-content">
           <div className="experience-column">

@@ -1,0 +1,98 @@
+.language-switcher {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.language-switcher-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.75rem;
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #222222;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.language-switcher-trigger:hover {
+  border-color: #233041;
+  color: #233041;
+  background: rgba(35, 48, 65, 0.04);
+}
+
+.language-switcher-current {
+  letter-spacing: 0.05em;
+}
+
+.language-switcher-chevron {
+  font-size: 0.55rem;
+  opacity: 0.8;
+  transition: transform 0.2s ease;
+}
+
+.language-switcher--open .language-switcher-chevron {
+  transform: rotate(180deg);
+}
+
+.language-switcher-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.35rem;
+  min-width: 160px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  padding: 0.35rem 0;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.language-switcher-option {
+  display: block;
+  width: 100%;
+  padding: 0.55rem 1rem;
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #222222;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.language-switcher-option:hover {
+  background: rgba(35, 48, 65, 0.06);
+  color: #233041;
+}
+
+.language-switcher-option--active {
+  background: rgba(212, 175, 55, 0.15);
+  color: #233041;
+  font-weight: 600;
+}
+
+.language-switcher-option--active:hover {
+  background: rgba(212, 175, 55, 0.22);
+}
+
+/* Mobile: compact trigger */
+@media (max-width: 968px) {
+  .language-switcher-trigger {
+    padding: 0.45rem 0.65rem;
+    font-size: 0.85rem;
+  }
+
+  .language-switcher-dropdown {
+    min-width: 150px;
+    right: 0;
+    left: auto;
+  }
+}

@@ -1,5 +1,6 @@
 import Footer from '../../components/Footer'
 import PageBanner from '../../components/PageBanner'
+import { useTranslation } from 'react-i18next'
 import { AllPracticeAreasSection } from './sections/AllPracticeAreasSection'
 import { LocationSpecificSection } from './sections/LocationSpecificSection'
 import { WhyChooseUsSection } from './sections/WhyChooseUsSection'
@@ -7,11 +8,12 @@ import { LocationsSection } from '../HomePage/sections/LocationsSection'
 import './PracticeAreasPage.css'
 
 const PracticeAreasPage = () => {
+  const { t } = useTranslation()
   return (
     <div className="practice-areas-page">
       <PageBanner 
-        title="Our Practice Areas"
-        subtitle="Expert legal representation across multiple areas of law with over 40 years of experience"
+        title={t('pages.practiceAreas.bannerTitle')}
+        subtitle={t('pages.practiceAreas.bannerSubtitle')}
       />
       <AllPracticeAreasSection />
       <LocationSpecificSection />

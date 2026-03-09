@@ -1,18 +1,20 @@
 import { useState, useEffect, useRef } from 'react'
+import { useTranslation } from 'react-i18next'
+import { formatCurrency } from '../../../../utils/formatNumber'
 import './PerformanceSection.css'
 
-const achievements = [
-  { amount: 110174972, description: 'Jury Verdict for Paralyzed Cyclist' },
-  { amount: 53500000, description: 'Jury Verdict in Construction Accident Case' },
-  { amount: 32756156, description: 'Jury Verdict in Car Accident Case' },
-  { amount: 25000000, description: 'Settlement for Victim in Floor Collapse Case' },
+const achievementKeys = [
+  'sections.performance.achievement1',
+  'sections.performance.achievement2',
+  'sections.performance.achievement3',
+  'sections.performance.achievement4',
 ]
 
-const formatNumber = (num: number): string => {
-  return `$${num.toLocaleString('en-US')}`
-}
+const amounts = [3500000, 2000000, 950000, 800000]
 
 const PerformanceSection = () => {
+  const { t, i18n } = useTranslation()
+  const lang = i18n.language || 'en'
   const [counters, setCounters] = useState<number[]>([0, 0, 0, 0])
   const hasAnimatedRef = useRef(false)
   const sectionRef = useRef<HTMLElement>(null)
@@ -25,8 +27,7 @@ const PerformanceSection = () => {
           if (entry.isIntersecting && !hasAnimatedRef.current) {
             hasAnimatedRef.current = true
 
-            achievements.forEach((achievement, index) => {
-              const target = achievement.amount
+            amounts.forEach((target, index) => {
               const duration = 2000
               const startTime = Date.now()
 
@@ -80,25 +81,25 @@ const PerformanceSection = () => {
       <div className="hp3-performance-container">
         <div className="hp3-performance-content">
           <div className="hp3-performance-text">
-            <h3 className="hp3-performance-label">OUR PERFORMANCE</h3>
+            <h3 className="hp3-performance-label">{t('sections.performance.label')}</h3>
             <h2 className="hp3-performance-heading">
-              Across 1000's Of Cases,<br />
+              {t('sections.performance.heading1')}<br />
               <span className="hp3-performance-heading-line2">
-                <em>A Half-Billion+ Recovered</em>
+                <em>{t('sections.performance.heading2')}</em>
               </span>
             </h2>
             <div className="hp3-performance-footnote">
               <p className="hp3-performance-footnote-text">
-                *INDUSTRY AVERAGES TRACK THE FIELD. OUR 98% RATE REPRESENTS THE STANDARD WITHIN THE COMPLEX LITIGATION WE NAVIGATE.
+                {t('sections.performance.footnote')}
               </p>
             </div>
           </div>
 
           <div className="hp3-performance-achievements-grid">
-            {achievements.map((achievement, index) => (
+            {achievementKeys.map((key, index) => (
               <div key={index} className="hp3-performance-achievement-card">
-                <div className="hp3-performance-achievement-amount">{formatNumber(counters[index])}</div>
-                <p className="hp3-performance-achievement-description">{achievement.description}</p>
+                <div className="hp3-performance-achievement-amount">{formatCurrency(counters[index], lang)}</div>
+                <p className="hp3-performance-achievement-description">{t(key)}</p>
               </div>
             ))}
           </div>

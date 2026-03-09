@@ -1,18 +1,10 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import Footer from '../../components/Footer'
 import PageBanner from '../../components/PageBanner'
-import ShapeDivider from '../../components/ShapeDivider'
+import { PRACTICE_AREAS_CATEGORIES } from '../PracticeAreasPage/practiceAreasConfig'
 import './ContactPage.css'
-
-const practiceAreas = [
-  { label: 'Auto Accidents', to: '/practice-areas/auto-accidents' },
-  { label: 'Vehicle & Car Accidents', to: '/practice-areas/car-accidents' },
-  { label: 'Personal Injury', to: '/practice-areas' },
-  { label: 'Wrongful Death', to: '/practice-areas' },
-  { label: 'Medical Malpractice', to: '/practice-areas' },
-  { label: 'Truck Accidents', to: '/practice-areas/truck-accidents' },
-  { label: 'Motorcycle Accidents', to: '/practice-areas/motorcycle-accidents' },
-]
 
 const location = {
   name: 'Ahmed Law Firm',
@@ -25,58 +17,114 @@ const location = {
 }
 
 const ContactPage = () => {
+  const { t } = useTranslation()
+  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
+    practiceAreas: true,
+    contactInfo: true,
+  })
+
+  const toggleSection = (key: string) => {
+    setExpandedSections((prev) => ({ ...prev, [key]: !prev[key] }))
+  }
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // Form submission handling
   }
 
   return (
     <div className="contact-page">
       <PageBanner
-        title="Contact Us"
-        subtitle="Get a free, no-obligation consultation with our personal injury attorneys. We're here to help."
+        title={t('pages.contact.bannerTitle')}
+        subtitle={t('pages.contact.bannerSubtitle')}
       />
 
+      <section className="contact-intro-section">
+        <div className="contact-intro-container">
+          <p className="contact-intro-label">{t('pages.contact.introLabel')}</p>
+          <h2 className="contact-intro-heading">
+            {t('pages.contact.introHeading')} <em>{t('pages.contact.introHeadingEm')}</em>
+          </h2>
+          <p className="contact-intro-text">
+            {t('pages.contact.introText')} <a href="tel:7188489595">{t('common.phone')}</a>.
+          </p>
+        </div>
+      </section>
+
       <section className="contact-main">
-        <ShapeDivider color="#FFFFFF" />
         <div className="contact-container">
           <aside className="contact-sidebar">
-            <h2 className="contact-sidebar-heading">How Can We Help You?</h2>
-            <p className="contact-sidebar-sub">Select a practice area related to your inquiry.</p>
-            <nav className="contact-sidebar-nav">
-              {practiceAreas.map((pa) => (
-                <Link key={pa.label} to={pa.to} className="contact-sidebar-link">
-                  {pa.label}
-                </Link>
-              ))}
-            </nav>
+            <div className="contact-sidebar-inner">
+              <h2 className="sidebar-section-title">{t('pages.contact.quickLinks')}</h2>
+              <nav className="sidebar-nav">
+                <div className="sidebar-collapsible-block">
+                  <button
+                    type="button"
+                    className={`sidebar-section-toggle ${expandedSections.practiceAreas ? 'expanded' : ''}`}
+                    onClick={() => toggleSection('practiceAreas')}
+                    aria-expanded={expandedSections.practiceAreas}
+                  >
+                    <span>{t('header.practiceAreas')}</span>
+                    <span className="dropdown-chevron">▼</span>
+                  </button>
+                  {expandedSections.practiceAreas && (
+                    <div className="sidebar-collapsible-content">
+                      {PRACTICE_AREAS_CATEGORIES.map((cat) => (
+                        <Link key={cat.slug} to={cat.path} className="sidebar-nav-link">
+                          {t(`practiceAreas.${cat.slug}`)}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <div className="sidebar-collapsible-block">
+                  <button
+                    type="button"
+                    className={`sidebar-section-toggle ${expandedSections.contactInfo ? 'expanded' : ''}`}
+                    onClick={() => toggleSection('contactInfo')}
+                    aria-expanded={expandedSections.contactInfo}
+                  >
+                    <span>{t('pages.contact.getInTouch')}</span>
+                    <span className="dropdown-chevron">▼</span>
+                  </button>
+                  {expandedSections.contactInfo && (
+                    <div className="sidebar-collapsible-content contact-sidebar-contact">
+                      <a href={`tel:${location.phone.replace(/\D/g, '')}`} className="sidebar-nav-link">
+                        {location.phone}
+                      </a>
+                      <a href={`mailto:${location.email}`} className="sidebar-nav-link">
+                        {location.email}
+                      </a>
+                      <Link to="/faq" className="sidebar-nav-link">{t('header.faq')}</Link>
+                    </div>
+                  )}
+                </div>
+              </nav>
+            </div>
           </aside>
 
           <div className="contact-content">
-            <h1 className="contact-title">Contact Us for a Free Lawyer Consultation</h1>
-            <div className="contact-intro">
-              <p>
-                Ahmed Law Firm has helped thousands of clients across New York recover compensation after serious injuries. Whether you were injured in a car accident, truck accident, slip and fall, or another incident, our attorneys are ready to listen and advise.
+            <div className="contact-content-card">
+              <h2 className="contact-heading">{t('pages.contact.requestHeading')}</h2>
+              <p className="contact-content-intro">
+                {t('pages.contact.requestIntro')}
               </p>
-              <p>
-                Use the form below to <strong>request a free consultation</strong>. You can also call us at <a href="tel:7188489595">(718) 848-9595</a> 24/7. We work on a contingency fee basis—you don't pay unless we win. Learn more about <Link to="/verdicts-settlements">our results</Link> and <Link to="/about">our firm</Link>.
-              </p>
-            </div>
 
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <fieldset className="contact-fieldset">
-                <legend className="contact-legend">Personal Information</legend>
+              <form className="contact-form" onSubmit={handleSubmit}>
                 <div className="contact-form-grid">
                   <div className="contact-form-group">
-                    <label htmlFor="contact-name">Name *</label>
-                    <input id="contact-name" type="text" name="name" required placeholder="Your name" />
+                    <label htmlFor="contact-name">{t('pages.contact.nameLabel')}</label>
+                    <input id="contact-name" type="text" name="name" required placeholder={t('pages.contact.namePlaceholder')} />
                   </div>
                   <div className="contact-form-group">
-                    <label htmlFor="contact-email">Email *</label>
-                    <input id="contact-email" type="email" name="email" required placeholder="your@email.com" />
+                    <label htmlFor="contact-email">{t('pages.contact.emailLabel')}</label>
+                    <input id="contact-email" type="email" name="email" required placeholder={t('pages.contact.emailPlaceholder')} />
                   </div>
                   <div className="contact-form-group">
-                    <label htmlFor="contact-state">State</label>
+                    <label htmlFor="contact-phone">{t('pages.contact.phoneLabel')}</label>
+                    <input id="contact-phone" type="tel" name="phone" required placeholder={t('pages.contact.phonePlaceholder')} />
+                  </div>
+                  <div className="contact-form-group">
+                    <label htmlFor="contact-state">{t('pages.contact.stateLabel')}</label>
                     <select id="contact-state" name="state">
                       <option value="NY">New York</option>
                       <option value="NJ">New Jersey</option>
@@ -85,52 +133,33 @@ const ContactPage = () => {
                       <option value="other">Other</option>
                     </select>
                   </div>
-                  <div className="contact-form-group">
-                    <label htmlFor="contact-zip">Zip</label>
-                    <input id="contact-zip" type="text" name="zip" placeholder="Zip code" />
-                  </div>
-                  <div className="contact-form-group">
-                    <label htmlFor="contact-phone">Phone *</label>
-                    <input id="contact-phone" type="tel" name="phone" required placeholder="(555) 555-5555" />
+                  <div className="contact-form-group contact-form-group-full">
+                    <label htmlFor="contact-message">{t('pages.contact.messageLabel')}</label>
+                    <textarea id="contact-message" name="message" rows={4} required placeholder={t('pages.contact.messagePlaceholder')} />
                   </div>
                 </div>
-              </fieldset>
-
-              <fieldset className="contact-fieldset">
-                <legend className="contact-legend">Contact Preferences</legend>
-                <p className="contact-pref-label">How would you like to be contacted?</p>
                 <div className="contact-checkbox-group">
                   <label className="contact-checkbox-label">
                     <input type="checkbox" name="contact_email" defaultChecked />
-                    <span>Email</span>
+                    <span>{t('pages.contact.contactByEmail')}</span>
                   </label>
                   <label className="contact-checkbox-label">
                     <input type="checkbox" name="contact_phone" defaultChecked />
-                    <span>Phone</span>
+                    <span>{t('pages.contact.contactByPhone')}</span>
                   </label>
                 </div>
-              </fieldset>
-
-              <fieldset className="contact-fieldset">
-                <legend className="contact-legend">How Can We Help You?</legend>
-                <div className="contact-form-group">
-                  <label htmlFor="contact-message">Brief Description of Your Legal Issue *</label>
-                  <textarea id="contact-message" name="message" rows={5} required placeholder="Tell us what happened and how we can help..." />
+                <div className="contact-disclaimer">
+                  <label className="contact-checkbox-label">
+                    <input type="checkbox" name="disclaimer" required />
+                    <span>{t('pages.contact.disclaimerCheck')}</span>
+                  </label>
                 </div>
-              </fieldset>
+                <button type="submit" className="contact-submit">{t('pages.contact.sendMessage')}</button>
+              </form>
+            </div>
 
-              <div className="contact-disclaimer">
-                <label className="contact-checkbox-label">
-                  <input type="checkbox" name="disclaimer" required />
-                  <span>I have read the <a href="#privacy">Privacy Policy</a> and disclaimer. *</span>
-                </label>
-              </div>
-
-              <button type="submit" className="contact-submit">Send this message</button>
-            </form>
-
-            <div className="contact-map-section">
-              <h2 className="contact-map-heading">Our Office</h2>
+            <div className="contact-map-card">
+              <h2 className="contact-map-heading">{t('pages.contact.ourOffice')}</h2>
               <div className="contact-map-wrapper">
                 <iframe
                   src={location.mapEmbedUrl}
@@ -140,7 +169,7 @@ const ContactPage = () => {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Ahmed Law Firm Location"
+                  title={t('pages.contact.mapTitle')}
                   className="contact-map-iframe"
                 />
               </div>
@@ -149,10 +178,10 @@ const ContactPage = () => {
                 <p className="contact-map-address">{location.address}</p>
                 <p className="contact-map-city">{location.city}</p>
                 <p className="contact-map-phone">
-                  Phone: <a href={`tel:${location.phone.replace(/\D/g, '')}`}>{location.phone}</a>
+                  <a href={`tel:${location.phone.replace(/\D/g, '')}`}>{location.phone}</a>
                 </p>
                 <a href={location.directionsUrl} target="_blank" rel="noopener noreferrer" className="contact-map-directions">
-                  Get Directions
+                  {t('pages.contact.getDirections')}
                 </a>
               </div>
             </div>
@@ -162,19 +191,20 @@ const ContactPage = () => {
 
       <section className="contact-media-section">
         <div className="contact-media-container">
-          <h2 className="contact-media-heading">Learn More About Us</h2>
+          <p className="contact-media-label">{t('pages.contact.learnMore')}</p>
+          <h2 className="contact-media-heading">{t('pages.contact.watchHeading')} <em>{t('pages.contact.watchHeadingEm')}</em></h2>
           <div className="contact-media-cards">
             <Link to="/reviews-ratings" className="contact-media-card">
               <span className="contact-media-icon">▶</span>
-              <span className="contact-media-text">Watch client testimonials and firm videos</span>
+              <span className="contact-media-text">{t('pages.contact.watchTestimonials')}</span>
             </Link>
             <Link to="/reviews-ratings" className="contact-media-card">
               <span className="contact-media-icon">♫</span>
-              <span className="contact-media-text">Listen to client stories and radio appearances</span>
+              <span className="contact-media-text">{t('pages.contact.listenStories')}</span>
             </Link>
             <Link to="/legal-blog" className="contact-media-card">
               <span className="contact-media-icon">📖</span>
-              <span className="contact-media-text">Read our legal blog and latest updates</span>
+              <span className="contact-media-text">{t('pages.contact.readBlog')}</span>
             </Link>
           </div>
         </div>

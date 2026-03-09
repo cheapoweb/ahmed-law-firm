@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import './LocationsSection.css'
 
 const location = {
@@ -9,6 +10,7 @@ const location = {
 }
 
 const LocationsSection = () => {
+  const { t } = useTranslation()
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
   }
@@ -16,22 +18,22 @@ const LocationsSection = () => {
   return (
     <section className="hp3-locations-section">
       <div className="hp3-locations-container">
-        <p className="hp3-locations-label">OUR LOCATION</p>
+        <p className="hp3-locations-label">{t('sections.locations.label')}</p>
         <h2 className="hp3-locations-heading">
-          Contact Our Attorneys <em>Anytime</em>
+          {t('sections.locations.heading')} <em>{t('sections.locations.headingEm')}</em>
         </h2>
 
         <div className="hp3-locations-grid">
           <div className="hp3-locations-left">
             <h3 className="hp3-locations-office-name">{location.name}</h3>
             <div className="hp3-locations-block">
-              <div className="hp3-locations-block-label">Office</div>
+              <div className="hp3-locations-block-label">{t('sections.locations.office')}</div>
               <p className="hp3-locations-line">{location.address}</p>
               <p className="hp3-locations-line">{location.city}</p>
             </div>
 
             <div className="hp3-locations-block">
-              <div className="hp3-locations-block-label">Contact</div>
+              <div className="hp3-locations-block-label">{t('sections.locations.contact')}</div>
               <a href="tel:7188489595" className="hp3-locations-link">
                 (718) 848-9595
               </a>
@@ -41,20 +43,20 @@ const LocationsSection = () => {
             </div>
 
             <div className="hp3-locations-block">
-              <div className="hp3-locations-block-label">Serving</div>
+              <div className="hp3-locations-block-label">{t('sections.locations.serving')}</div>
               <p className="hp3-locations-line hp3-locations-line--muted">
-                Queens · Brooklyn · The Bronx · Manhattan · Long Island and surrounding New York communities.
+                {t('sections.locations.servingText')}
               </p>
             </div>
 
             <div className="hp3-locations-social">
-              <div className="hp3-locations-social-label">Follow</div>
+              <div className="hp3-locations-social-label">{t('sections.locations.follow')}</div>
               <div className="hp3-locations-social-icons">
                 <a
                   href="https://facebook.com"
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="Visit our Facebook page"
+                  aria-label={t('sections.locations.facebook')}
                   className="hp3-locations-social-icon"
                 >
                   F
@@ -63,7 +65,7 @@ const LocationsSection = () => {
                   href="https://www.linkedin.com"
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="Visit our LinkedIn profile"
+                  aria-label={t('sections.locations.linkedin')}
                   className="hp3-locations-social-icon"
                 >
                   in
@@ -72,7 +74,7 @@ const LocationsSection = () => {
                   href="https://www.instagram.com"
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="Visit our Instagram profile"
+                  aria-label={t('sections.locations.instagram')}
                   className="hp3-locations-social-icon"
                 >
                   IG
@@ -86,43 +88,42 @@ const LocationsSection = () => {
               <form className="hp3-locations-form" onSubmit={handleSubmit}>
                 <div className="hp3-locations-form-row">
                   <div className="hp3-locations-field">
-                    <label htmlFor="hp3-name">Full name</label>
+                    <label htmlFor="hp3-name">{t('sections.locations.fullName')}</label>
                     <input id="hp3-name" name="name" type="text" autoComplete="name" required />
                   </div>
                   <div className="hp3-locations-field">
-                    <label htmlFor="hp3-phone">Phone</label>
+                    <label htmlFor="hp3-phone">{t('sections.locations.phone')}</label>
                     <input id="hp3-phone" name="phone" type="tel" autoComplete="tel" required />
                   </div>
                 </div>
                 <div className="hp3-locations-form-row">
                   <div className="hp3-locations-field">
-                    <label htmlFor="hp3-email">Email</label>
+                    <label htmlFor="hp3-email">{t('sections.locations.email')}</label>
                     <input id="hp3-email" name="email" type="email" autoComplete="email" />
                   </div>
                   <div className="hp3-locations-field">
-                    <label htmlFor="hp3-practice-area">Practice area</label>
+                    <label htmlFor="hp3-practice-area">{t('sections.locations.practiceArea')}</label>
                     <select id="hp3-practice-area" name="practiceArea" defaultValue="">
                       <option value="" disabled>
-                        Select an area
+                        {t('sections.locations.selectArea')}
                       </option>
-                      <option value="auto-accidents">Auto / Car accident</option>
-                      <option value="construction">Construction accident</option>
-                      <option value="slip-fall">Slip &amp; fall</option>
-                      <option value="medical-malpractice">Medical malpractice</option>
-                      <option value="other">Other injury</option>
+                      <option value="auto-accidents">{t('sections.locations.autoAccident')}</option>
+                      <option value="construction">{t('sections.locations.construction')}</option>
+                      <option value="slip-fall">{t('sections.locations.slipFall')}</option>
+                      <option value="medical-malpractice">{t('sections.locations.medicalMalpractice')}</option>
+                      <option value="other">{t('sections.locations.otherInjury')}</option>
                     </select>
                   </div>
                 </div>
                 <div className="hp3-locations-field">
-                  <label htmlFor="hp3-message">Brief description of your case</label>
+                  <label htmlFor="hp3-message">{t('sections.locations.caseDescription')}</label>
                   <textarea id="hp3-message" name="message" rows={4} />
                 </div>
                 <button type="submit" className="hp3-locations-submit">
-                  Submit to our attorneys
+                  {t('sections.locations.submit')}
                 </button>
                 <p className="hp3-locations-disclaimer">
-                  By submitting, you agree that this form does not create an attorney–client relationship and no
-                  confidential information should be included.
+                  {t('sections.locations.formDisclaimer')}
                 </p>
               </form>
             </div>

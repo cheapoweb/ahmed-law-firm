@@ -1,47 +1,45 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import Footer from '../../components/Footer'
 import PageBanner from '../../components/PageBanner'
-import ShapeDivider from '../../components/ShapeDivider'
 import './FAQPage.css'
 
-const faqs = [
-  { question: 'What is the average settlement for a car accident in NY?', answer: 'Settlement amounts vary widely based on the severity of injuries, medical costs, lost wages, and other factors. Our attorneys can evaluate your case and give you an idea of what similar cases have recovered. We work to maximize your compensation.' },
-  { question: 'How much is my personal injury case worth?', answer: 'Case value depends on your injuries, medical treatment, impact on your life, and the liable party\'s insurance or assets. We work on a contingency fee basis—you don\'t pay unless we win. Contact us for a free case evaluation.' },
-  { question: 'How long does a personal injury case take?', answer: 'Some cases settle in months; others take a year or more, especially if they go to trial. We work efficiently while making sure we don\'t settle for less than you deserve. We keep you updated at every step.' },
-  { question: 'How long do I have to file a personal injury claim?', answer: 'In New York, you generally have three years from the date of injury to file a personal injury lawsuit. Some claims have shorter deadlines. It\'s important to speak with an attorney as soon as possible so you don\'t miss a deadline.' },
-  { question: 'What types of personal injury cases do you handle?', answer: 'We handle auto accidents, medical malpractice, construction accidents, slip and fall, wrongful death, truck accidents, and more. Our attorneys have decades of experience across multiple practice areas.' },
-  { question: 'Do I need to come to your office for a consultation?', answer: 'We offer free phone consultations and can meet you at home or in the hospital if you can\'t travel. Contact us 24/7 to discuss your case.' },
+const faqKeys = [
+  { q: 'pages.faq.q1', a: 'pages.faq.a1' },
+  { q: 'pages.faq.q2', a: 'pages.faq.a2' },
+  { q: 'pages.faq.q3', a: 'pages.faq.a3' },
+  { q: 'pages.faq.q4', a: 'pages.faq.a4' },
+  { q: 'pages.faq.q5', a: 'pages.faq.a5' },
+  { q: 'pages.faq.q6', a: 'pages.faq.a6' },
 ]
 
 const FAQPage = () => {
+  const { t } = useTranslation()
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const toggle = (index: number) => setOpenIndex(openIndex === index ? null : index)
 
   return (
     <div className="faq-page">
       <PageBanner
-        title="Frequently Asked Questions"
-        subtitle="Answers to common questions about personal injury claims and your legal rights in New York"
+        title={t('pages.faq.bannerTitle')}
+        subtitle={t('pages.faq.bannerSubtitle')}
       />
 
       <section className="faq-page-section">
-        <ShapeDivider color="#F8F8F8" />
         <div className="faq-page-container">
-          <p className="faq-page-intro">
-            Get answers to common questions about personal injury claims in New York. If you don't see your question below, contact us for a free consultation.
-          </p>
+          <p className="faq-page-intro">{t('pages.faq.intro')}</p>
           <div className="faq-page-list">
-            {faqs.map((faq, index) => (
+            {faqKeys.map((faq, index) => (
               <div key={index} className={`faq-page-item ${openIndex === index ? 'open' : ''}`}>
                 <button className="faq-page-question" onClick={() => toggle(index)}>
-                  <span>{faq.question}</span>
+                  <span>{t(faq.q)}</span>
                   <span className={`faq-page-icon ${openIndex === index ? 'open' : ''}`}>▼</span>
                 </button>
                 {openIndex === index && (
                   <>
                     <div className="faq-page-separator" />
                     <div className="faq-page-answer">
-                      <p>{faq.answer}</p>
+                      <p>{t(faq.a)}</p>
                     </div>
                   </>
                 )}
@@ -49,10 +47,10 @@ const FAQPage = () => {
             ))}
           </div>
           <div className="faq-page-footer">
-            <p className="faq-page-footer-text">Have more questions? We're here to help.</p>
+            <p className="faq-page-footer-text">{t('pages.faq.footerText')}</p>
             <div className="faq-page-buttons">
-              <button className="faq-page-cta-primary">Schedule Free Consultation</button>
-              <a href="tel:7188489595" className="faq-page-cta-secondary">Call (718) 848-9595</a>
+              <button className="faq-page-cta-primary">{t('pages.faq.scheduleCta')}</button>
+              <a href="tel:7188489595" className="faq-page-cta-secondary">{t('pages.faq.callCta')}</a>
             </div>
           </div>
         </div>

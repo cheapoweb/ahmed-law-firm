@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react'
-import ShapeDivider from '../../../../components/ShapeDivider'
 import './PerformanceSection.css'
 
 const achievements = [
@@ -82,7 +81,6 @@ export const PerformanceSection = () => {
 
   return (
     <section ref={sectionRef} className="performance-section">
-      <ShapeDivider color="#233041" />
       <div className="performance-container">
         <div className="performance-content">
           <div className="performance-text">

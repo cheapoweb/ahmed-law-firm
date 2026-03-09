@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import ShapeDivider from '../../../../components/ShapeDivider'
 import personalInjuryImage from '../../../../assets/Personal-injury.webp'
 import workersBenefitsImage from '../../../../assets/workers-benefits.webp'
 import './PracticeAreasSection.css'
@@ -13,7 +12,7 @@ const practiceAreas: Record<string, { areas: string[], image: string }> = {
     ],
     image: personalInjuryImage
   },
-  'Workers Benefits': {
+  'Workers Compensation': {
     areas: [
       'Construction Accidents', 'Crane Accidents', 'Forklift Accidents',
       'Scaffolding Injury', 'Workplace Falls', 'Equipment Accidents',
@@ -70,7 +69,6 @@ export const PracticeAreasSection = () => {
 
   return (
     <section className="practice-areas-section">
-      <ShapeDivider color="#222F40" />
       <div className="practice-areas-container">
         <h2 className="practice-areas-heading">
           We've protected our clients' rights,<br />

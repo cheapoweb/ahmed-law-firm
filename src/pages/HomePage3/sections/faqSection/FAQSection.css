@@ -179,4 +179,11 @@
     padding: 0 1.25rem 1rem;
     padding-top: 0.5rem;
   }
+
+  .hp3-faq-cta {
+    padding: 0.7rem 1rem;
+    font-size: 0.75rem;
+    width: auto;
+    max-width: none;
+  }
 }

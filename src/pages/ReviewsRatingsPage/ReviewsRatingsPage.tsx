@@ -1,5 +1,6 @@
 import Footer from '../../components/Footer'
 import PageBanner from '../../components/PageBanner'
+import { useTranslation } from 'react-i18next'
 import './ReviewsRatingsPage.css'
 
 const videoReviews = [
@@ -66,18 +67,19 @@ const clientLogos = [
 ]
 
 const ReviewsRatingsPage = () => {
+  const { t } = useTranslation()
   return (
     <div className="reviews-ratings-page">
       <PageBanner
-        title="Reviews & Ratings"
-        subtitle="What our clients say about their experience with Ahmed Law Firm"
+        title={t('pages.reviews.bannerTitle')}
+        subtitle={t('pages.reviews.bannerSubtitle')}
       />
 
       <section className="reviews-logos-section">
         <div className="reviews-container">
-          <h2 className="reviews-section-heading">Trusted by Our Clients</h2>
+          <h2 className="reviews-section-heading">{t('pages.reviews.trustedHeading', 'Trusted by Our Clients')}</h2>
           <p className="reviews-section-sub">
-            We are proud to have helped thousands of clients across New York.
+            {t('pages.reviews.trustedSub', 'We are proud to have helped thousands of clients across New York.')}
           </p>
           <div className="reviews-logos-carousel">
             <div className="reviews-logos-track">
@@ -95,9 +97,9 @@ const ReviewsRatingsPage = () => {
 
       <section className="reviews-video-section">
         <div className="reviews-container">
-          <h2 className="reviews-section-heading">Video Reviews</h2>
+          <h2 className="reviews-section-heading">{t('pages.reviews.videoHeading', 'Video Reviews')}</h2>
           <p className="reviews-section-sub">
-            Hear directly from clients who trusted us with their personal injury cases.
+            {t('pages.reviews.videoSub', 'Hear directly from clients who trusted us with their personal injury cases.')}
           </p>
           <div className="reviews-video-grid">
             {videoReviews.map((video) => (
@@ -120,9 +122,9 @@ const ReviewsRatingsPage = () => {
 
       <section className="reviews-written-section">
         <div className="reviews-container">
-          <h2 className="reviews-section-heading">Written Reviews</h2>
+          <h2 className="reviews-section-heading">{t('pages.reviews.writtenHeading', 'Written Reviews')}</h2>
           <p className="reviews-section-sub">
-            Read what our clients have shared about their experience.
+            {t('pages.reviews.writtenSub', 'Read what our clients have shared about their experience.')}
           </p>
           <div className="reviews-written-grid">
             {writtenReviews.map((review) => (

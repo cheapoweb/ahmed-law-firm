@@ -88,10 +88,18 @@
   .about-firm-layout {
     grid-template-columns: 1fr;
     gap: 2rem;
+    display: flex;
+    flex-direction: column;
   }
-  
+
+  /* Mobile: show page content first, sidebar at bottom */
   .about-firm-main-content {
+    order: 1;
     padding: 2rem;
+  }
+
+  .about-firm-sidebar {
+    order: 2;
   }
 }
 

@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import ShapeDivider from '../../../../components/ShapeDivider'
 import './FAQSection.css'
 
 const faqs = [
@@ -15,7 +14,6 @@ export const FAQSection = () => {
 
   return (
     <section className="faq-section">
-      <ShapeDivider color="#233041" />
       <div className="faq-container">
         <div className="faq-label">FREQUENTLY ASKED QUESTIONS</div>
         <h2 className="faq-heading">

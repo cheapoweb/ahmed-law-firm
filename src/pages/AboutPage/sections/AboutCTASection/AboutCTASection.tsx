@@ -1,23 +1,24 @@
-import ShapeDivider from '../../../../components/ShapeDivider'
+import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import './AboutCTASection.css'
 
 export const AboutCTASection = () => {
+  const { t } = useTranslation()
   return (
     <section className="about-cta-section">
-      <ShapeDivider color="#FFFFFF" />
       <div className="about-cta-container">
         <h2 className="about-cta-heading">
-          Ready to Work With New York's Most Trusted Injury Lawyers?
+          {t('pages.about.ctaHeading')}
         </h2>
         <p className="about-cta-description">
-          With over 40 years of experience and $100M+ recovered, our team is ready to fight for your rights. Get your free case evaluation today.
+          {t('pages.about.ctaDesc')}
         </p>
         <div className="about-cta-buttons">
-          <a href="#contact" className="cta-button-primary">
-            SCHEDULE FREE CONSULTATION
-          </a>
+          <Link to="/contact" className="cta-button-primary">
+            {t('pages.about.ctaButton')}
+          </Link>
           <a href="tel:7188489595" className="cta-button-secondary">
-            (718) 848-9595
+            {t('common.phone')}
           </a>
         </div>
       </div>

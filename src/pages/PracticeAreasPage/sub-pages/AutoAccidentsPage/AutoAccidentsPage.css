@@ -239,6 +239,17 @@
   .practice-area-container {
     grid-template-columns: 1fr;
     gap: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Mobile: show page content first, sidebar at bottom */
+  .practice-area-main-content {
+    order: 1;
+  }
+
+  .practice-area-sidebar {
+    order: 2;
   }
 
   .intro-section {

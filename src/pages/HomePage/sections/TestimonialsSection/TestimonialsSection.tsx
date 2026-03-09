@@ -1,4 +1,3 @@
-import ShapeDivider from '../../../../components/ShapeDivider'
 import './TestimonialsSection.css'
 
 // Convert YouTube URL to embed format
@@ -14,7 +13,6 @@ const testimonials = [
 
 export const TestimonialsSection = () => (
   <section className="testimonials-section">
-    <ShapeDivider color="#F8F8F8" />
     <div className="testimonials-container">
       <div className="testimonials-header">
         <div className="testimonials-video-column">

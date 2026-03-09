@@ -148,6 +148,24 @@
     padding-top: 2rem;
   }
 
+  .hp3-performance-text {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hp3-performance-heading-line2 {
+    white-space: normal;
+  }
+
+  .hp3-performance-footnote {
+    margin-top: 0.75rem;
+    width: 100%;
+  }
+
+  .hp3-performance-footnote-text {
+    max-width: 100%;
+  }
+
   .hp3-performance-achievements-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -155,9 +173,5 @@
 
   .hp3-performance-achievement-card {
     padding: 2rem 1.5rem;
-  }
-
-  .hp3-performance-footnote {
-    gap: 0.75rem;
   }
 }
