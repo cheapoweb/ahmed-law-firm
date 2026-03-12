@@ -176,6 +176,57 @@
   -webkit-mask-repeat: no-repeat;
 }
 
+/* Large laptops: 1249px–1400px
+   - slightly reduce zoom and relax mask so the team
+     is not visibly cut off on the right side */
+@media (min-width: 1249px) and (max-width: 1400px) {
+  .hp3-hero-team-img {
+    transform: scale(1.07);
+    max-width: 105%;
+    object-position: center bottom;
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 3%,
+      black 97%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 3%,
+      black 97%,
+      transparent 100%
+    );
+  }
+}
+
+/* Mid-width desktops: 969px–1248px
+   - Give hero a bit more height
+   - Slightly reduce team image zoom so no one is cut off
+   - Tighten inner padding/gap so layout breathes better */
+@media (min-width: 969px) and (max-width: 1248px) {
+  .hp3-hero {
+    min-height: 62vh;
+  }
+
+  .hp3-hero-inner {
+    grid-template-columns: 45% 55%;
+    gap: 3rem;
+    padding: 0 1.25rem;
+  }
+
+  .hp3-hero-team-img {
+    transform: scale(1.0);
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    /* relax edge fading so image isn't clipped on right */
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+}
+
 @media (max-width: 968px) {
   .hp3-hero-inner {
     grid-template-columns: 1fr;

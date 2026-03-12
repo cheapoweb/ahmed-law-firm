@@ -1,0 +1,44 @@
+.disclaimer-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.disclaimer-section {
+  padding: 4rem 0 5rem;
+}
+
+.disclaimer-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.disclaimer-content {
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.75;
+}
+
+.disclaimer-content h2 {
+  font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #233041;
+  margin: 2rem 0 0.75rem 0;
+}
+
+.disclaimer-content h2:first-of-type {
+  margin-top: 0;
+}
+
+.disclaimer-content p {
+  margin: 0 0 1rem 0;
+}
+
+@media (max-width: 640px) {
+  .disclaimer-container {
+    padding: 0 1.5rem;
+  }
+}

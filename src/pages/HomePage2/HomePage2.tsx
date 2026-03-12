@@ -77,7 +77,7 @@ const HomePage2 = () => {
       {/* Big stat bar */}
       <section className="hp2-stat-bar">
         <div className="hp2-stat-inner">
-          <span className="hp2-stat-number">{formatLargeAmount(100_000_000, '+')}</span>
+          <span className="hp2-stat-number">{formatLargeAmount(2_000_000, '+')}</span>
           <span className="hp2-stat-label">Recovered for Our Clients</span>
         </div>
       </section>

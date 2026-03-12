@@ -251,6 +251,28 @@
   line-height: 1.6;
 }
 
+.footer-bottom-links {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.footer-bottom-link {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-bottom-link:hover {
+  color: #D4AF37;
+}
+
+.footer-bottom-sep {
+  color: rgba(209, 213, 219, 0.6);
+}
+
 .footer-bottom-right {
   display: flex;
   flex-direction: column;

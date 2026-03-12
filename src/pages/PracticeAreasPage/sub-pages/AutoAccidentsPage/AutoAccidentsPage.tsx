@@ -8,7 +8,7 @@ const AutoAccidentsPage = () => {
     <div className="auto-accidents-page">
       <PageBanner 
         title="New York Auto Accident Lawyers"
-        subtitle="Expert legal representation for auto accident victims with over 40 years of experience"
+        subtitle="Expert legal representation for auto accident victims with over 10 years of experience"
       />
       
       <div className="practice-area-content-wrapper">
@@ -157,14 +157,14 @@ const AutoAccidentsPage = () => {
             <div className="content-section">
               <h2 className="content-heading">Why Choose Ahmed Law Firm for Your Auto Accident Case</h2>
               <p className="content-paragraph">
-                With over 40 years of experience representing auto accident victims throughout New York, Ahmed Law Firm 
+                With over 10 years of experience representing auto accident victims throughout New York, Ahmed Law Firm 
                 has the knowledge, resources, and dedication needed to secure the best possible outcome for your case. 
                 We understand the challenges you're facing and are committed to providing personalized attention and 
                 aggressive representation.
               </p>
               <p className="content-paragraph">
                 Our track record speaks for itself – we have successfully represented thousands of clients and recovered 
-                millions of dollars in compensation. We work on a contingency fee basis, so you don't pay unless we win 
+                2 million+ in compensation. We work on a contingency fee basis, so you don't pay unless we win 
                 your case. Contact us today for a free consultation and let us fight for the compensation you deserve.
               </p>
             </div>

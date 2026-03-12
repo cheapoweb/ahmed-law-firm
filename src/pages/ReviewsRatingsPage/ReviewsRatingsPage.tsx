@@ -1,27 +1,21 @@
 import Footer from '../../components/Footer'
 import PageBanner from '../../components/PageBanner'
 import { useTranslation } from 'react-i18next'
+import '../../pages/HomePage/sections/TestimonialsSection/TestimonialsSection.css'
 import './ReviewsRatingsPage.css'
 
+const toInitials = (name: string) =>
+  name
+    .replace(/\./g, '')
+    .trim()
+    .split(/\s+/)
+    .map((part) => part.charAt(0).toUpperCase())
+    .join('.') + '.'
+
 const videoReviews = [
-  {
-    id: 1,
-    title: 'Client Testimonial - Auto Accident Case',
-    embedUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    name: 'John D.',
-  },
-  {
-    id: 2,
-    title: 'Why I Chose Ahmed Law Firm',
-    embedUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    name: 'Maria S.',
-  },
-  {
-    id: 3,
-    title: 'Outstanding Results - Settlement Review',
-    embedUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    name: 'Robert M.',
-  },
+  { id: 1, title: 'Client Testimonial - Auto Accident Case', embedUrl: 'https://www.youtube.com/embed/WGuNoKBQQEE', name: 'John D.' },
+  { id: 2, title: 'Why I Chose Ahmed Law Firm', embedUrl: 'https://www.youtube.com/embed/KBm3C1AErzc', name: 'Maria S.' },
+  { id: 3, title: 'Outstanding Results - Settlement Review', embedUrl: 'https://www.youtube.com/embed/i5Z00p-bHiE', name: 'Robert M.' },
 ]
 
 const writtenReviews = [
@@ -53,17 +47,41 @@ const writtenReviews = [
     rating: 5,
     date: 'October 2023',
   },
-]
-
-const clientLogos = [
-  { id: 1, name: 'Client 1' },
-  { id: 2, name: 'Client 2' },
-  { id: 3, name: 'Client 3' },
-  { id: 4, name: 'Client 4' },
-  { id: 5, name: 'Client 5' },
-  { id: 6, name: 'Client 6' },
-  { id: 7, name: 'Client 7' },
-  { id: 8, name: 'Client 8' },
+  {
+    id: 5,
+    quote: 'The team at Ahmed Law Firm was incredible from start to finish. They explained everything clearly and fought hard for my family. We are so grateful for their dedication and the outcome.',
+    name: 'Amanda P.',
+    rating: 5,
+    date: 'September 2023',
+  },
+  {
+    id: 6,
+    quote: 'After my construction accident, I was lost. Ahmed Law Firm guided me through every step and secured a fair settlement. They are compassionate professionals who really care.',
+    name: 'Carlos M.',
+    rating: 5,
+    date: 'August 2023',
+  },
+  {
+    id: 7,
+    quote: 'I had a medical malpractice case and was afraid no one would take it. Ahmed Law Firm believed in me and won. I cannot thank them enough for giving my family hope.',
+    name: 'Patricia W.',
+    rating: 5,
+    date: 'July 2023',
+  },
+  {
+    id: 8,
+    quote: 'Honest, thorough, and results-driven. Ahmed Law Firm handled my pedestrian accident case with expertise. They kept me updated and achieved a settlement I did not expect.',
+    name: 'James H.',
+    rating: 5,
+    date: 'June 2023',
+  },
+  {
+    id: 9,
+    quote: 'From the first call, I knew I was in good hands. The team at Ahmed Law Firm was professional, kind, and relentless. They got me the compensation I deserved.',
+    name: 'Nicole F.',
+    rating: 5,
+    date: 'May 2023',
+  },
 ]
 
 const ReviewsRatingsPage = () => {
@@ -75,29 +93,9 @@ const ReviewsRatingsPage = () => {
         subtitle={t('pages.reviews.bannerSubtitle')}
       />
 
-      <section className="reviews-logos-section">
-        <div className="reviews-container">
-          <h2 className="reviews-section-heading">{t('pages.reviews.trustedHeading', 'Trusted by Our Clients')}</h2>
-          <p className="reviews-section-sub">
-            {t('pages.reviews.trustedSub', 'We are proud to have helped thousands of clients across New York.')}
-          </p>
-          <div className="reviews-logos-carousel">
-            <div className="reviews-logos-track">
-              {[...clientLogos, ...clientLogos].map((client) => (
-                <div key={`${client.id}-${client.name}`} className="reviews-logo-item">
-                  <div className="reviews-logo-placeholder">
-                    <span className="reviews-logo-text">{client.name}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="reviews-video-section">
         <div className="reviews-container">
-          <h2 className="reviews-section-heading">{t('pages.reviews.videoHeading', 'Video Reviews')}</h2>
+          <h2 className="reviews-section-heading">{t('pages.reviews.videoHeading', 'Hear From Our Clients')}</h2>
           <p className="reviews-section-sub">
             {t('pages.reviews.videoSub', 'Hear directly from clients who trusted us with their personal injury cases.')}
           </p>
@@ -113,33 +111,46 @@ const ReviewsRatingsPage = () => {
                     className="reviews-video-iframe"
                   />
                 </div>
-                <p className="reviews-video-caption">{video.name}</p>
+                <p className="reviews-video-caption">{toInitials(video.name)}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="reviews-written-section">
-        <div className="reviews-container">
-          <h2 className="reviews-section-heading">{t('pages.reviews.writtenHeading', 'Written Reviews')}</h2>
+      <section className="reviews-written-section testimonials-section">
+        <div className="testimonials-container">
+          <h2 className="reviews-section-heading">{t('pages.reviews.writtenHeading', 'What Our Clients Say')}</h2>
           <p className="reviews-section-sub">
             {t('pages.reviews.writtenSub', 'Read what our clients have shared about their experience.')}
           </p>
-          <div className="reviews-written-grid">
+          <div className="testimonials-grid">
             {writtenReviews.map((review) => (
-              <article key={review.id} className="reviews-written-card">
-                <div className="reviews-stars">
-                  {Array.from({ length: review.rating }).map((_, i) => (
-                    <span key={i} className="reviews-star" aria-hidden>★</span>
-                  ))}
+              <div key={review.id} className="testimonial-card">
+                <div className="testimonial-top">
+                  <div className="testimonial-firm-info">
+                    <div className="testimonial-avatar" />
+                    <div className="testimonial-firm-details">
+                      <div className="testimonial-firm-name">AHMED LAW FIRM</div>
+                      <div className="testimonial-firm-year">EST 1981</div>
+                    </div>
+                  </div>
+                  <div className="testimonial-stars">
+                    {Array.from({ length: review.rating }).map((_, i) => (
+                      <span key={i} className="star" aria-hidden>★</span>
+                    ))}
+                  </div>
                 </div>
-                <blockquote className="reviews-quote">&ldquo;{review.quote}&rdquo;</blockquote>
-                <footer className="reviews-meta">
-                  <span className="reviews-author">{review.name}</span>
-                  <span className="reviews-date">{review.date}</span>
-                </footer>
-              </article>
+                <div className="testimonial-quote">
+                  <p className="testimonial-text">&ldquo;{review.quote}&rdquo;</p>
+                </div>
+                <div className="testimonial-author">
+                  <div className="author-name-section">
+                    <div className="author-name-primary">{toInitials(review.name)} CLIENT</div>
+                  </div>
+                  <div className="author-signature">{toInitials(review.name)}</div>
+                </div>
+              </div>
             ))}
           </div>
         </div>

@@ -57,7 +57,7 @@ export const TrustExperienceSection = () => {
           
           <div className="experience-statement">
             <p className="statement-text">
-              When you choose <span className="highlight-firm">Ahmed Law Firm</span>, you receive 40 years of experience engineered for one purpose, maximizing your recovery while minimizing your stress.
+              When you choose <span className="highlight-firm">Ahmed Law Firm</span>, you receive 10 years of experience engineered for one purpose, maximizing your recovery while minimizing your stress.
             </p>
           </div>
           
@@ -86,7 +86,7 @@ export const TrustExperienceSection = () => {
             </div>
             <h3 className="feature-heading">The Numbers Speak Louder Than Words</h3>
             <p className="feature-description">
-              {formatLargeAmount(100_000_000, '+')} recovered, 40+ years of proven results, zero upfront costs, &lt;2 hour response time. A track record you can trust.
+              {formatLargeAmount(2_000_000, '+')} recovered, 10+ years of proven results, zero upfront costs, &lt;2 hour response time. A track record you can trust.
             </p>
           </div>
 

@@ -17,6 +17,8 @@ import FAQPage from './pages/FAQPage/FAQPage'
 import LegalResourcesPage from './pages/LegalResourcesPage/LegalResourcesPage'
 import ContactPage from './pages/ContactPage/ContactPage'
 import SearchPage from './pages/SearchPage/SearchPage'
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage'
+import DisclaimerPage from './pages/DisclaimerPage/DisclaimerPage'
 import './App.css'
 
 function App() {
@@ -45,6 +47,8 @@ function App() {
             <Route path="/faq" element={<FAQPage />} />
             <Route path="/legal-resources" element={<LegalResourcesPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="/disclaimer" element={<DisclaimerPage />} />
             <Route path="/search" element={<SearchPage />} />
           </Routes>
         </main>

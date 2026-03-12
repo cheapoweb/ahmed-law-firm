@@ -28,7 +28,9 @@
     "practiceAreas": "Practice Areas",
     "verdictsSettlements": "Verdicts & Settlements",
     "reviewsRatings": "Reviews & Ratings",
+    "faq": "FAQ",
     "locations": "Locations",
+    "results": "Results",
     "resources": "Resources",
     "contact": "Contact",
     "searchPlaceholder": "Search the site...",
@@ -38,6 +40,8 @@
     "locationText": "Ahmed Law Firm is located in South Richmond Hill, NY and serves clients throughout Long Island, including Nassau County, Queens County, The Bronx, Brooklyn, NYC, and Suffolk County.",
     "disclaimer": "Attorney Advertising. This website is designed for general information only. The information presented at this site should not be construed to be formal legal advice nor the formation of a lawyer/client relationship.",
     "sitemap": "Site Map",
+    "privacyPolicy": "Privacy Policy",
+    "disclaimerLink": "Disclaimer",
     "lawyersProfile": "See our profile at Lawyers.com",
     "copyright": "© 2026 Ahmed Law Firm. All rights reserved.",
     "logoAlt": "Ahmed Law Firm Logo"
@@ -129,7 +133,7 @@
       "card3Title": "Results You Expect",
       "card3Desc": "Every benefit and right you are entitled to by law.",
       "card4Title": "Trusted Experience",
-      "card4Desc": "40+ years fighting for injured New Yorkers.",
+      "card4Desc": "10+ years fighting for injured New Yorkers.",
       "cta": "FREE CASE EVALUATION",
       "videoTitle": "Ahmed Law Firm"
     },
@@ -167,7 +171,7 @@
       "heading": "Your Legal Questions",
       "headingEm": "Answered",
       "q1": "What types of personal injury cases do you handle?",
-      "a1": "We handle a wide range of personal injury cases including auto accidents, medical malpractice, nursing home abuse, construction accidents, slip and fall incidents, wrongful death, and more. Our attorneys have over 40 years of combined experience across multiple practice areas.",
+      "a1": "We handle a wide range of personal injury cases including auto accidents, medical malpractice, nursing home abuse, construction accidents, slip and fall incidents, wrongful death, and more. Our attorneys have over 10 years of combined experience across multiple practice areas.",
       "q2": "How long do I have to file a personal injury claim?",
       "a2": "In most states, the statute of limitations for personal injury cases is typically two to three years from the date of the accident. However, deadlines can vary by state and case type. It's crucial to consult with an attorney as soon as possible to protect your rights.",
       "q3": "How long does a personal injury case typically take?",
@@ -184,8 +188,8 @@
       "serving": "Serving",
       "servingText": "Queens · Brooklyn · The Bronx · Manhattan · Long Island and surrounding New York communities.",
       "follow": "Follow",
+      "youtube": "Visit our YouTube channel",
       "facebook": "Visit our Facebook page",
-      "linkedin": "Visit our LinkedIn profile",
       "instagram": "Visit our Instagram profile",
       "fullName": "Full name",
       "phone": "Phone",
@@ -212,7 +216,7 @@
     },
     "whyChooseUs": {
       "heading": "Why Choose Ahmed Law Firm?",
-      "item1Title": "40+ Years Experience",
+      "item1Title": "10+ Years Experience",
       "item1Desc": "Decades of legal excellence in providing expert legal representation",
       "item2Title": "24/7 Availability",
       "item2Desc": "Free consultation available around the clock",
@@ -242,13 +246,13 @@
       "firmPara1": "Ahmed Law Firm was founded in 1981 with a commitment to providing exceptional legal representation to individuals and families who have been injured due to the negligence of others. Our firm has built a reputation for excellence through decades of dedicated service to our clients throughout New York, including Long Island, Nassau County, Queens County, Kings County, The Bronx, Brooklyn, NYC, and Suffolk County.",
       "firmPara2": "We understand that facing a personal injury can be overwhelming, both emotionally and financially. That's why we work on a contingency fee basis, meaning you don't pay unless we win your case. Our experienced attorneys are committed to fighting for your rights and securing the compensation you deserve.",
       "verdictsHeading": "Verdicts That Matter",
-      "verdictsPara": "Over the years, Ahmed Law Firm has successfully represented thousands of clients and recovered millions of dollars in compensation. Our track record speaks to our dedication and expertise in personal injury law.",
+      "verdictsPara": "Over the years, Ahmed Law Firm has successfully represented thousands of clients and recovered 2 million+ in compensation. Our track record speaks to our dedication and expertise in personal injury law.",
       "attorneysHeading": "Attorneys Ready To Fight For You",
       "attorneysPara": "Our legal team brings together diverse expertise and a shared commitment to excellence. Each attorney at Ahmed Law Firm brings unique skills and experience to help achieve the best possible outcomes for our clients.",
       "commitmentHeading": "Our Commitment to Our Clients",
       "commitmentPara": "At Ahmed Law Firm, we believe that every client deserves personalized attention and aggressive representation.",
       "experienceTitle": "Our Experience",
-      "experienceIntro": "With over 40 years of combined experience, our attorneys have successfully represented thousands of clients across New York.",
+      "experienceIntro": "With over 10 years of combined experience, our attorneys have successfully represented thousands of clients across New York.",
       "experienceItem1": "Catastrophic Injury Cases",
       "experienceItem2": "Automobile Accidents",
       "experienceItem3": "Construction Site Accidents",
@@ -272,7 +276,7 @@
       "meetTeamDesc": "Get to know our experienced attorneys and partners who are dedicated to fighting for your rights and achieving the best possible outcomes for your case.",
       "meetTeamButton": "VIEW ALL ATTORNEYS",
       "ctaHeading": "Ready to Work With New York's Most Trusted Injury Lawyers?",
-      "ctaDesc": "With over 40 years of experience and {{amount}} recovered, our team is ready to fight for your rights. Get your free case evaluation today.",
+      "ctaDesc": "With over 10 years of experience and {{amount}} recovered, our team is ready to fight for your rights. Get your free case evaluation today.",
       "ctaButton": "SCHEDULE FREE CONSULTATION"
     },
     "attorneys": {
@@ -303,9 +307,9 @@
       "esquire": "Esquire",
       "abu-ahmed": {
         "tagline": "Founding attorney with over four decades of experience fighting for injured New Yorkers.",
-        "bio1": "Abu Ahmed founded Ahmed Law Firm in 1981 with a singular mission: to provide exceptional legal representation to individuals and families who have been injured through no fault of their own. For over forty years, he has been a steadfast advocate for victims of negligence throughout New York, including Long Island, Nassau County, Queens County, The Bronx, Brooklyn, NYC, and Suffolk County.",
+        "bio1": "Abu Ahmed founded Ahmed Law Firm in 1981 with a singular mission: to provide exceptional legal representation to individuals and families who have been injured through no fault of their own. For over ten years, he has been a steadfast advocate for victims of negligence throughout New York, including Long Island, Nassau County, Queens County, The Bronx, Brooklyn, NYC, and Suffolk County.",
         "bio2": "Mr. Ahmed believes that every client deserves personalized attention and aggressive representation. He has built the firm on a foundation of trust, integrity, and an unwavering commitment to securing the compensation his clients need to move forward after life-changing injuries.",
-        "bio3": "Under his leadership, Ahmed Law Firm has recovered millions of dollars for clients in personal injury, medical malpractice, workers' compensation, and wrongful death cases. He takes pride in the firm's contingency fee structure—clients do not pay unless the firm wins their case.",
+        "bio3": "Under his leadership, Ahmed Law Firm has recovered over $2 million for clients in personal injury, medical malpractice, workers' compensation, and wrongful death cases. He takes pride in the firm's contingency fee structure—clients do not pay unless the firm wins their case.",
         "education1School": "Juris Doctor",
         "education1Degree": "Accredited Law School",
         "education2School": "Undergraduate Studies",
@@ -319,8 +323,8 @@
         "practiceArea5": "Vehicle & Transportation Accidents",
         "practiceArea6": "Premises Liability",
         "highlight1": "Founded Ahmed Law Firm in 1981",
-        "highlight2": "Over 40 years of experience representing injury victims",
-        "highlight3": "Millions recovered for clients across New York",
+        "highlight2": "Over 10 years of experience representing injury victims",
+        "highlight3": "2 million+ recovered for clients across New York",
         "highlight4": "Contingency fee basis—no fee unless we win"
       },
       "usman-ahmed": {
@@ -366,6 +370,10 @@
       "stateLabel": "State",
       "messageLabel": "How can we help you? *",
       "messagePlaceholder": "Brief description of your legal issue...",
+      "uploadDocsLabel": "Upload documents (optional)",
+      "uploadDocsBrowse": "Choose files",
+      "uploadDocsNone": "No file chosen",
+      "uploadDocsHint": "PDF, Word, or images. Max 10MB per file.",
       "contactByEmail": "Contact by Email",
       "contactByPhone": "Contact by Phone",
       "disclaimerCheck": "I have read the Privacy Policy and disclaimer. *",
@@ -402,7 +410,7 @@
     },
     "practiceAreas": {
       "bannerTitle": "Our Practice Areas",
-      "bannerSubtitle": "Expert legal representation across multiple areas of law with over 40 years of experience"
+      "bannerSubtitle": "Expert legal representation across multiple areas of law with over 10 years of experience"
     },
     "legalResources": {
       "bannerTitle": "Legal Resources",
@@ -420,7 +428,37 @@
     },
     "reviews": {
       "bannerTitle": "Reviews & Ratings",
-      "bannerSubtitle": "What our clients say about their experience with Ahmed Law Firm"
+      "bannerSubtitle": "What our clients say about their experience with Ahmed Law Firm",
+      "videoHeading": "Hear From Our Clients",
+      "videoSub": "Hear directly from clients who trusted us with their personal injury cases.",
+      "writtenHeading": "What Our Clients Say",
+      "writtenSub": "Read what our clients have shared about their experience."
+    },
+    "privacyPolicy": {
+      "bannerTitle": "Privacy Policy",
+      "bannerSubtitle": "How Ahmed Law Firm collects, uses, and protects your information",
+      "intro": "At Ahmed Law Firm, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard information when you visit our website or contact us.",
+      "infoWeCollectTitle": "Information We Collect",
+      "infoWeCollect": "We may collect personal information such as your name, email address, phone number, and case-related details when you complete our contact form, subscribe to our communications, or otherwise provide information to us. We also collect information automatically when you visit our site, including your IP address and browser type.",
+      "howWeUseTitle": "How We Use Your Information",
+      "howWeUse": "We use the information you provide to respond to your inquiries, evaluate potential cases, and communicate with you about our services. We do not sell or share your personal information with third parties for marketing purposes.",
+      "cookiesTitle": "Cookies and Tracking",
+      "cookies": "Our website may use cookies and similar technologies to improve your experience and analyze site traffic. You can adjust your browser settings to disable cookies if you prefer.",
+      "contactTitle": "Contact Us",
+      "contact": "If you have questions about this Privacy Policy or your personal information, please contact us at frontdesk@lawahmed.com or call (718) 848-9595."
+    },
+    "disclaimer": {
+      "bannerTitle": "Disclaimer",
+      "bannerSubtitle": "Important information about the use of this website",
+      "intro": "The information on this website is provided for general informational purposes only and does not constitute legal advice. Please read the following disclaimers carefully.",
+      "attorneyAdviceTitle": "Not Legal Advice",
+      "attorneyAdvice": "The content on this website is not intended to be, and should not be construed as, formal legal advice. Every legal matter is unique. You should consult with a qualified attorney to discuss your specific situation before taking any action.",
+      "noRelationshipTitle": "No Attorney-Client Relationship",
+      "noRelationship": "Communicating with Ahmed Law Firm through this website, by email, or by phone does not create an attorney-client relationship. An attorney-client relationship is formed only when we agree in writing to represent you. Do not send confidential information until we have confirmed that we represent you.",
+      "priorResultsTitle": "Prior Results",
+      "priorResults": "Prior results do not guarantee a similar outcome. Each case depends on its own facts and circumstances.",
+      "contactTitle": "Contact",
+      "contact": "For a free consultation, contact Ahmed Law Firm at (718) 848-9595 or frontdesk@lawahmed.com. Attorney Advertising."
     },
     "search": {
       "bannerTitle": "Search",
@@ -506,8 +544,8 @@
           "4": {
             "heading": "Why Choose Ahmed Law Firm",
             "paragraphs": {
-              "0": "With over 40 years of experience representing injury victims throughout New York, Ahmed Law Firm has the knowledge, resources, and dedication needed to secure the best possible outcome for your case. We understand the challenges you are facing and are committed to providing personalized attention and aggressive representation.",
-              "1": "Our track record speaks for itself – we have successfully represented thousands of clients and recovered millions of dollars in compensation. We work on a contingency fee basis, so you do not pay unless we win your case. Contact us today for a free consultation and let us fight for the compensation you deserve."
+              "0": "With over 10 years of experience representing injury victims throughout New York, Ahmed Law Firm has the knowledge, resources, and dedication needed to secure the best possible outcome for your case. We understand the challenges you are facing and are committed to providing personalized attention and aggressive representation.",
+              "1": "Our track record speaks for itself – we have successfully represented thousands of clients and recovered 2 million+ in compensation. We work on a contingency fee basis, so you do not pay unless we win your case. Contact us today for a free consultation and let us fight for the compensation you deserve."
             }
           }
         }
@@ -569,8 +607,8 @@
           "4": {
             "heading": "Why Choose Ahmed Law Firm",
             "paragraphs": {
-              "0": "With over 40 years of experience representing injury victims throughout New York, Ahmed Law Firm has the knowledge, resources, and dedication needed to secure the best possible outcome for your case. We understand the challenges you are facing and are committed to providing personalized attention and aggressive representation.",
-              "1": "Our track record speaks for itself – we have successfully represented thousands of clients and recovered millions of dollars in compensation. We work on a contingency fee basis, so you do not pay unless we win your case. Contact us today for a free consultation and let us fight for the compensation you deserve."
+              "0": "With over 10 years of experience representing injury victims throughout New York, Ahmed Law Firm has the knowledge, resources, and dedication needed to secure the best possible outcome for your case. We understand the challenges you are facing and are committed to providing personalized attention and aggressive representation.",
+              "1": "Our track record speaks for itself – we have successfully represented thousands of clients and recovered 2 million+ in compensation. We work on a contingency fee basis, so you do not pay unless we win your case. Contact us today for a free consultation and let us fight for the compensation you deserve."
             }
           }
         }
@@ -631,8 +669,8 @@
           "4": {
             "heading": "Why Choose Ahmed Law Firm",
             "paragraphs": {
-              "0": "With over 40 years of experience representing injury victims throughout New York, Ahmed Law Firm has the knowledge, resources, and dedication needed to secure the best possible outcome for your case. We understand the challenges you are facing and are committed to providing personalized attention and aggressive representation.",
-              "1": "Our track record speaks for itself – we have successfully represented thousands of clients and recovered millions of dollars in compensation. We work on a contingency fee basis, so you do not pay unless we win your case. Contact us today for a free consultation and let us fight for the compensation you deserve."
+              "0": "With over 10 years of experience representing injury victims throughout New York, Ahmed Law Firm has the knowledge, resources, and dedication needed to secure the best possible outcome for your case. We understand the challenges you are facing and are committed to providing personalized attention and aggressive representation.",
+              "1": "Our track record speaks for itself – we have successfully represented thousands of clients and recovered 2 million+ in compensation. We work on a contingency fee basis, so you do not pay unless we win your case. Contact us today for a free consultation and let us fight for the compensation you deserve."
             }
           }
         }
@@ -693,8 +731,8 @@
           "4": {
             "heading": "Why Choose Ahmed Law Firm",
             "paragraphs": {
-              "0": "With over 40 years of experience representing injury victims throughout New York, Ahmed Law Firm has the knowledge, resources, and dedication needed to secure the best possible outcome for your case. We understand the challenges you are facing and are committed to providing personalized attention and aggressive representation.",
-              "1": "Our track record speaks for itself – we have successfully represented thousands of clients and recovered millions of dollars in compensation. We work on a contingency fee basis, so you do not pay unless we win your case. Contact us today for a free consultation and let us fight for the compensation you deserve."
+              "0": "With over 10 years of experience representing injury victims throughout New York, Ahmed Law Firm has the knowledge, resources, and dedication needed to secure the best possible outcome for your case. We understand the challenges you are facing and are committed to providing personalized attention and aggressive representation.",
+              "1": "Our track record speaks for itself – we have successfully represented thousands of clients and recovered 2 million+ in compensation. We work on a contingency fee basis, so you do not pay unless we win your case. Contact us today for a free consultation and let us fight for the compensation you deserve."
             }
           }
         }
@@ -758,8 +796,8 @@
           "4": {
             "heading": "Why Choose Ahmed Law Firm",
             "paragraphs": {
-              "0": "With over 40 years of experience representing injury victims throughout New York, Ahmed Law Firm has the knowledge, resources, and dedication needed to secure the best possible outcome for your case. We understand the challenges you are facing and are committed to providing personalized attention and aggressive representation.",
-              "1": "Our track record speaks for itself – we have successfully represented thousands of clients and recovered millions of dollars in compensation. We work on a contingency fee basis, so you do not pay unless we win your case. Contact us today for a free consultation and let us fight for the compensation you deserve."
+              "0": "With over 10 years of experience representing injury victims throughout New York, Ahmed Law Firm has the knowledge, resources, and dedication needed to secure the best possible outcome for your case. We understand the challenges you are facing and are committed to providing personalized attention and aggressive representation.",
+              "1": "Our track record speaks for itself – we have successfully represented thousands of clients and recovered 2 million+ in compensation. We work on a contingency fee basis, so you do not pay unless we win your case. Contact us today for a free consultation and let us fight for the compensation you deserve."
             }
           }
         }

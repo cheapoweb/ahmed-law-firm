@@ -87,7 +87,7 @@ export const PerformanceSection = () => {
             <h3 className="performance-label">OUR PERFORMANCE</h3>
             <h2 className="performance-heading">
               Across 1000's of cases,<br />
-              <em>a half-billion+ recovered.</em>
+              <em>2 million+ recovered.</em>
             </h2>
             <div className="performance-footnote">
               <p className="footnote-text">

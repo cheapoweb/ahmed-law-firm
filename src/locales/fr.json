@@ -129,14 +129,14 @@
       "card3Title": "Les résultats que vous attendez",
       "card3Desc": "Chaque avantage et droit auquel la loi vous donne droit.",
       "card4Title": "Une expérience de confiance",
-      "card4Desc": "Plus de 40 ans à défendre les New-Yorkais blessés.",
+      "card4Desc": "Plus de 10 ans à défendre les New-Yorkais blessés.",
       "cta": "ÉVALUATION GRATUITE DE VOTRE CAS",
       "videoTitle": "Ahmed Law Firm"
     },
     "performance": {
       "label": "NOTRE RÉSULTAT",
       "heading1": "Sur des milliers de dossiers,",
-      "heading2": "des millions récupérés",
+      "heading2": "2 millions+ récupérés",
       "footnote": "*Les moyennes du secteur reflètent le domaine. Notre taux de 98 % représente la norme dans le contentieux complexe que nous gérons.",
       "achievement1": "Verdict du jury – accident de véhicule (MVA)",
       "achievement2": "Accord – accident de chantier",
@@ -167,7 +167,7 @@
       "heading": "Vos questions juridiques",
       "headingEm": "répondues",
       "q1": "Quels types de dossiers d'indemnisation pour blessures traitez-vous ?",
-      "a1": "Nous traitons un large éventail de dossiers : accidents de voiture, fautes médicales, abus en maison de retraite, accidents de chantier, glissades et chutes, décès par négligence, et plus. Nos avocats ont plus de 40 ans d'expérience cumulée dans plusieurs domaines.",
+      "a1": "Nous traitons un large éventail de dossiers : accidents de voiture, fautes médicales, abus en maison de retraite, accidents de chantier, glissades et chutes, décès par négligence, et plus. Nos avocats ont plus de 10 ans d'expérience cumulée dans plusieurs domaines.",
       "q2": "Combien de temps ai-je pour déposer une demande d'indemnisation ?",
       "a2": "Dans la plupart des États, le délai de prescription est généralement de deux à trois ans à partir de la date de l'accident. Les délais varient selon l'État et le type de dossier. Il est crucial de consulter un avocat le plus tôt possible pour protéger vos droits.",
       "q3": "Combien de temps dure en général un dossier d'indemnisation ?",
@@ -212,7 +212,7 @@
     },
     "whyChooseUs": {
       "heading": "Pourquoi choisir Ahmed Law Firm ?",
-      "item1Title": "Plus de 40 ans d'expérience",
+      "item1Title": "Plus de 10 ans d'expérience",
       "item1Desc": "Des décennies d'excellence juridique en représentation juridique d'experts",
       "item2Title": "Disponibilité 24h/24 et 7j/7",
       "item2Desc": "Consultation gratuite disponible à toute heure",
@@ -242,13 +242,13 @@
       "firmPara1": "Ahmed Law Firm a été fondé en 1981 avec l'engagement de fournir une représentation juridique exceptionnelle aux personnes et familles blessées par la négligence d'autrui. Notre cabinet s'est bâti une réputation d'excellence grâce à des décennies de service dévoué à nos clients dans tout New York, notamment Long Island, le comté de Nassau, le comté de Queens, le comté de Kings, le Bronx, Brooklyn, NYC et le comté de Suffolk.",
       "firmPara2": "Nous comprenons qu'une blessure personnelle peut être accablante, tant sur le plan émotionnel que financier. C'est pourquoi nous travaillons aux honoraires contingents : vous ne payez que si nous gagnons votre affaire. Nos avocats expérimentés sont déterminés à défendre vos droits et à obtenir la compensation que vous méritez.",
       "verdictsHeading": "Des verdicts qui comptent",
-      "verdictsPara": "Au fil des années, Ahmed Law Firm a représenté avec succès des milliers de clients et récupéré des millions de dollars en compensation. Notre palmarès témoigne de notre dévouement et de notre expertise en droit des blessures personnelles.",
+      "verdictsPara": "Au fil des années, Ahmed Law Firm a représenté avec succès des milliers de clients et récupéré 2 millions+ en compensation. Notre palmarès témoigne de notre dévouement et de notre expertise en droit des blessures personnelles.",
       "attorneysHeading": "Des avocats prêts à se battre pour vous",
       "attorneysPara": "Notre équipe juridique réunit une expertise variée et un engagement commun envers l'excellence. Chaque avocat d'Ahmed Law Firm apporte des compétences et une expérience uniques pour obtenir les meilleurs résultats pour nos clients.",
       "commitmentHeading": "Notre engagement envers nos clients",
       "commitmentPara": "Chez Ahmed Law Firm, nous croyons que chaque client mérite une attention personnalisée et une représentation vigoureuse.",
       "experienceTitle": "Notre expérience",
-      "experienceIntro": "Avec plus de 40 ans d'expérience combinée, nos avocats ont représenté avec succès des milliers de clients à travers New York.",
+      "experienceIntro": "Avec plus de 10 ans d'expérience combinée, nos avocats ont représenté avec succès des milliers de clients à travers New York.",
       "experienceItem1": "Cas de blessures catastrophiques",
       "experienceItem2": "Accidents automobiles",
       "experienceItem3": "Accidents de chantier",
@@ -272,7 +272,7 @@
       "meetTeamDesc": "Découvrez nos avocats et partenaires expérimentés, dévoués à défendre vos droits et à obtenir les meilleurs résultats pour votre affaire.",
       "meetTeamButton": "VOIR TOUS LES AVOCATS",
       "ctaHeading": "Prêt à travailler avec les avocats en blessures les plus dignes de confiance de New York ?",
-      "ctaDesc": "Avec plus de 40 ans d'expérience et {{amount}} récupérés, notre équipe est prête à défendre vos droits. Obtenez votre évaluation gratuite aujourd'hui.",
+      "ctaDesc": "Avec plus de 10 ans d'expérience et {{amount}} récupérés, notre équipe est prête à défendre vos droits. Obtenez votre évaluation gratuite aujourd'hui.",
       "ctaButton": "PRENDRE RENDEZ-VOUS GRATUIT"
     },
     "attorneys": {
@@ -305,7 +305,7 @@
         "tagline": "Avocat fondateur avec plus de quatre décennies d'expérience au service des New-Yorkais blessés.",
         "bio1": "Abu Ahmed a fondé Ahmed Law Firm en 1981 avec une mission unique : offrir une représentation juridique exceptionnelle aux personnes et familles blessées sans faute de leur part. Depuis plus de quarante ans, il défend avec constance les victimes de négligence dans tout New York, notamment Long Island, le comté de Nassau, le comté de Queens, le Bronx, Brooklyn, NYC et le comté de Suffolk.",
         "bio2": "M. Ahmed est convaincu que chaque client mérite une attention personnalisée et une représentation vigoureuse. Il a bâti le cabinet sur la confiance, l'intégrité et un engagement inébranlable à obtenir la compensation dont ses clients ont besoin pour aller de l'avant après des blessures qui changent une vie.",
-        "bio3": "Sous sa direction, Ahmed Law Firm a récupéré des millions de dollars pour des clients dans des affaires de dommages corporels, faute médicale, indemnisation des travailleurs et décès par négligence. Il est fier de la structure des honoraires au résultat du cabinet : les clients ne paient que si le cabinet gagne leur affaire.",
+        "bio3": "Sous sa direction, Ahmed Law Firm a récupéré plus de 2 millions $ pour des clients dans des affaires de dommages corporels, faute médicale, indemnisation des travailleurs et décès par négligence. Il est fier de la structure des honoraires au résultat du cabinet : les clients ne paient que si le cabinet gagne leur affaire.",
         "education1School": "Juris Doctor",
         "education1Degree": "École de droit accréditée",
         "education2School": "Études universitaires",
@@ -319,8 +319,8 @@
         "practiceArea5": "Accidents de véhicules et de transport",
         "practiceArea6": "Responsabilité des locaux",
         "highlight1": "A fondé Ahmed Law Firm en 1981",
-        "highlight2": "Plus de 40 ans d'expérience à représenter des victimes de blessures",
-        "highlight3": "Des millions récupérés pour des clients dans tout New York",
+        "highlight2": "Plus de 10 ans d'expérience à représenter des victimes de blessures",
+        "highlight3": "2 millions+ récupérés pour des clients dans tout New York",
         "highlight4": "Honoraires au résultat : pas d'honoraires si nous ne gagnons pas"
       },
       "usman-ahmed": {
@@ -402,7 +402,7 @@
     },
     "practiceAreas": {
       "bannerTitle": "Nos domaines d'activité",
-      "bannerSubtitle": "Représentation juridique d'experts dans plusieurs domaines du droit avec plus de 40 ans d'expérience"
+      "bannerSubtitle": "Représentation juridique d'experts dans plusieurs domaines du droit avec plus de 10 ans d'expérience"
     },
     "legalResources": {
       "bannerTitle": "Legal Resources",
@@ -443,7 +443,7 @@
       "genericPoint1": "Planifier une consultation gratuite",
       "genericPoint2": "Aucuns honoraires sauf en cas de succès",
       "genericPoint3": "Avocats expérimentés en dommages corporels",
-      "genericPoint4": "Des millions récupérés pour nos clients",
+      "genericPoint4": "2 millions+ récupérés pour nos clients",
       "personal-injury": {
         "bannerTitle": "Avocats en dommages corporels à New York",
         "bannerSubtitle": "Représentation expérimentée des victimes de blessures dans tout l'État de New York depuis 1981",
@@ -518,8 +518,8 @@
           "4": {
             "heading": "Pourquoi choisir Ahmed Law Firm",
             "paragraphs": {
-              "0": "Avec plus de 40 ans d'expérience à représenter des victimes de blessures dans tout l'État de New York, Ahmed Law Firm dispose des connaissances, des ressources et du dévouement nécessaires pour obtenir le meilleur résultat possible pour votre affaire. Nous comprenons les défis auxquels vous faites face et nous nous engageons à vous offrir une attention personnalisée et une représentation énergique.",
-              "1": "Notre bilan parle de lui-même : nous avons représenté avec succès des milliers de clients et récupéré des millions de dollars en indemnisation. Nous travaillons sur la base d'honoraires conditionnels, de sorte que vous ne payez rien à moins que nous ne gagnions votre affaire. Contactez-nous dès aujourd'hui pour une consultation gratuite et laissez-nous nous battre pour l'indemnisation que vous méritez."
+              "0": "Avec plus de 10 ans d'expérience à représenter des victimes de blessures dans tout l'État de New York, Ahmed Law Firm dispose des connaissances, des ressources et du dévouement nécessaires pour obtenir le meilleur résultat possible pour votre affaire. Nous comprenons les défis auxquels vous faites face et nous nous engageons à vous offrir une attention personnalisée et une représentation énergique.",
+              "1": "Notre bilan parle de lui-même : nous avons représenté avec succès des milliers de clients et récupéré 2 millions+ en indemnisation. Nous travaillons sur la base d'honoraires conditionnels, de sorte que vous ne payez rien à moins que nous ne gagnions votre affaire. Contactez-nous dès aujourd'hui pour une consultation gratuite et laissez-nous nous battre pour l'indemnisation que vous méritez."
             }
           }
         }
@@ -581,8 +581,8 @@
           "4": {
             "heading": "Pourquoi choisir Ahmed Law Firm",
             "paragraphs": {
-              "0": "Avec plus de 40 ans d'expérience à représenter des victimes de blessures dans tout l'État de New York, Ahmed Law Firm dispose des connaissances, des ressources et du dévouement nécessaires pour obtenir le meilleur résultat possible pour votre affaire. Nous comprenons les défis auxquels vous faites face et nous nous engageons à vous offrir une attention personnalisée et une représentation énergique.",
-              "1": "Notre bilan parle de lui-même : nous avons représenté avec succès des milliers de clients et récupéré des millions de dollars en indemnisation. Nous travaillons sur la base d'honoraires conditionnels, de sorte que vous ne payez rien à moins que nous ne gagnions votre affaire. Contactez-nous dès aujourd'hui pour une consultation gratuite et laissez-nous nous battre pour l'indemnisation que vous méritez."
+              "0": "Avec plus de 10 ans d'expérience à représenter des victimes de blessures dans tout l'État de New York, Ahmed Law Firm dispose des connaissances, des ressources et du dévouement nécessaires pour obtenir le meilleur résultat possible pour votre affaire. Nous comprenons les défis auxquels vous faites face et nous nous engageons à vous offrir une attention personnalisée et une représentation énergique.",
+              "1": "Notre bilan parle de lui-même : nous avons représenté avec succès des milliers de clients et récupéré 2 millions+ en indemnisation. Nous travaillons sur la base d'honoraires conditionnels, de sorte que vous ne payez rien à moins que nous ne gagnions votre affaire. Contactez-nous dès aujourd'hui pour une consultation gratuite et laissez-nous nous battre pour l'indemnisation que vous méritez."
             }
           }
         }
@@ -644,8 +644,8 @@
           "4": {
             "heading": "Pourquoi choisir Ahmed Law Firm",
             "paragraphs": {
-              "0": "Avec plus de 40 ans d'expérience à représenter des victimes de blessures dans tout l'État de New York, Ahmed Law Firm dispose des connaissances, des ressources et du dévouement nécessaires pour obtenir le meilleur résultat possible pour votre affaire. Nous comprenons les défis auxquels vous faites face et nous nous engageons à vous offrir une attention personnalisée et une représentation énergique.",
-              "1": "Notre bilan parle de lui-même : nous avons représenté avec succès des milliers de clients et récupéré des millions de dollars en indemnisation. Nous travaillons sur la base d'honoraires conditionnels, de sorte que vous ne payez rien à moins que nous ne gagnions votre affaire. Contactez-nous dès aujourd'hui pour une consultation gratuite et laissez-nous nous battre pour l'indemnisation que vous méritez."
+              "0": "Avec plus de 10 ans d'expérience à représenter des victimes de blessures dans tout l'État de New York, Ahmed Law Firm dispose des connaissances, des ressources et du dévouement nécessaires pour obtenir le meilleur résultat possible pour votre affaire. Nous comprenons les défis auxquels vous faites face et nous nous engageons à vous offrir une attention personnalisée et une représentation énergique.",
+              "1": "Notre bilan parle de lui-même : nous avons représenté avec succès des milliers de clients et récupéré 2 millions+ en indemnisation. Nous travaillons sur la base d'honoraires conditionnels, de sorte que vous ne payez rien à moins que nous ne gagnions votre affaire. Contactez-nous dès aujourd'hui pour une consultation gratuite et laissez-nous nous battre pour l'indemnisation que vous méritez."
             }
           }
         }
@@ -706,8 +706,8 @@
           "4": {
             "heading": "Pourquoi choisir Ahmed Law Firm",
             "paragraphs": {
-              "0": "Avec plus de 40 ans d'expérience à représenter des victimes de blessures dans tout l'État de New York, Ahmed Law Firm dispose des connaissances, des ressources et du dévouement nécessaires pour obtenir le meilleur résultat possible pour votre affaire. Nous comprenons les défis auxquels vous faites face et nous nous engageons à vous offrir une attention personnalisée et une représentation énergique.",
-              "1": "Notre bilan parle de lui-même : nous avons représenté avec succès des milliers de clients et récupéré des millions de dollars en indemnisation. Nous travaillons sur la base d'honoraires conditionnels, de sorte que vous ne payez rien à moins que nous ne gagnions votre affaire. Contactez-nous dès aujourd'hui pour une consultation gratuite et laissez-nous nous battre pour l'indemnisation que vous méritez."
+              "0": "Avec plus de 10 ans d'expérience à représenter des victimes de blessures dans tout l'État de New York, Ahmed Law Firm dispose des connaissances, des ressources et du dévouement nécessaires pour obtenir le meilleur résultat possible pour votre affaire. Nous comprenons les défis auxquels vous faites face et nous nous engageons à vous offrir une attention personnalisée et une représentation énergique.",
+              "1": "Notre bilan parle de lui-même : nous avons représenté avec succès des milliers de clients et récupéré 2 millions+ en indemnisation. Nous travaillons sur la base d'honoraires conditionnels, de sorte que vous ne payez rien à moins que nous ne gagnions votre affaire. Contactez-nous dès aujourd'hui pour une consultation gratuite et laissez-nous nous battre pour l'indemnisation que vous méritez."
             }
           }
         }
@@ -768,8 +768,8 @@
           "4": {
             "heading": "Pourquoi choisir Ahmed Law Firm",
             "paragraphs": {
-              "0": "Avec plus de 40 ans d'expérience à représenter des victimes de blessures dans tout l'État de New York, Ahmed Law Firm dispose des connaissances, des ressources et du dévouement nécessaires pour obtenir le meilleur résultat possible pour votre affaire. Nous comprenons les défis auxquels vous faites face et nous nous engageons à vous offrir une attention personnalisée et une représentation énergique.",
-              "1": "Notre bilan parle de lui-même : nous avons représenté avec succès des milliers de clients et récupéré des millions de dollars en indemnisation. Nous travaillons sur la base d'honoraires conditionnels, de sorte que vous ne payez rien à moins que nous ne gagnions votre affaire. Contactez-nous dès aujourd'hui pour une consultation gratuite et laissez-nous nous battre pour l'indemnisation que vous méritez."
+              "0": "Avec plus de 10 ans d'expérience à représenter des victimes de blessures dans tout l'État de New York, Ahmed Law Firm dispose des connaissances, des ressources et du dévouement nécessaires pour obtenir le meilleur résultat possible pour votre affaire. Nous comprenons les défis auxquels vous faites face et nous nous engageons à vous offrir une attention personnalisée et une représentation énergique.",
+              "1": "Notre bilan parle de lui-même : nous avons représenté avec succès des milliers de clients et récupéré 2 millions+ en indemnisation. Nous travaillons sur la base d'honoraires conditionnels, de sorte que vous ne payez rien à moins que nous ne gagnions votre affaire. Contactez-nous dès aujourd'hui pour une consultation gratuite et laissez-nous nous battre pour l'indemnisation que vous méritez."
             }
           }
         }
@@ -828,8 +828,8 @@
           "4": {
             "heading": "Pourquoi choisir Ahmed Law Firm",
             "paragraphs": {
-              "0": "Avec plus de 40 ans d'expérience à représenter des victimes de blessures dans tout l'État de New York, Ahmed Law Firm dispose des connaissances, des ressources et du dévouement nécessaires pour obtenir le meilleur résultat possible pour votre affaire. Nous comprenons les défis auxquels vous faites face et nous nous engageons à vous offrir une attention personnalisée et une représentation énergique.",
-              "1": "Notre bilan parle de lui-même : nous avons représenté avec succès des milliers de clients et récupéré des millions de dollars en indemnisation. Nous travaillons sur la base d'honoraires conditionnels, de sorte que vous ne payez rien à moins que nous ne gagnions votre affaire. Contactez-nous dès aujourd'hui pour une consultation gratuite et laissez-nous nous battre pour l'indemnisation que vous méritez."
+              "0": "Avec plus de 10 ans d'expérience à représenter des victimes de blessures dans tout l'État de New York, Ahmed Law Firm dispose des connaissances, des ressources et du dévouement nécessaires pour obtenir le meilleur résultat possible pour votre affaire. Nous comprenons les défis auxquels vous faites face et nous nous engageons à vous offrir une attention personnalisée et une représentation énergique.",
+              "1": "Notre bilan parle de lui-même : nous avons représenté avec succès des milliers de clients et récupéré 2 millions+ en indemnisation. Nous travaillons sur la base d'honoraires conditionnels, de sorte que vous ne payez rien à moins que nous ne gagnions votre affaire. Contactez-nous dès aujourd'hui pour une consultation gratuite et laissez-nous nous battre pour l'indemnisation que vous méritez."
             }
           }
         }

@@ -11,7 +11,7 @@
 
 .header-container {
   width: 100%;
-  padding: 0 3rem;
+  padding: 0 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,9 +38,10 @@
 .header-nav {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.75rem;
   flex: 1;
-  justify-content: center;
+  min-width: 0;
+  justify-content: flex-start;
   padding: 0 2rem;
 }
 
@@ -153,6 +154,13 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+}
+
+.header-phone:hover {
+  opacity: 0.85;
 }
 
 .phone-icon {
@@ -170,13 +178,13 @@
 
 .header-cta-button {
   font-family: 'Inter', 'Inter Fallback', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.83rem;
   font-weight: 600;
   color: #233041;
   background-color: transparent;
   border: 2px solid #233041;
   border-radius: 9999px;
-  padding: 0.75rem 1.5rem;
+  padding: 0.7rem 1.4rem;
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s, transform 0.2s;
   white-space: nowrap;
@@ -222,24 +230,28 @@
   width: 44px;
   height: 44px;
   padding: 0;
-  border: none;
-  background: none;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #f5f7fb;
   cursor: pointer;
   flex-direction: column;
   gap: 6px;
   z-index: 1001;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .header-menu-toggle:hover {
-  opacity: 0.8;
+  opacity: 1;
+  background: #ffffff;
+  border-color: #D4AF37;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 .header-menu-toggle-bar {
   display: block;
   width: 22px;
   height: 2px;
-  background-color: #222222;
+  background-color: #233041;
   border-radius: 1px;
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
@@ -263,36 +275,70 @@
 
 /* Responsive Design */
 @media (max-width: 1200px) {
+  .header-container {
+    padding: 0 1.5rem;
+    gap: 1.25rem;
+  }
+
   .header-nav {
-    gap: 1.5rem;
+    gap: 1.25rem;
     padding: 0 1rem;
   }
 
   .nav-link {
     font-size: 0.85rem;
   }
+
+  .header-contact {
+    gap: 1rem;
+  }
+
+  .phone-number {
+    font-size: 0.85rem;
+  }
+
+  .header-cta-button {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.8rem;
+  }
 }
 
-@media (max-width: 968px) {
+/* Hide phone block on laptop-width desktop to save space */
+@media (min-width: 880px) and (max-width: 1600px) {
+  .header-phone {
+    display: none;
+  }
+}
+
+/* Between 880px and 1300px, also hide the header CTA button
+   (the contact button will still be accessible in the page body) */
+@media (min-width: 880px) and (max-width: 1300px) {
+  .header-cta-button {
+    display: none;
+  }
+}
+
+@media (max-width: 880px) {
   .header-container {
     flex-wrap: nowrap;
     height: auto;
     min-height: 72px;
     padding: 0 1.25rem;
     align-content: center;
+    justify-content: flex-start;
   }
 
   .header-menu-toggle {
     display: flex;
-    order: 2;
-    margin-left: auto;
+    order: 3;
+    margin-left: 0;
   }
 
   .header-contact {
     display: flex;
-    order: 1;
+    order: 2;
     margin-left: auto;
-    margin-right: 0.5rem;
+    margin-right: 0.25rem;
   }
 
   .header-contact .header-phone,
@@ -331,7 +377,7 @@
     margin: 0;
     padding: 2.5rem 1.25rem 1.5rem;
     background: #ffffff;
-    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.16);
     z-index: 1002;
     overflow-y: auto;
     overflow-x: hidden;
@@ -342,7 +388,7 @@
     transform: translateX(100%);
     visibility: hidden;
     transition: transform 0.3s ease, visibility 0.3s ease;
-    border-radius: 0;
+    border-radius: 16px 0 0 16px;
   }
 
   .header-flyout-logo {
@@ -396,7 +442,7 @@
     font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-size: 0.9rem;
     font-weight: 600;
-    color: #233041;
+    color: #ffffff;
     background: #D4AF37;
     border: 2px solid #D4AF37;
     border-radius: 9999px;
@@ -411,7 +457,7 @@
   .header-nav-cta:hover {
     background: #e5c04a;
     border-color: #e5c04a;
-    color: #233041;
+    color: #ffffff;
     transform: translateY(-1px);
   }
 

@@ -7,7 +7,7 @@ export const AttorneysHeroSection = () => {
         <h1 className="attorneys-hero-title">Our New York Personal Injury Legal Team</h1>
         <div className="attorneys-hero-content">
           <p>
-            At Ahmed Law Firm, our team of experienced personal injury attorneys is dedicated to fighting for the rights of injured individuals throughout New York. With decades of combined experience, we have successfully represented thousands of clients and recovered millions of dollars in compensation.
+            At Ahmed Law Firm, our team of experienced personal injury attorneys is dedicated to fighting for the rights of injured individuals throughout New York. With decades of combined experience, we have successfully represented thousands of clients and recovered 2 million+ in compensation.
           </p>
           <p>
             Our attorneys understand the physical, emotional, and financial toll that personal injuries can take on victims and their families. We work tirelessly to ensure our clients receive the justice and compensation they deserve.

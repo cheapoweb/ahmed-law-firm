@@ -79,10 +79,76 @@
   margin: 0;
 }
 
-/* Written Reviews */
-.reviews-written-section {
-  padding: 4rem 0;
-  background-color: #f8f8f8;
+/* Written Reviews - uses testimonial card design (TestimonialsSection.css) */
+.reviews-written-section.testimonials-section {
+  padding: 4rem 2rem 8rem;
+}
+
+.reviews-written-section.testimonials-section .reviews-section-heading {
+  color: #ffffff;
+}
+
+.reviews-written-section.testimonials-section .reviews-section-sub {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.reviews-written-section .testimonials-grid {
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 0;
+  gap: 1.25rem;
+}
+
+/* Reduce height of Written Review cards */
+.reviews-written-section .testimonial-card {
+  padding: 1.25rem 1.5rem;
+  gap: 1rem;
+}
+
+.reviews-written-section .testimonial-top {
+  margin-bottom: 0.5rem;
+}
+
+.reviews-written-section .testimonial-avatar {
+  width: 44px;
+  height: 44px;
+}
+
+.reviews-written-section .testimonial-firm-name {
+  font-size: 1rem;
+}
+
+.reviews-written-section .testimonial-firm-year {
+  font-size: 0.85rem;
+}
+
+.reviews-written-section .testimonial-stars .star {
+  font-size: 1.2rem;
+}
+
+.reviews-written-section .testimonial-quote {
+  margin: 0.5rem 0;
+}
+
+.reviews-written-section .testimonial-text {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.reviews-written-section .testimonial-author {
+  padding-top: 0.75rem;
+}
+
+.reviews-written-section .author-name-primary {
+  font-size: 0.95rem;
+}
+
+.reviews-written-section .author-signature {
+  font-size: 2.25rem;
+  top: -0.25rem;
 }
 
 .reviews-written-grid {

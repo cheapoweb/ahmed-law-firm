@@ -259,12 +259,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Inter', 'Inter Fallback', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: #ffffff;
+  color: #D4AF37;
   text-decoration: none;
   transition: background-color 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.hp3-locations-social-icon svg {
+  flex-shrink: 0;
+  display: block;
 }
 
 .hp3-locations-social-icon:hover {

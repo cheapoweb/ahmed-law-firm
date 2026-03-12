@@ -120,7 +120,6 @@
 
 .hp3-practice-card:hover {
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(212, 175, 55, 0.35);
-  transform: translateY(-6px);
   border-color: rgba(212, 175, 55, 0.4);
 }
 
@@ -200,12 +199,7 @@
 }
 
 .hp3-practice-dots {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 2.5rem;
-  flex-wrap: wrap;
+  display: none;
 }
 
 .hp3-practice-dot {
@@ -268,11 +262,35 @@
   }
 
   .hp3-practice-card-wrap {
-    flex: 0 0 50%;
+    flex: 0 0 auto; /* keep base width so 3 cards remain visible */
   }
 
   .hp3-practice-dots {
     margin-bottom: 2rem;
+  }
+}
+
+/* Tablet: 641px–968px
+   Limit width like desktop so cards don't stretch full viewport;
+   shorter image height so the section isn't oversized */
+@media (min-width: 641px) and (max-width: 968px) {
+  .hp3-practice-container {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* 2 cards visible: track width = (14 items) * (1/2 viewport) */
+  .hp3-practice-track {
+    width: calc(100% * 14 / 2);
+  }
+
+  .hp3-practice-card-image {
+    padding-top: 0;
+    height: 260px;
+    background-position: center;
   }
 }
 

@@ -25,8 +25,8 @@ export interface ContentSection {
 const DEFAULT_WHY_CHOOSE: ContentSection = {
   heading: 'Why Choose Ahmed Law Firm',
   paragraphs: [
-    'With over 40 years of experience representing injury victims throughout New York, Ahmed Law Firm has the knowledge, resources, and dedication needed to secure the best possible outcome for your case. We understand the challenges you are facing and are committed to providing personalized attention and aggressive representation.',
-    'Our track record speaks for itself – we have successfully represented thousands of clients and recovered millions of dollars in compensation. We work on a contingency fee basis, so you do not pay unless we win your case. Contact us today for a free consultation and let us fight for the compensation you deserve.',
+    'With over 10 years of experience representing injury victims throughout New York, Ahmed Law Firm has the knowledge, resources, and dedication needed to secure the best possible outcome for your case. We understand the challenges you are facing and are committed to providing personalized attention and aggressive representation.',
+    'Our track record speaks for itself – we have successfully represented thousands of clients and recovered 2 million+ in compensation. We work on a contingency fee basis, so you do not pay unless we win your case. Contact us today for a free consultation and let us fight for the compensation you deserve.',
   ],
 }
 
@@ -680,7 +680,7 @@ export const PAGE_CONFIG: Record<string, PageConfig> = {
   },
   'car-accidents': {
     title: 'New York Car Accident Lawyers',
-    subtitle: 'Expert legal representation for car accident victims with over 40 years of experience',
+    subtitle: 'Expert legal representation for car accident victims with over 10 years of experience',
     contentTitle: 'New York Car Accident Lawyers',
     sidebarCategory: 'vehicle-accidents',
   },

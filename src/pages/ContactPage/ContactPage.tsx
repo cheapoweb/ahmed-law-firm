@@ -22,6 +22,16 @@ const ContactPage = () => {
     practiceAreas: true,
     contactInfo: true,
   })
+  const [fileNames, setFileNames] = useState<string>('')
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files
+    if (!files || files.length === 0) {
+      setFileNames('')
+      return
+    }
+    setFileNames(Array.from(files).map((f) => f.name).join(', '))
+  }
 
   const toggleSection = (key: string) => {
     setExpandedSections((prev) => ({ ...prev, [key]: !prev[key] }))
@@ -136,6 +146,23 @@ const ContactPage = () => {
                   <div className="contact-form-group contact-form-group-full">
                     <label htmlFor="contact-message">{t('pages.contact.messageLabel')}</label>
                     <textarea id="contact-message" name="message" rows={4} required placeholder={t('pages.contact.messagePlaceholder')} />
+                  </div>
+                  <div className="contact-form-group contact-form-group-full">
+                    <label htmlFor="contact-docs">{t('pages.contact.uploadDocsLabel')}</label>
+                    <div className="contact-file-wrapper">
+                      <input
+                        id="contact-docs"
+                        type="file"
+                        name="documents"
+                        multiple
+                        accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                        className="contact-file-input"
+                        onChange={handleFileChange}
+                      />
+                      <span className="contact-file-label">{t('pages.contact.uploadDocsBrowse', 'Choose files')}</span>
+                      <span className="contact-file-chosen">{fileNames || t('pages.contact.uploadDocsNone', 'No file chosen')}</span>
+                    </div>
+                    <span className="contact-file-hint">{t('pages.contact.uploadDocsHint')}</span>
                   </div>
                 </div>
                 <div className="contact-checkbox-group">

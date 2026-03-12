@@ -22,9 +22,9 @@ export const ATTORNEYS: AttorneyProfile[] = [
     image: abuAhmedImage,
     tagline: 'Founding attorney with over four decades of experience fighting for injured New Yorkers.',
     bio: [
-      'Abu Ahmed founded Ahmed Law Firm in 1981 with a singular mission: to provide exceptional legal representation to individuals and families who have been injured through no fault of their own. For over forty years, he has been a steadfast advocate for victims of negligence throughout New York, including Long Island, Nassau County, Queens County, The Bronx, Brooklyn, NYC, and Suffolk County.',
+      'Abu Ahmed founded Ahmed Law Firm in 1981 with a singular mission: to provide exceptional legal representation to individuals and families who have been injured through no fault of their own. For over ten years, he has been a steadfast advocate for victims of negligence throughout New York, including Long Island, Nassau County, Queens County, The Bronx, Brooklyn, NYC, and Suffolk County.',
       'Mr. Ahmed believes that every client deserves personalized attention and aggressive representation. He has built the firm on a foundation of trust, integrity, and an unwavering commitment to securing the compensation his clients need to move forward after life-changing injuries.',
-      'Under his leadership, Ahmed Law Firm has recovered millions of dollars for clients in personal injury, medical malpractice, workers’ compensation, and wrongful death cases. He takes pride in the firm’s contingency fee structure—clients do not pay unless the firm wins their case.',
+      'Under his leadership, Ahmed Law Firm has recovered over $2 million for clients in personal injury, medical malpractice, workers’ compensation, and wrongful death cases. He takes pride in the firm’s contingency fee structure—clients do not pay unless the firm wins their case.',
     ],
     education: [
       { school: 'Juris Doctor', degree: 'Accredited Law School' },
@@ -41,8 +41,8 @@ export const ATTORNEYS: AttorneyProfile[] = [
     ],
     highlights: [
       'Founded Ahmed Law Firm in 1981',
-      'Over 40 years of experience representing injury victims',
-      'Millions recovered for clients across New York',
+      'Over 10 years of experience representing injury victims',
+      '2 million+ recovered for clients across New York',
       'Contingency fee basis—no fee unless we win',
     ],
   },

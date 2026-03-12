@@ -84,7 +84,7 @@ const LawsuitProcessPage = () => {
 
               <h2 className="content-heading">Why Choose Ahmed Law Firm</h2>
               <p className="content-paragraph">
-                With over 40 years of experience handling car accident cases throughout New York, Ahmed Law Firm has 
+                With over 10 years of experience handling car accident cases throughout New York, Ahmed Law Firm has 
                 the knowledge and resources to guide you through every step of the lawsuit process. We work on a 
                 contingency fee basis, meaning you don't pay unless we win your case. Contact us today for a free 
                 consultation.

@@ -13,7 +13,7 @@ export const AboutCTASection = () => {
           {t('pages.about.ctaHeading')}
         </h2>
         <p className="about-cta-description">
-          {t('pages.about.ctaDesc', { amount: formatLargeAmount(100_000_000, '+') })}
+          {t('pages.about.ctaDesc', { amount: formatLargeAmount(2_000_000, '+') })}
         </p>
         <div className="about-cta-buttons">
           <Link to="/contact" className="cta-button-primary">
