@@ -434,12 +434,7 @@
     "legalBlog": {
       "bannerTitle": "Ahmed Law Firm's Blog",
       "bannerSubtitle": "Insights on personal injury law, your rights, and how we help clients across New York"
-    }
-  },
-  "banner": {
-    "buildingsAlt": "Buildings Background"
-  },
-  "pages": {
+    },
     "practiceArea": {
       "notFoundTitle": "Practice Area",
       "notFoundSubtitle": "The page you are looking for could not be found.",
@@ -785,5 +780,8 @@
         "contentTitle": "New York Catastrophic Injury & Abuse Lawyers"
       }
     }
+  },
+  "banner": {
+    "buildingsAlt": "Buildings Background"
   }
 }
