@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import { formatCurrency } from '../../../../utils/formatNumber'
+import { useCurrencyFormat } from '../../../../hooks/useCurrencyFormat'
 import './PerformanceSection.css'
 
 const achievementKeys = [
@@ -13,8 +13,8 @@ const achievementKeys = [
 const amounts = [3500000, 2000000, 950000, 800000]
 
 const PerformanceSection = () => {
-  const { t, i18n } = useTranslation()
-  const lang = i18n.language || 'en'
+  const { t } = useTranslation()
+  const { formatAmount } = useCurrencyFormat()
   const [counters, setCounters] = useState<number[]>([0, 0, 0, 0])
   const hasAnimatedRef = useRef(false)
   const sectionRef = useRef<HTMLElement>(null)
@@ -98,7 +98,7 @@ const PerformanceSection = () => {
           <div className="hp3-performance-achievements-grid">
             {achievementKeys.map((key, index) => (
               <div key={index} className="hp3-performance-achievement-card">
-                <div className="hp3-performance-achievement-amount">{formatCurrency(counters[index], lang)}</div>
+                <div className="hp3-performance-achievement-amount">{formatAmount(counters[index])}</div>
                 <p className="hp3-performance-achievement-description">{t(key)}</p>
               </div>
             ))}

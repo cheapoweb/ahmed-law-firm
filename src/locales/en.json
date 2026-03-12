@@ -97,6 +97,10 @@
     "phone": "(718) 848-9595"
   },
   "sections": {
+    "practiceAreaSidebar": {
+      "title": "Practice Areas",
+      "overview": "Overview"
+    },
     "awards": {
       "label": "OUR AWARDS",
       "heading": "Recognized For",
@@ -151,12 +155,12 @@
       "heading": "What Our Clients",
       "headingEm": "Say",
       "showTestimonial": "Show testimonial {{n}}",
-      "review1Text": "The Ahmed Law Firm helped me recover $450,000 after my car accident. Their team was professional, caring, and fought hard for my rights.",
-      "review1Name": "Maria Rodriguez",
-      "review2Text": "After my slip and fall injury, Ahmed Law got me a $275,000 settlement. They handled everything while I focused on recovery.",
-      "review2Name": "John Thompson",
-      "review3Text": "Medical malpractice case resulted in $850,000 recovery. The team at Ahmed Law Firm are exceptional attorneys who truly care.",
-      "review3Name": "Patricia Williams"
+      "review1Text": "The Ahmed Law Firm helped me recover {{amount}} after my car accident. Their team was professional, caring, and fought hard for my rights.",
+      "review1Name": "M. R.",
+      "review2Text": "After my slip and fall injury, Ahmed Law got me a {{amount}} settlement. They handled everything while I focused on recovery.",
+      "review2Name": "J. T.",
+      "review3Text": "Medical malpractice case resulted in {{amount}} recovery. The team at Ahmed Law Firm are exceptional attorneys who truly care.",
+      "review3Name": "P. W."
     },
     "faq": {
       "label": "FREQUENTLY ASKED QUESTIONS",
@@ -221,7 +225,13 @@
     },
     "locationSpecific": {
       "heading": "Location-Specific Pages",
-      "subheading": "Dedicated legal representation across New York's five boroughs and Long Island"
+      "subheading": "Dedicated legal representation across New York's five boroughs and Long Island",
+      "manhattan": "Manhattan",
+      "brooklyn": "Brooklyn",
+      "longIsland": "Long Island",
+      "queens": "Queens",
+      "bronx": "Bronx",
+      "statenIsland": "Staten Island"
     }
   },
   "pages": {
@@ -237,8 +247,32 @@
       "attorneysPara": "Our legal team brings together diverse expertise and a shared commitment to excellence. Each attorney at Ahmed Law Firm brings unique skills and experience to help achieve the best possible outcomes for our clients.",
       "commitmentHeading": "Our Commitment to Our Clients",
       "commitmentPara": "At Ahmed Law Firm, we believe that every client deserves personalized attention and aggressive representation.",
+      "experienceTitle": "Our Experience",
+      "experienceIntro": "With over 40 years of combined experience, our attorneys have successfully represented thousands of clients across New York.",
+      "experienceItem1": "Catastrophic Injury Cases",
+      "experienceItem2": "Automobile Accidents",
+      "experienceItem3": "Construction Site Accidents",
+      "experienceItem4": "Medical Malpractice",
+      "experienceItem5": "Workers' Compensation Claims",
+      "experienceItem6": "Premises Liability",
+      "commitmentTitle": "Our Commitment",
+      "commitmentIntro": "We are committed to providing personalized attention and aggressive representation for every client.",
+      "commitmentItem1": "No Fee Unless We Win",
+      "commitmentItem2": "Proven Results",
+      "commitmentItem3": "Personal Attention",
+      "commitmentItem4": "24/7 Availability",
+      "commitmentItem5": "Experienced Attorneys",
+      "sidebarTitle": "How Can We Help You?",
+      "sidebarSubtitle": "Learn More About Our Services",
+      "sidebarArea1Title": "Workers Compensation",
+      "sidebarArea1Desc": "Construction Accidents, Workplace Falls, Equipment Accidents, and More",
+      "sidebarArea2Title": "Personal Injury",
+      "sidebarArea2Desc": "Auto Accidents, Slip & Fall, Premises Liability, Dangerous Products, and Serious Injuries",
+      "meetTeamHeading": "Meet Our Legal Team",
+      "meetTeamDesc": "Get to know our experienced attorneys and partners who are dedicated to fighting for your rights and achieving the best possible outcomes for your case.",
+      "meetTeamButton": "VIEW ALL ATTORNEYS",
       "ctaHeading": "Ready to Work With New York's Most Trusted Injury Lawyers?",
-      "ctaDesc": "With over 40 years of experience and $100M+ recovered, our team is ready to fight for your rights. Get your free case evaluation today.",
+      "ctaDesc": "With over 40 years of experience and {{amount}} recovered, our team is ready to fight for your rights. Get your free case evaluation today.",
       "ctaButton": "SCHEDULE FREE CONSULTATION"
     },
     "attorneys": {
@@ -256,6 +290,61 @@
       "ctaDesc": "With decades of combined experience and a proven track record of success, our legal team is ready to help you get the compensation you deserve.",
       "ctaButton": "SCHEDULE FREE CONSULTATION",
       "ctaCall": "CALL (718) 848-9595"
+    },
+    "attorneyProfile": {
+      "notFoundTitle": "Attorney Not Found",
+      "notFoundSubtitle": "The attorney profile you're looking for could not be found.",
+      "scheduleConsultation": "Schedule a Consultation",
+      "aboutHeading": "About {{name}}",
+      "educationHeading": "Education",
+      "barAdmissionsHeading": "Bar Admissions",
+      "practiceAreasHeading": "Practice Areas",
+      "whyWorkWithHeading": "Why Work With {{name}}?",
+      "esquire": "Esquire",
+      "abu-ahmed": {
+        "tagline": "Founding attorney with over four decades of experience fighting for injured New Yorkers.",
+        "bio1": "Abu Ahmed founded Ahmed Law Firm in 1981 with a singular mission: to provide exceptional legal representation to individuals and families who have been injured through no fault of their own. For over forty years, he has been a steadfast advocate for victims of negligence throughout New York, including Long Island, Nassau County, Queens County, The Bronx, Brooklyn, NYC, and Suffolk County.",
+        "bio2": "Mr. Ahmed believes that every client deserves personalized attention and aggressive representation. He has built the firm on a foundation of trust, integrity, and an unwavering commitment to securing the compensation his clients need to move forward after life-changing injuries.",
+        "bio3": "Under his leadership, Ahmed Law Firm has recovered millions of dollars for clients in personal injury, medical malpractice, workers' compensation, and wrongful death cases. He takes pride in the firm's contingency fee structure—clients do not pay unless the firm wins their case.",
+        "education1School": "Juris Doctor",
+        "education1Degree": "Accredited Law School",
+        "education2School": "Undergraduate Studies",
+        "education2Degree": "Liberal Arts & Pre-Law",
+        "bar1": "State of New York",
+        "bar2": "Federal Courts in New York",
+        "practiceArea1": "Personal Injury",
+        "practiceArea2": "Medical Malpractice",
+        "practiceArea3": "Workers' Compensation",
+        "practiceArea4": "Wrongful Death",
+        "practiceArea5": "Vehicle & Transportation Accidents",
+        "practiceArea6": "Premises Liability",
+        "highlight1": "Founded Ahmed Law Firm in 1981",
+        "highlight2": "Over 40 years of experience representing injury victims",
+        "highlight3": "Millions recovered for clients across New York",
+        "highlight4": "Contingency fee basis—no fee unless we win"
+      },
+      "usman-ahmed": {
+        "tagline": "Dedicated advocate for injury victims, committed to justice and full compensation.",
+        "bio1": "Usman Ahmed brings a sharp legal mind and a deep commitment to client-centered representation at Ahmed Law Firm. He works alongside the firm's founding attorney to serve injured individuals and their families throughout the greater New York area, including Long Island, Nassau County, Queens County, Kings County, The Bronx, Brooklyn, NYC, and Suffolk County.",
+        "bio2": "Mr. Ahmed understands the physical, emotional, and financial toll that serious injuries can take. He focuses on clear communication, thorough case preparation, and aggressive advocacy so that clients can focus on recovery while the firm fights for the compensation they deserve.",
+        "bio3": "His practice spans the full range of personal injury and related matters—from car accidents and slip-and-fall cases to medical malpractice and workers' compensation. He is committed to the firm's core values: no fees unless we win, and no client left without a voice.",
+        "education1School": "Juris Doctor",
+        "education1Degree": "Accredited Law School",
+        "education2School": "Undergraduate Degree",
+        "education2Degree": "Pre-Law & Political Science",
+        "bar1": "State of New York",
+        "bar2": "Federal Courts in New York",
+        "practiceArea1": "Personal Injury",
+        "practiceArea2": "Car & Motor Vehicle Accidents",
+        "practiceArea3": "Slip & Fall / Premises Liability",
+        "practiceArea4": "Workers' Compensation",
+        "practiceArea5": "Construction & Workplace Injuries",
+        "practiceArea6": "Catastrophic & Abuse Cases",
+        "highlight1": "Focused practice in personal injury and workers' rights",
+        "highlight2": "Committed to contingency fee representation",
+        "highlight3": "Serving clients across the New York metro area",
+        "highlight4": "Dedicated to securing maximum compensation for victims"
+      }
     },
     "contact": {
       "bannerTitle": "Contact Us",
@@ -349,5 +438,352 @@
   },
   "banner": {
     "buildingsAlt": "Buildings Background"
+  },
+  "pages": {
+    "practiceArea": {
+      "notFoundTitle": "Practice Area",
+      "notFoundSubtitle": "The page you are looking for could not be found.",
+      "genericIntro1": "If you have been injured in New York, you need experienced legal representation to help you navigate the legal process and secure the compensation you deserve. At Ahmed Law Firm, we have been representing injury victims throughout New York, including Long Island, Nassau County, Queens County, The Bronx, Brooklyn, NYC, and Suffolk County since 1981.",
+      "genericIntro2": "Our attorneys work on a contingency fee basis, meaning you do not pay unless we win your case. We are committed to fighting for your rights and ensuring you receive the maximum compensation available for your injuries, medical expenses, lost wages, and pain and suffering.",
+      "genericPoint1": "Schedule a Free Consultation",
+      "genericPoint2": "No Fees Unless We Win",
+      "genericPoint3": "Experienced Personal Injury Attorneys",
+      "genericPoint4": "Millions Recovered for Our Clients",
+      "personal-injury": {
+        "bannerTitle": "New York Personal Injury Lawyers",
+        "bannerSubtitle": "Experienced personal injury representation for victims across New York since 1981",
+        "contentTitle": "New York Personal Injury Lawyers"
+      },
+      "construction-accidents": {
+        "bannerTitle": "New York Construction Accident Lawyers",
+        "bannerSubtitle": "Representing construction workers and visitors injured on job sites",
+        "contentTitle": "New York Construction Accident Lawyers",
+        "sections": {
+          "0": {
+            "heading": "What to Do After a Construction Accident",
+            "intro": "Construction site injuries can give you rights to workers' comp and sometimes a third-party lawsuit. Consider these steps:",
+            "orderedSteps": {
+              "0": { "strong": "Report the injury:", "text": "Notify your employer and, if applicable, the site owner or general contractor as required." },
+              "1": { "strong": "Seek medical care:", "text": "Get treatment and follow your doctor's orders. Document all visits and restrictions." },
+              "2": { "strong": "Document the scene:", "text": "If possible, take photos of the area, equipment, and your injuries. Note what caused the accident." },
+              "3": { "strong": "File workers' compensation:", "text": "Submit a claim to the Workers' Compensation Board. Deadlines apply." },
+              "4": { "strong": "Preserve evidence:", "text": "Keep all medical records, pay stubs, and correspondence with employers and insurers." },
+              "5": { "strong": "Contact a construction accident lawyer:", "text": "You may have claims against multiple parties; we can evaluate your case." }
+            }
+          },
+          "1": {
+            "heading": "How to File a Claim",
+            "intro": "Our experienced attorneys can guide you through every step of the process. We help with:",
+            "listItems": {
+              "0": "Gathering evidence and documentation",
+              "1": "Filing claims with all relevant parties and insurers",
+              "2": "Negotiating with insurance adjusters",
+              "3": "Calculating damages including medical expenses, lost wages, and pain and suffering",
+              "4": "Representing you in court if a fair settlement cannot be reached"
+            }
+          },
+          "2": {
+            "heading": "Common Causes of Construction Accidents",
+            "intro": "Construction site injuries often result from:",
+            "listItems": {
+              "0": "Falls from heights (ladders, scaffolding, roofs)",
+              "1": "Struck-by incidents (falling objects, equipment)",
+              "2": "Electrocution and electrical hazards",
+              "3": "Caught-in/between hazards (trenches, machinery)",
+              "4": "Inadequate training or safety equipment",
+              "5": "Defective tools or equipment"
+            }
+          },
+          "3": {
+            "heading": "Types of Injuries We Handle",
+            "intro": "We represent clients who have suffered serious injuries, including:",
+            "listItems": {
+              "0": "Head and traumatic brain injuries",
+              "1": "Neck and back injuries",
+              "2": "Spinal cord damage and paralysis",
+              "3": "Broken bones and fractures",
+              "4": "Internal organ damage",
+              "5": "Cuts, lacerations, and scarring",
+              "6": "Emotional trauma and PTSD",
+              "7": "Wrongful death"
+            }
+          },
+          "4": {
+            "heading": "Why Choose Ahmed Law Firm",
+            "paragraphs": {
+              "0": "With over 40 years of experience representing injury victims throughout New York, Ahmed Law Firm has the knowledge, resources, and dedication needed to secure the best possible outcome for your case. We understand the challenges you are facing and are committed to providing personalized attention and aggressive representation.",
+              "1": "Our track record speaks for itself – we have successfully represented thousands of clients and recovered millions of dollars in compensation. We work on a contingency fee basis, so you do not pay unless we win your case. Contact us today for a free consultation and let us fight for the compensation you deserve."
+            }
+          }
+        }
+      },
+      "slip-fall": {
+        "bannerTitle": "New York Slip and Fall Lawyers",
+        "bannerSubtitle": "Holding property owners accountable for dangerous conditions",
+        "contentTitle": "New York Slip and Fall Lawyers",
+        "sections": {
+          "0": {
+            "heading": "What to Do After a Slip and Fall",
+            "intro": "If you were injured in a slip and fall, these steps can help protect your claim:",
+            "orderedSteps": {
+              "0": { "strong": "Seek medical attention:", "text": "Get evaluated and treated. Document your injuries and follow your doctor's advice." },
+              "1": { "strong": "Report the incident:", "text": "Report to the property owner or manager and ask for a written incident report." },
+              "2": { "strong": "Document the scene:", "text": "Take photos of the condition that caused the fall (e.g., wet floor, uneven surface) and your injuries." },
+              "3": { "strong": "Get witness information:", "text": "Collect names and contact details of anyone who saw the fall or the condition." },
+              "4": { "strong": "Preserve evidence:", "text": "Keep your clothing and shoes if they were damaged. Save all medical and incident paperwork." },
+              "5": { "strong": "Contact a slip and fall lawyer:", "text": "Premises liability claims require proving the owner knew or should have known of the hazard; we can help." }
+            }
+          },
+          "1": {
+            "heading": "How to File a Claim",
+            "intro": "Our experienced attorneys can guide you through every step of the process. We help with:",
+            "listItems": {
+              "0": "Gathering evidence and documentation",
+              "1": "Filing claims with all relevant parties and insurers",
+              "2": "Negotiating with insurance adjusters",
+              "3": "Calculating damages including medical expenses, lost wages, and pain and suffering",
+              "4": "Representing you in court if a fair settlement cannot be reached"
+            }
+          },
+          "2": {
+            "heading": "Common Causes of Slip and Fall Injuries",
+            "intro": "Slip and fall accidents are often caused by:",
+            "listItems": {
+              "0": "Wet or slippery floors",
+              "1": "Uneven surfaces and broken pavement",
+              "2": "Poor lighting in stairwells and walkways",
+              "3": "Loose rugs or cords",
+              "4": "Ice and snow on sidewalks and parking lots",
+              "5": "Unmarked steps or changes in elevation"
+            }
+          },
+          "3": {
+            "heading": "Types of Injuries We Handle",
+            "intro": "We represent clients who have suffered serious injuries, including:",
+            "listItems": {
+              "0": "Head and traumatic brain injuries",
+              "1": "Neck and back injuries",
+              "2": "Spinal cord damage and paralysis",
+              "3": "Broken bones and fractures",
+              "4": "Internal organ damage",
+              "5": "Cuts, lacerations, and scarring",
+              "6": "Emotional trauma and PTSD",
+              "7": "Wrongful death"
+            }
+          },
+          "4": {
+            "heading": "Why Choose Ahmed Law Firm",
+            "paragraphs": {
+              "0": "With over 40 years of experience representing injury victims throughout New York, Ahmed Law Firm has the knowledge, resources, and dedication needed to secure the best possible outcome for your case. We understand the challenges you are facing and are committed to providing personalized attention and aggressive representation.",
+              "1": "Our track record speaks for itself – we have successfully represented thousands of clients and recovered millions of dollars in compensation. We work on a contingency fee basis, so you do not pay unless we win your case. Contact us today for a free consultation and let us fight for the compensation you deserve."
+            }
+          }
+        }
+      },
+      "premises-liability": {
+        "bannerTitle": "New York Premises Liability Lawyers",
+        "bannerSubtitle": "Fighting for those injured by unsafe property conditions",
+        "contentTitle": "New York Premises Liability Lawyers",
+        "sections": {
+          "0": {
+            "heading": "What to Do After a Premises Injury",
+            "intro": "If you were hurt on someone else's property due to a dangerous condition, consider these steps:",
+            "orderedSteps": {
+              "0": { "strong": "Seek medical care:", "text": "Get treatment and document all injuries and follow-up care." },
+              "1": { "strong": "Report the incident:", "text": "Report to the property owner or manager and request a written incident report." },
+              "2": { "strong": "Document the hazard:", "text": "Take photos of the condition that caused your injury (e.g., broken step, poor lighting, debris)." },
+              "3": { "strong": "Get witness information:", "text": "Collect names and contact details of anyone who saw the condition or your fall." },
+              "4": { "strong": "Preserve evidence:", "text": "Keep clothing, shoes, and any incident or medical paperwork." },
+              "5": { "strong": "Contact a premises liability lawyer:", "text": "We can help you prove the owner knew or should have known of the danger and pursue full compensation." }
+            }
+          },
+          "1": {
+            "heading": "How to File a Claim",
+            "intro": "Our experienced attorneys can guide you through every step of the process. We help with:",
+            "listItems": {
+              "0": "Gathering evidence and documentation",
+              "1": "Filing claims with all relevant parties and insurers",
+              "2": "Negotiating with insurance adjusters",
+              "3": "Calculating damages including medical expenses, lost wages, and pain and suffering",
+              "4": "Representing you in court if a fair settlement cannot be reached"
+            }
+          },
+          "2": {
+            "heading": "Common Causes and Contributing Factors",
+            "intro": "Injuries in this area can result from a variety of causes. Our attorneys investigate the facts of your case to identify responsible parties and hold them accountable.",
+            "listItems": {
+              "0": "Negligence of others",
+              "1": "Unsafe conditions",
+              "2": "Lack of proper training or supervision",
+              "3": "Failure to follow safety rules and regulations",
+              "4": "Defective products or equipment"
+            }
+          },
+          "3": {
+            "heading": "Types of Injuries We Handle",
+            "intro": "We represent clients who have suffered serious injuries, including:",
+            "listItems": {
+              "0": "Head and traumatic brain injuries",
+              "1": "Neck and back injuries",
+              "2": "Spinal cord damage and paralysis",
+              "3": "Broken bones and fractures",
+              "4": "Internal organ damage",
+              "5": "Cuts, lacerations, and scarring",
+              "6": "Emotional trauma and PTSD",
+              "7": "Wrongful death"
+            }
+          },
+          "4": {
+            "heading": "Why Choose Ahmed Law Firm",
+            "paragraphs": {
+              "0": "With over 40 years of experience representing injury victims throughout New York, Ahmed Law Firm has the knowledge, resources, and dedication needed to secure the best possible outcome for your case. We understand the challenges you are facing and are committed to providing personalized attention and aggressive representation.",
+              "1": "Our track record speaks for itself – we have successfully represented thousands of clients and recovered millions of dollars in compensation. We work on a contingency fee basis, so you do not pay unless we win your case. Contact us today for a free consultation and let us fight for the compensation you deserve."
+            }
+          }
+        }
+      },
+      "workplace-injuries": {
+        "bannerTitle": "New York Workplace Injury Lawyers",
+        "bannerSubtitle": "Helping injured workers secure workers' compensation and more",
+        "contentTitle": "New York Workplace Injury Lawyers",
+        "sections": {
+          "0": {
+            "heading": "What to Do After a Workplace Injury",
+            "intro": "To protect your right to workers' compensation and any other claims, take these steps:",
+            "orderedSteps": {
+              "0": { "strong": "Report the injury:", "text": "Notify your employer as soon as possible. Timely notice is required under New York law." },
+              "1": { "strong": "Seek medical attention:", "text": "Get the care you need. Follow your employer's rules regarding authorized providers if applicable." },
+              "2": { "strong": "Document the incident:", "text": "Write down what happened, where, and who was present. Take photos if you can." },
+              "3": { "strong": "File a workers' compensation claim:", "text": "Submit a C-3 form to the Workers' Compensation Board. Deadlines apply." },
+              "4": { "strong": "Keep records:", "text": "Save all medical bills, pay stubs, and correspondence with your employer and the carrier." },
+              "5": { "strong": "Consult a workers' compensation attorney:", "text": "We can help you file, appeal denials, and secure the benefits you deserve." }
+            }
+          },
+          "1": {
+            "heading": "How to File a Claim",
+            "intro": "Our experienced attorneys can guide you through every step of the process. We help with:",
+            "listItems": {
+              "0": "Gathering evidence and documentation",
+              "1": "Filing claims with all relevant parties and insurers",
+              "2": "Negotiating with insurance adjusters",
+              "3": "Calculating damages including medical expenses, lost wages, and pain and suffering",
+              "4": "Representing you in court if a fair settlement cannot be reached"
+            }
+          },
+          "2": {
+            "heading": "Common Causes and Contributing Factors",
+            "intro": "Injuries in this area can result from a variety of causes. Our attorneys investigate the facts of your case to identify responsible parties and hold them accountable.",
+            "listItems": {
+              "0": "Negligence of others",
+              "1": "Unsafe conditions",
+              "2": "Lack of proper training or supervision",
+              "3": "Failure to follow safety rules and regulations",
+              "4": "Defective products or equipment"
+            }
+          },
+          "3": {
+            "heading": "Types of Injuries We Handle",
+            "intro": "We represent clients who have suffered serious injuries, including:",
+            "listItems": {
+              "0": "Head and traumatic brain injuries",
+              "1": "Neck and back injuries",
+              "2": "Spinal cord damage and paralysis",
+              "3": "Broken bones and fractures",
+              "4": "Internal organ damage",
+              "5": "Cuts, lacerations, and scarring",
+              "6": "Emotional trauma and PTSD",
+              "7": "Wrongful death"
+            }
+          },
+          "4": {
+            "heading": "Why Choose Ahmed Law Firm",
+            "paragraphs": {
+              "0": "With over 40 years of experience representing injury victims throughout New York, Ahmed Law Firm has the knowledge, resources, and dedication needed to secure the best possible outcome for your case. We understand the challenges you are facing and are committed to providing personalized attention and aggressive representation.",
+              "1": "Our track record speaks for itself – we have successfully represented thousands of clients and recovered millions of dollars in compensation. We work on a contingency fee basis, so you do not pay unless we win your case. Contact us today for a free consultation and let us fight for the compensation you deserve."
+            }
+          }
+        }
+      },
+      "medical-malpractice": {
+        "bannerTitle": "New York Medical Malpractice Lawyers",
+        "bannerSubtitle": "Fighting for victims of medical negligence and malpractice across New York",
+        "contentTitle": "New York Medical Malpractice Lawyers"
+      },
+      "workers-compensation": {
+        "bannerTitle": "New York Workers Compensation Lawyers",
+        "bannerSubtitle": "Helping injured workers secure the benefits they deserve",
+        "contentTitle": "New York Workers Compensation Lawyers",
+        "sections": {
+          "0": {
+            "heading": "What to Do After a Workplace Injury",
+            "intro": "To protect your right to workers' compensation benefits in New York, take these steps:",
+            "orderedSteps": {
+              "0": { "strong": "Report the injury:", "text": "Notify your employer as soon as possible. New York law requires timely notice." },
+              "1": { "strong": "Seek medical care:", "text": "Get the treatment you need. Your employer or their carrier may have a list of authorized providers." },
+              "2": { "strong": "Document the incident:", "text": "Write down what happened, where, when, and who was present. Take photos if you can." },
+              "3": { "strong": "File a claim:", "text": "Submit a C-3 form (Employee Claim) to the New York Workers' Compensation Board. Deadlines apply." },
+              "4": { "strong": "Keep records:", "text": "Save all medical bills, pay stubs, and correspondence with your employer and the insurance carrier." },
+              "5": { "strong": "Consult a workers' compensation lawyer:", "text": "An attorney can help you file correctly, appeal denials, and maximize your benefits." }
+            }
+          },
+          "1": {
+            "heading": "How to File a Workers' Compensation Claim",
+            "intro": "Navigating the claims process can be complex. We assist with:",
+            "listItems": {
+              "0": "Filing your C-3 and other forms with the Workers' Compensation Board",
+              "1": "Communicating with your employer and the insurance carrier",
+              "2": "Appealing denials and securing medical and wage benefits",
+              "3": "Negotiating lump-sum settlements when appropriate",
+              "4": "Representing you at hearings and before the Board"
+            }
+          },
+          "2": {
+            "heading": "Common Causes and Contributing Factors",
+            "intro": "Injuries in this area can result from a variety of causes. Our attorneys investigate the facts of your case to identify responsible parties and hold them accountable.",
+            "listItems": {
+              "0": "Negligence of others",
+              "1": "Unsafe conditions",
+              "2": "Lack of proper training or supervision",
+              "3": "Failure to follow safety rules and regulations",
+              "4": "Defective products or equipment"
+            }
+          },
+          "3": {
+            "heading": "Types of Workplace Injuries We Handle",
+            "intro": "We help injured workers with a wide range of job-related injuries and illnesses, including:",
+            "listItems": {
+              "0": "Fractures and orthopedic injuries",
+              "1": "Back and neck injuries",
+              "2": "Repetitive stress and occupational diseases",
+              "3": "Amputations and crush injuries",
+              "4": "Burns and electrical injuries",
+              "5": "Exposure to toxic substances"
+            }
+          },
+          "4": {
+            "heading": "Why Choose Ahmed Law Firm",
+            "paragraphs": {
+              "0": "With over 40 years of experience representing injury victims throughout New York, Ahmed Law Firm has the knowledge, resources, and dedication needed to secure the best possible outcome for your case. We understand the challenges you are facing and are committed to providing personalized attention and aggressive representation.",
+              "1": "Our track record speaks for itself – we have successfully represented thousands of clients and recovered millions of dollars in compensation. We work on a contingency fee basis, so you do not pay unless we win your case. Contact us today for a free consultation and let us fight for the compensation you deserve."
+            }
+          }
+        }
+      },
+      "vehicle-accidents": {
+        "bannerTitle": "New York Vehicle Accident Lawyers",
+        "bannerSubtitle": "Comprehensive representation for victims of car, truck, motorcycle, and other vehicle accidents",
+        "contentTitle": "New York Vehicle Accident Lawyers"
+      },
+      "transportation-accidents": {
+        "bannerTitle": "New York Transportation Accident Lawyers",
+        "bannerSubtitle": "Legal help for subway, train, plane, and other transportation accident victims",
+        "contentTitle": "New York Transportation Accident Lawyers"
+      },
+      "catastrophic-abuse-cases": {
+        "bannerTitle": "New York Catastrophic Injury & Abuse Lawyers",
+        "bannerSubtitle": "Standing up for families in wrongful death, catastrophic injury, and abuse cases",
+        "contentTitle": "New York Catastrophic Injury & Abuse Lawyers"
+      }
+    }
   }
 }

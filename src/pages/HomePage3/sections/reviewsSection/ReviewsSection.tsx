@@ -1,17 +1,19 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useCurrencyFormat } from '../../../../hooks/useCurrencyFormat'
 import './ReviewsSection.css'
 
 const AUTO_ROTATE_MS = 6500
 
 const reviewKeys = [
-  { textKey: 'sections.reviews.review1Text', nameKey: 'sections.reviews.review1Name' },
-  { textKey: 'sections.reviews.review2Text', nameKey: 'sections.reviews.review2Name' },
-  { textKey: 'sections.reviews.review3Text', nameKey: 'sections.reviews.review3Name' },
+  { textKey: 'sections.reviews.review1Text', nameKey: 'sections.reviews.review1Name', amountUsd: 450000 },
+  { textKey: 'sections.reviews.review2Text', nameKey: 'sections.reviews.review2Name', amountUsd: 275000 },
+  { textKey: 'sections.reviews.review3Text', nameKey: 'sections.reviews.review3Name', amountUsd: 850000 },
 ]
 
 const ReviewsSection = () => {
   const { t } = useTranslation()
+  const { formatAmount } = useCurrencyFormat()
   const [activeIndex, setActiveIndex] = useState(0)
 
   useEffect(() => {
@@ -32,7 +34,7 @@ const ReviewsSection = () => {
         </h2>
 
         <div className="hp3-reviews-card" role="group" aria-roledescription="carousel">
-          <p className="hp3-reviews-quote">"{t(active.textKey)}"</p>
+          <p className="hp3-reviews-quote">"{t(active.textKey, { amount: formatAmount(active.amountUsd) })}"</p>
           <p className="hp3-reviews-name">{t(active.nameKey).toUpperCase()}</p>
         </div>
 

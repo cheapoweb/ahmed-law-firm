@@ -1,4 +1,5 @@
 import './TestimonialsSection.css'
+import { useCurrencyFormat } from '../../../../hooks/useCurrencyFormat'
 
 // Convert YouTube URL to embed format
 const youtubeUrl = 'https://youtu.be/i5Z00p-bHiE'
@@ -6,12 +7,14 @@ const youtubeId = youtubeUrl.replace('https://youtu.be/', '').split('?')[0]
 const embedUrl = `https://www.youtube.com/embed/${youtubeId}`
 
 const testimonials = [
-  { name: 'Maria Rodriguez', role: 'Client', text: 'The Ahmed Law Firm helped me recover $450,000 after my car accident. Their team was professional, caring, and fought hard for my rights.', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80' },
-  { name: 'John Thompson', role: 'Client', text: 'After my slip and fall injury, Ahmed Law got me a $275,000 settlement. They handled everything while I focused on recovery.', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80' },
-  { name: 'Patricia Williams', role: 'Client', text: 'Medical malpractice case resulted in $850,000 recovery. The team at Ahmed Law Firm are exceptional attorneys who truly care.', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80' },
+  { name: 'M. R.', amountUsd: 450000, role: 'Client', text: 'The Ahmed Law Firm helped me recover {{amount}} after my car accident. Their team was professional, caring, and fought hard for my rights.', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80' },
+  { name: 'J. T.', amountUsd: 275000, role: 'Client', text: 'After my slip and fall injury, Ahmed Law got me a {{amount}} settlement. They handled everything while I focused on recovery.', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80' },
+  { name: 'P. W.', amountUsd: 850000, role: 'Client', text: 'Medical malpractice case resulted in {{amount}} recovery. The team at Ahmed Law Firm are exceptional attorneys who truly care.', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80' },
 ]
 
-export const TestimonialsSection = () => (
+export const TestimonialsSection = () => {
+  const { formatAmount } = useCurrencyFormat()
+  return (
   <section className="testimonials-section">
     <div className="testimonials-container">
       <div className="testimonials-header">
@@ -63,13 +66,13 @@ export const TestimonialsSection = () => (
               </div>
             </div>
             <div className="testimonial-quote">
-              <p className="testimonial-text">{t.text}</p>
+              <p className="testimonial-text">{t.text.replace(/\{\{amount\}\}/g, formatAmount(t.amountUsd))}</p>
             </div>
             <div className="testimonial-author">
               <div className="author-name-section">
                 <div className="author-name-primary">{t.name.toUpperCase()} CLIENT</div>
               </div>
-              <div className="author-signature">{t.name.split(' ')[0]}</div>
+              <div className="author-signature">{t.name.split('.')[0].trim()}</div>
             </div>
           </div>
         ))}
@@ -95,4 +98,5 @@ export const TestimonialsSection = () => (
       </div>
     </div>
   </section>
-)
+  )
+}

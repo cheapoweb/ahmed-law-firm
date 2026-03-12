@@ -32,7 +32,7 @@ export const AttorneysGridSection = () => {
               </div>
               <div className="attorney-info">
                 <h3 className="attorney-name">{attorney.name}</h3>
-                <p className="attorney-title">{attorney.title.toUpperCase()}</p>
+                <p className="attorney-title">{t('sections.team.esquire')}</p>
                 <Link to={`/attorneys/${attorney.slug}`} className="attorney-profile-link">{t('pages.attorneys.viewProfile')}</Link>
               </div>
             </div>

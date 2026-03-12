@@ -97,6 +97,10 @@
     "phone": "(718) 848-9595"
   },
   "sections": {
+    "practiceAreaSidebar": {
+      "title": "Domaines d'activité",
+      "overview": "Aperçu"
+    },
     "awards": {
       "label": "NOS PRIX",
       "heading": "Reconnus pour",
@@ -151,12 +155,12 @@
       "heading": "Ce que nos clients",
       "headingEm": "disent",
       "showTestimonial": "Afficher le témoignage {{n}}",
-      "review1Text": "Ahmed Law Firm m'a aidée à récupérer 450 000 $ après mon accident de voiture. Leur équipe était professionnelle, à l'écoute et s'est battue pour mes droits.",
-      "review1Name": "Maria Rodriguez",
-      "review2Text": "Après ma chute, Ahmed Law m'a obtenu un accord de 275 000 $. Ils ont tout géré pendant que je me concentrais sur ma guérison.",
-      "review2Name": "John Thompson",
-      "review3Text": "Affaire de faute médicale : récupération de 850 000 $. L'équipe d'Ahmed Law Firm est composée d'avocats exceptionnels qui tiennent vraiment à leurs clients.",
-      "review3Name": "Patricia Williams"
+      "review1Text": "Ahmed Law Firm m'a aidée à récupérer {{amount}} après mon accident de voiture. Leur équipe était professionnelle, à l'écoute et s'est battue pour mes droits.",
+      "review1Name": "M. R.",
+      "review2Text": "Après ma chute, Ahmed Law m'a obtenu un accord de {{amount}}. Ils ont tout géré pendant que je me concentrais sur ma guérison.",
+      "review2Name": "J. T.",
+      "review3Text": "Affaire de faute médicale : récupération de {{amount}}. L'équipe d'Ahmed Law Firm est composée d'avocats exceptionnels qui tiennent vraiment à leurs clients.",
+      "review3Name": "P. W."
     },
     "faq": {
       "label": "QUESTIONS FRÉQUENTES",
@@ -204,58 +208,143 @@
       "address": "ADDRESS:",
       "phone": "PHONE:",
       "email": "EMAIL:",
-      "getDirections": "Get Directions"
+      "getDirections": "Obtenir l'itinéraire"
     },
     "whyChooseUs": {
-      "heading": "Why Choose Ahmed Law Firm?",
-      "item1Title": "40+ Years Experience",
-      "item1Desc": "Decades of legal excellence in providing expert legal representation",
-      "item2Title": "24/7 Availability",
-      "item2Desc": "Free consultation available around the clock",
-      "item3Title": "No Fee Unless We Win",
-      "item3Desc": "Contingency fee basis means there is no fee unless we obtain a recovery for you"
+      "heading": "Pourquoi choisir Ahmed Law Firm ?",
+      "item1Title": "Plus de 40 ans d'expérience",
+      "item1Desc": "Des décennies d'excellence juridique en représentation juridique d'experts",
+      "item2Title": "Disponibilité 24h/24 et 7j/7",
+      "item2Desc": "Consultation gratuite disponible à toute heure",
+      "item3Title": "Pas d'honoraires si nous ne gagnons pas",
+      "item3Desc": "Honoraires au résultat : pas d'honoraires si nous n'obtenons pas de récupération pour vous."
     },
     "allPracticeAreas": {
-      "heading": "All Practice Area Pages",
-      "subheading": "Comprehensive legal services across all areas of personal injury and healthcare law"
+      "heading": "Toutes les pages Domaines d'activité",
+      "subheading": "Services juridiques complets dans tous les domaines des blessures personnelles et du droit de la santé"
     },
     "locationSpecific": {
-      "heading": "Location-Specific Pages",
-      "subheading": "Dedicated legal representation across New York's five boroughs and Long Island"
+      "heading": "Pages par localisation",
+      "subheading": "Représentation juridique dévouée dans les cinq arrondissements de New York et Long Island",
+      "manhattan": "Manhattan",
+      "brooklyn": "Brooklyn",
+      "longIsland": "Long Island",
+      "queens": "Queens",
+      "bronx": "Bronx",
+      "statenIsland": "Staten Island"
     }
   },
   "pages": {
     "about": {
-      "bannerTitle": "Our Firm",
-      "bannerSubtitle": "Established in 1981, built on trust, integrity and successfully delivering desired results to our clients.",
-      "firmHeading": "Injury Law Firm With a Proven Track Record",
-      "firmPara1": "Ahmed Law Firm was founded in 1981 with a commitment to providing exceptional legal representation to individuals and families who have been injured due to the negligence of others. Our firm has built a reputation for excellence through decades of dedicated service to our clients throughout New York, including Long Island, Nassau County, Queens County, Kings County, The Bronx, Brooklyn, NYC, and Suffolk County.",
-      "firmPara2": "We understand that facing a personal injury can be overwhelming, both emotionally and financially. That's why we work on a contingency fee basis, meaning you don't pay unless we win your case. Our experienced attorneys are committed to fighting for your rights and securing the compensation you deserve.",
-      "verdictsHeading": "Verdicts That Matter",
-      "verdictsPara": "Over the years, Ahmed Law Firm has successfully represented thousands of clients and recovered millions of dollars in compensation. Our track record speaks to our dedication and expertise in personal injury law.",
-      "attorneysHeading": "Attorneys Ready To Fight For You",
-      "attorneysPara": "Our legal team brings together diverse expertise and a shared commitment to excellence. Each attorney at Ahmed Law Firm brings unique skills and experience to help achieve the best possible outcomes for our clients.",
-      "commitmentHeading": "Our Commitment to Our Clients",
-      "commitmentPara": "At Ahmed Law Firm, we believe that every client deserves personalized attention and aggressive representation.",
-      "ctaHeading": "Ready to Work With New York's Most Trusted Injury Lawyers?",
-      "ctaDesc": "With over 40 years of experience and $100M+ recovered, our team is ready to fight for your rights. Get your free case evaluation today.",
-      "ctaButton": "SCHEDULE FREE CONSULTATION"
+      "bannerTitle": "Notre cabinet",
+      "bannerSubtitle": "Fondé en 1981, bâti sur la confiance, l'intégrité et la réussite pour nos clients.",
+      "firmHeading": "Cabinet d'avocats en blessures avec un historique prouvé",
+      "firmPara1": "Ahmed Law Firm a été fondé en 1981 avec l'engagement de fournir une représentation juridique exceptionnelle aux personnes et familles blessées par la négligence d'autrui. Notre cabinet s'est bâti une réputation d'excellence grâce à des décennies de service dévoué à nos clients dans tout New York, notamment Long Island, le comté de Nassau, le comté de Queens, le comté de Kings, le Bronx, Brooklyn, NYC et le comté de Suffolk.",
+      "firmPara2": "Nous comprenons qu'une blessure personnelle peut être accablante, tant sur le plan émotionnel que financier. C'est pourquoi nous travaillons aux honoraires contingents : vous ne payez que si nous gagnons votre affaire. Nos avocats expérimentés sont déterminés à défendre vos droits et à obtenir la compensation que vous méritez.",
+      "verdictsHeading": "Des verdicts qui comptent",
+      "verdictsPara": "Au fil des années, Ahmed Law Firm a représenté avec succès des milliers de clients et récupéré des millions de dollars en compensation. Notre palmarès témoigne de notre dévouement et de notre expertise en droit des blessures personnelles.",
+      "attorneysHeading": "Des avocats prêts à se battre pour vous",
+      "attorneysPara": "Notre équipe juridique réunit une expertise variée et un engagement commun envers l'excellence. Chaque avocat d'Ahmed Law Firm apporte des compétences et une expérience uniques pour obtenir les meilleurs résultats pour nos clients.",
+      "commitmentHeading": "Notre engagement envers nos clients",
+      "commitmentPara": "Chez Ahmed Law Firm, nous croyons que chaque client mérite une attention personnalisée et une représentation vigoureuse.",
+      "experienceTitle": "Notre expérience",
+      "experienceIntro": "Avec plus de 40 ans d'expérience combinée, nos avocats ont représenté avec succès des milliers de clients à travers New York.",
+      "experienceItem1": "Cas de blessures catastrophiques",
+      "experienceItem2": "Accidents automobiles",
+      "experienceItem3": "Accidents de chantier",
+      "experienceItem4": "Faute médicale",
+      "experienceItem5": "Réclamations d'indemnisation des travailleurs",
+      "experienceItem6": "Responsabilité des propriétaires",
+      "commitmentTitle": "Notre engagement",
+      "commitmentIntro": "Nous nous engageons à offrir une attention personnalisée et une représentation vigoureuse à chaque client.",
+      "commitmentItem1": "Pas d'honoraires si nous ne gagnons pas",
+      "commitmentItem2": "Résultats prouvés",
+      "commitmentItem3": "Attention personnelle",
+      "commitmentItem4": "Disponibilité 24h/24",
+      "commitmentItem5": "Avocats expérimentés",
+      "sidebarTitle": "Comment pouvons-nous vous aider ?",
+      "sidebarSubtitle": "En savoir plus sur nos services",
+      "sidebarArea1Title": "Indemnisation des travailleurs",
+      "sidebarArea1Desc": "Accidents de construction, chutes au travail, accidents d'équipement et plus",
+      "sidebarArea2Title": "Blessures personnelles",
+      "sidebarArea2Desc": "Accidents de voiture, glissades et chutes, responsabilité des locaux, produits dangereux et blessures graves",
+      "meetTeamHeading": "Rencontrez notre équipe juridique",
+      "meetTeamDesc": "Découvrez nos avocats et partenaires expérimentés, dévoués à défendre vos droits et à obtenir les meilleurs résultats pour votre affaire.",
+      "meetTeamButton": "VOIR TOUS LES AVOCATS",
+      "ctaHeading": "Prêt à travailler avec les avocats en blessures les plus dignes de confiance de New York ?",
+      "ctaDesc": "Avec plus de 40 ans d'expérience et {{amount}} récupérés, notre équipe est prête à défendre vos droits. Obtenez votre évaluation gratuite aujourd'hui.",
+      "ctaButton": "PRENDRE RENDEZ-VOUS GRATUIT"
     },
     "attorneys": {
-      "bannerTitle": "Our New York Personal Injury Legal Team",
-      "bannerSubtitle": "Meet our experienced attorneys dedicated to fighting for your rights and securing the compensation you deserve.",
-      "intro1": "At Ahmed Law Firm, our team of experienced personal injury attorneys is dedicated to fighting for the rights of injured individuals throughout New York.",
-      "intro2": "Our attorneys understand the physical, emotional, and financial toll that personal injuries can take on victims and their families.",
-      "teamLabel": "OUR TEAM",
-      "teamHeading": "Working With The Best Has",
-      "teamHeadingEm": "Never Been Easier",
-      "intro3": "Our legal team brings together diverse expertise and a shared commitment to excellence.",
-      "intro4": "From complex catastrophic injury cases to straightforward personal injury claims, our attorneys have the knowledge and dedication to guide you through every step of the legal process.",
-      "viewProfile": "View Profile →",
+      "bannerTitle": "Notre équipe juridique en blessures personnelles à New York",
+      "bannerSubtitle": "Rencontrez nos avocats expérimentés, dévoués à défendre vos droits et à obtenir la compensation que vous méritez.",
+      "intro1": "Chez Ahmed Law Firm, notre équipe d'avocats expérimentés en blessures personnelles est dévouée à défendre les droits des personnes blessées dans tout New York.",
+      "intro2": "Nos avocats comprennent le coût physique, émotionnel et financier que les blessures personnelles peuvent avoir sur les victimes et leurs familles.",
+      "teamLabel": "NOTRE ÉQUIPE",
+      "teamHeading": "Travailler avec les meilleurs",
+      "teamHeadingEm": "n'a jamais été aussi simple",
+      "intro3": "Notre équipe juridique réunit une expertise variée et un engagement commun envers l'excellence.",
+      "intro4": "Des cas complexes de blessures catastrophiques aux réclamations simples en blessures personnelles, nos avocats ont les connaissances et la dévotion pour vous guider à chaque étape du processus juridique.",
+      "viewProfile": "Voir le profil →",
       "ctaHeading": "Let Our Experienced Attorneys Fight for You",
       "ctaDesc": "With decades of combined experience and a proven track record of success, our legal team is ready to help you get the compensation you deserve.",
-      "ctaButton": "SCHEDULE FREE CONSULTATION",
-      "ctaCall": "CALL (718) 848-9595"
+      "ctaButton": "PRENDRE RENDEZ-VOUS GRATUIT",
+      "ctaCall": "APPELEZ (718) 848-9595"
+    },
+    "attorneyProfile": {
+      "notFoundTitle": "Avocat introuvable",
+      "notFoundSubtitle": "Le profil de l'avocat que vous recherchez est introuvable.",
+      "scheduleConsultation": "Prendre rendez-vous",
+      "aboutHeading": "À propos de {{name}}",
+      "educationHeading": "Formation",
+      "barAdmissionsHeading": "Barreaux",
+      "practiceAreasHeading": "Domaines d'activité",
+      "whyWorkWithHeading": "Pourquoi travailler avec {{name}} ?",
+      "esquire": "Avocat",
+      "abu-ahmed": {
+        "tagline": "Avocat fondateur avec plus de quatre décennies d'expérience au service des New-Yorkais blessés.",
+        "bio1": "Abu Ahmed a fondé Ahmed Law Firm en 1981 avec une mission unique : offrir une représentation juridique exceptionnelle aux personnes et familles blessées sans faute de leur part. Depuis plus de quarante ans, il défend avec constance les victimes de négligence dans tout New York, notamment Long Island, le comté de Nassau, le comté de Queens, le Bronx, Brooklyn, NYC et le comté de Suffolk.",
+        "bio2": "M. Ahmed est convaincu que chaque client mérite une attention personnalisée et une représentation vigoureuse. Il a bâti le cabinet sur la confiance, l'intégrité et un engagement inébranlable à obtenir la compensation dont ses clients ont besoin pour aller de l'avant après des blessures qui changent une vie.",
+        "bio3": "Sous sa direction, Ahmed Law Firm a récupéré des millions de dollars pour des clients dans des affaires de dommages corporels, faute médicale, indemnisation des travailleurs et décès par négligence. Il est fier de la structure des honoraires au résultat du cabinet : les clients ne paient que si le cabinet gagne leur affaire.",
+        "education1School": "Juris Doctor",
+        "education1Degree": "École de droit accréditée",
+        "education2School": "Études universitaires",
+        "education2Degree": "Arts libéraux et pré-droit",
+        "bar1": "État de New York",
+        "bar2": "Tribunaux fédéraux à New York",
+        "practiceArea1": "Dommages corporels",
+        "practiceArea2": "Faute médicale",
+        "practiceArea3": "Indemnisation des travailleurs",
+        "practiceArea4": "Décès par négligence",
+        "practiceArea5": "Accidents de véhicules et de transport",
+        "practiceArea6": "Responsabilité des locaux",
+        "highlight1": "A fondé Ahmed Law Firm en 1981",
+        "highlight2": "Plus de 40 ans d'expérience à représenter des victimes de blessures",
+        "highlight3": "Des millions récupérés pour des clients dans tout New York",
+        "highlight4": "Honoraires au résultat : pas d'honoraires si nous ne gagnons pas"
+      },
+      "usman-ahmed": {
+        "tagline": "Défenseur dévoué des victimes d'accidents, engagé pour la justice et une indemnisation complète.",
+        "bio1": "Usman Ahmed apporte un esprit juridique aigu et un engagement profond envers une représentation centrée sur le client au sein d'Ahmed Law Firm. Il travaille aux côtés de l'avocat fondateur pour servir les personnes blessées et leurs familles dans toute la région du grand New York, notamment Long Island, le comté de Nassau, le comté de Queens, le comté de Kings, le Bronx, Brooklyn, NYC et le comté de Suffolk.",
+        "bio2": "M. Ahmed comprend le coût physique, émotionnel et financier que des blessures graves peuvent avoir. Il privilégie une communication claire, une préparation rigoureuse des dossiers et une défense vigoureuse pour que les clients puissent se concentrer sur leur rétablissement pendant que le cabinet se bat pour la compensation qu'ils méritent.",
+        "bio3": "Sa pratique couvre tout l'éventail des dommages corporels et des questions connexes, des accidents de voiture et chutes aux fautes médicales et à l'indemnisation des travailleurs. Il adhère aux valeurs fondamentales du cabinet : pas d'honoraires à moins de gagner, et aucun client sans voix.",
+        "education1School": "Juris Doctor",
+        "education1Degree": "École de droit accréditée",
+        "education2School": "Diplôme universitaire",
+        "education2Degree": "Pré-droit et sciences politiques",
+        "bar1": "État de New York",
+        "bar2": "Tribunaux fédéraux à New York",
+        "practiceArea1": "Dommages corporels",
+        "practiceArea2": "Accidents de voiture et de véhicules motorisés",
+        "practiceArea3": "Glissade et chute / Responsabilité des locaux",
+        "practiceArea4": "Indemnisation des travailleurs",
+        "practiceArea5": "Blessures sur chantier et au travail",
+        "practiceArea6": "Cas catastrophiques et abus",
+        "highlight1": "Pratique centrée sur les dommages corporels et les droits des travailleurs",
+        "highlight2": "Engagé dans la représentation aux honoraires au résultat",
+        "highlight3": "Au service des clients dans toute la région métropolitaine de New York",
+        "highlight4": "Dévoué à obtenir une indemnisation maximale pour les victimes"
+      }
     },
     "contact": {
       "bannerTitle": "Contact Us",
@@ -263,7 +352,7 @@
       "introLabel": "FREE CONSULTATION",
       "introHeading": "Get in Touch,",
       "introHeadingEm": "We're Here to Help",
-      "introText": "Request a free consultation or call us 24/7. We work on a contingency fee basis—you don't pay unless we win.",
+      "introText": "Demandez une consultation gratuite ou appelez-nous 24h/24 et 7j/7. Nous travaillons aux honoraires au résultat : vous ne payez que si nous gagnons.",
       "quickLinks": "Quick Links",
       "getInTouch": "Get in Touch",
       "requestHeading": "Request a Free Consultation",
@@ -283,7 +372,7 @@
       "sendMessage": "Send Message",
       "ourOffice": "Our Office",
       "mapTitle": "Ahmed Law Firm Location",
-      "getDirections": "Get Directions →",
+      "getDirections": "Obtenir l'itinéraire →",
       "learnMore": "LEARN MORE",
       "watchHeading": "Watch, Listen &",
       "watchHeadingEm": "Read",
@@ -301,19 +390,19 @@
       "q1": "What is the average settlement for a car accident in NY?",
       "a1": "Settlement amounts vary widely based on the severity of injuries, medical costs, lost wages, and other factors. Our attorneys can evaluate your case and give you an idea of what similar cases have recovered. We work to maximize your compensation.",
       "q2": "How much is my personal injury case worth?",
-      "a2": "Case value depends on your injuries, medical treatment, impact on your life, and the liable party's insurance or assets. We work on a contingency fee basis—you don't pay unless we win. Contact us for a free case evaluation.",
+      "a2": "La valeur du dossier dépend de vos blessures, des soins médicaux, de l'impact sur votre vie et de l'assurance ou des actifs de la partie responsable. Nous travaillons aux honoraires au résultat : vous ne payez que si nous gagnons. Contactez-nous pour une évaluation gratuite de votre dossier.",
       "q3": "How long does a personal injury case take?",
       "a3": "Some cases settle in months; others take a year or more, especially if they go to trial. We work efficiently while making sure we don't settle for less than you deserve. We keep you updated at every step.",
       "q4": "How long do I have to file a personal injury claim?",
       "a4": "In New York, you generally have three years from the date of injury to file a personal injury lawsuit. Some claims have shorter deadlines. It's important to speak with an attorney as soon as possible so you don't miss a deadline.",
       "q5": "What types of personal injury cases do you handle?",
-      "a5": "We handle auto accidents, medical malpractice, construction accidents, slip and fall, wrongful death, truck accidents, and more. Our attorneys have decades of experience across multiple practice areas.",
+      "a5": "Nous traitons les accidents de voiture, les fautes médicales, les accidents du travail, les glissades et chutes, les décès par négligence, les accidents de camion et plus encore. Nos avocats ont des décennies d'expérience dans plusieurs domaines d'activité.",
       "q6": "Do I need to come to your office for a consultation?",
       "a6": "We offer free phone consultations and can meet you at home or in the hospital if you can't travel. Contact us 24/7 to discuss your case."
     },
     "practiceAreas": {
-      "bannerTitle": "Our Practice Areas",
-      "bannerSubtitle": "Expert legal representation across multiple areas of law with over 40 years of experience"
+      "bannerTitle": "Nos domaines d'activité",
+      "bannerSubtitle": "Représentation juridique d'experts dans plusieurs domaines du droit avec plus de 40 ans d'expérience"
     },
     "legalResources": {
       "bannerTitle": "Legal Resources",
@@ -345,6 +434,406 @@
     "legalBlog": {
       "bannerTitle": "Ahmed Law Firm's Blog",
       "bannerSubtitle": "Insights on personal injury law, your rights, and how we help clients across New York"
+    },
+    "practiceArea": {
+      "notFoundTitle": "Domaine d'activité",
+      "notFoundSubtitle": "La page que vous recherchez est introuvable.",
+      "genericIntro1": "Si vous avez été blessé à New York, vous avez besoin d'une représentation juridique expérimentée pour vous aider à naviguer dans le processus légal et à obtenir l'indemnisation que vous méritez. Chez Ahmed Law Firm, nous représentons les victimes de blessures dans tout l'État de New York — y compris Long Island, le comté de Nassau, le comté de Queens, le Bronx, Brooklyn, NYC et le comté de Suffolk — depuis 1981.",
+      "genericIntro2": "Nos avocats travaillent sur la base d'honoraires conditionnels, ce qui signifie que vous ne payez rien à moins que nous ne gagnions votre affaire. Nous sommes déterminés à défendre vos droits et à veiller à ce que vous receviez la compensation maximale possible pour vos blessures, vos frais médicaux, vos pertes de salaire et votre douleur et souffrance.",
+      "genericPoint1": "Planifier une consultation gratuite",
+      "genericPoint2": "Aucuns honoraires sauf en cas de succès",
+      "genericPoint3": "Avocats expérimentés en dommages corporels",
+      "genericPoint4": "Des millions récupérés pour nos clients",
+      "personal-injury": {
+        "bannerTitle": "Avocats en dommages corporels à New York",
+        "bannerSubtitle": "Représentation expérimentée des victimes de blessures dans tout l'État de New York depuis 1981",
+        "contentTitle": "Avocats en dommages corporels à New York",
+        "sections": {
+          "0": {
+            "heading": "Que faire après une blessure",
+            "intro": "Si vous avez été blessé en raison de la négligence de quelqu'un d'autre, suivre les bonnes étapes peut protéger votre santé et votre demande d'indemnisation :",
+            "orderedSteps": {
+              "0": {
+                "strong": "Consultez un médecin :",
+                "text": "Faites-vous examiner et suivez le plan de traitement de votre médecin. Conservez un dossier de toutes les visites et de tous les diagnostics."
+              },
+              "1": {
+                "strong": "Déclarez l'incident :",
+                "text": "Prévenez le propriétaire des lieux, votre employeur ou la police selon la situation (par exemple, chute, accident de voiture, etc.)."
+              },
+              "2": {
+                "strong": "Documentez tout :",
+                "text": "Prenez des photos des lieux, de vos blessures et de tout dommage matériel. Tenez un journal de ce que vous ressentez."
+              },
+              "3": {
+                "strong": "Rassemblez les preuves :",
+                "text": "Recueillez les noms et coordonnées des témoins, les rapports d'incident et toute correspondance pertinente."
+              },
+              "4": {
+                "strong": "Évitez de faire des déclarations :",
+                "text": "Ne faites pas de déclaration enregistrée à l'assureur de la partie adverse avant d'avoir parlé à un avocat."
+              },
+              "5": {
+                "strong": "Contactez un avocat :",
+                "text": "Communiquez dès que possible avec un avocat expérimenté en dommages corporels pour protéger vos droits."
+              }
+            }
+          },
+          "1": {
+            "heading": "Comment déposer une demande",
+            "intro": "Nos avocats expérimentés peuvent vous guider à chaque étape de la procédure. Nous vous aidons à :",
+            "listItems": {
+              "0": "Rassembler les preuves et la documentation",
+              "1": "Déposer des demandes auprès de toutes les parties et compagnies d'assurance concernées",
+              "2": "Négocier avec les experts en sinistres des assureurs",
+              "3": "Calculer les dommages, y compris les frais médicaux, la perte de revenus et la douleur et la souffrance",
+              "4": "Vous représenter devant les tribunaux si aucun règlement équitable ne peut être obtenu"
+            }
+          },
+          "2": {
+            "heading": "Causes et facteurs contributifs courants",
+            "intro": "Les blessures dans ce domaine peuvent résulter de nombreuses causes différentes. Nos avocats examinent les faits de votre affaire pour identifier les parties responsables et les tenir pour comptables.",
+            "listItems": {
+              "0": "Négligence d'autres personnes",
+              "1": "Conditions dangereuses ou non sécuritaires",
+              "2": "Manque de formation ou de supervision adéquate",
+              "3": "Non-respect des règles et normes de sécurité",
+              "4": "Produits ou équipements défectueux"
+            }
+          },
+          "3": {
+            "heading": "Types de blessures que nous traitons",
+            "intro": "Nous représentons des clients qui ont subi des blessures graves, notamment :",
+            "listItems": {
+              "0": "Blessures à la tête et traumatismes crânio-cérébraux",
+              "1": "Blessures au cou et au dos",
+              "2": "Lésions de la moelle épinière et paralysie",
+              "3": "Fractures et os brisés",
+              "4": "Atteintes aux organes internes",
+              "5": "Coupures, lacérations et cicatrices",
+              "6": "Traumatisme émotionnel et trouble de stress post-traumatique (TSPT)",
+              "7": "Décès par négligence"
+            }
+          },
+          "4": {
+            "heading": "Pourquoi choisir Ahmed Law Firm",
+            "paragraphs": {
+              "0": "Avec plus de 40 ans d'expérience à représenter des victimes de blessures dans tout l'État de New York, Ahmed Law Firm dispose des connaissances, des ressources et du dévouement nécessaires pour obtenir le meilleur résultat possible pour votre affaire. Nous comprenons les défis auxquels vous faites face et nous nous engageons à vous offrir une attention personnalisée et une représentation énergique.",
+              "1": "Notre bilan parle de lui-même : nous avons représenté avec succès des milliers de clients et récupéré des millions de dollars en indemnisation. Nous travaillons sur la base d'honoraires conditionnels, de sorte que vous ne payez rien à moins que nous ne gagnions votre affaire. Contactez-nous dès aujourd'hui pour une consultation gratuite et laissez-nous nous battre pour l'indemnisation que vous méritez."
+            }
+          }
+        }
+      },
+      "construction-accidents": {
+        "bannerTitle": "Avocats en accidents de construction à New York",
+        "bannerSubtitle": "Représentation des travailleurs de la construction et des visiteurs blessés sur les chantiers",
+        "contentTitle": "Avocats en accidents de construction à New York",
+        "sections": {
+          "0": {
+            "heading": "Que faire après un accident de construction",
+            "intro": "Les blessures sur chantier peuvent vous donner droit à l'indemnisation des travailleurs et parfois à un recours contre un tiers. Suivez ces étapes :",
+            "orderedSteps": {
+              "0": { "strong": "Signalez la blessure :", "text": "Notifiez votre employeur et, le cas échéant, le propriétaire du chantier ou l'entrepreneur général comme requis." },
+              "1": { "strong": "Consultez un médecin :", "text": "Recevez des soins et suivez les ordres de votre médecin. Documentez toutes les visites et restrictions." },
+              "2": { "strong": "Documentez les lieux :", "text": "Si possible, prenez des photos du lieu, de l'équipement et de vos blessures. Notez ce qui a causé l'accident." },
+              "3": { "strong": "Déposez une demande d'indemnisation :", "text": "Soumettez une demande à la commission d'indemnisation des travailleurs. Les délais s'appliquent." },
+              "4": { "strong": "Préservez les preuves :", "text": "Conservez tous les dossiers médicaux, bulletins de paie et correspondance avec les employeurs et assureurs." },
+              "5": { "strong": "Contactez un avocat en accidents de construction :", "text": "Vous pouvez avoir des recours contre plusieurs parties ; nous pouvons évaluer votre cas." }
+            }
+          },
+          "1": {
+            "heading": "Comment déposer une demande",
+            "intro": "Nos avocats expérimentés peuvent vous guider à chaque étape de la procédure. Nous vous aidons à :",
+            "listItems": {
+              "0": "Rassembler les preuves et la documentation",
+              "1": "Déposer des demandes auprès de toutes les parties et compagnies d'assurance concernées",
+              "2": "Négocier avec les experts en sinistres des assureurs",
+              "3": "Calculer les dommages, y compris les frais médicaux, la perte de revenus et la douleur et la souffrance",
+              "4": "Vous représenter devant les tribunaux si aucun règlement équitable ne peut être obtenu"
+            }
+          },
+          "2": {
+            "heading": "Causes courantes d'accidents de construction",
+            "intro": "Les blessures sur chantier résultent souvent de :",
+            "listItems": {
+              "0": "Chutes de hauteur (échelles, échafaudages, toits)",
+              "1": "Heurts par des objets ou équipements tombants",
+              "2": "Électrocution et risques électriques",
+              "3": "Coincements (tranchées, machinerie)",
+              "4": "Formation ou équipement de sécurité inadéquats",
+              "5": "Outils ou équipements défectueux"
+            }
+          },
+          "3": {
+            "heading": "Types de blessures que nous traitons",
+            "intro": "Nous représentons des clients qui ont subi des blessures graves, notamment :",
+            "listItems": {
+              "0": "Blessures à la tête et traumatismes crânio-cérébraux",
+              "1": "Blessures au cou et au dos",
+              "2": "Lésions de la moelle épinière et paralysie",
+              "3": "Fractures et os brisés",
+              "4": "Atteintes aux organes internes",
+              "5": "Coupures, lacérations et cicatrices",
+              "6": "Traumatisme émotionnel et trouble de stress post-traumatique (TSPT)",
+              "7": "Décès par négligence"
+            }
+          },
+          "4": {
+            "heading": "Pourquoi choisir Ahmed Law Firm",
+            "paragraphs": {
+              "0": "Avec plus de 40 ans d'expérience à représenter des victimes de blessures dans tout l'État de New York, Ahmed Law Firm dispose des connaissances, des ressources et du dévouement nécessaires pour obtenir le meilleur résultat possible pour votre affaire. Nous comprenons les défis auxquels vous faites face et nous nous engageons à vous offrir une attention personnalisée et une représentation énergique.",
+              "1": "Notre bilan parle de lui-même : nous avons représenté avec succès des milliers de clients et récupéré des millions de dollars en indemnisation. Nous travaillons sur la base d'honoraires conditionnels, de sorte que vous ne payez rien à moins que nous ne gagnions votre affaire. Contactez-nous dès aujourd'hui pour une consultation gratuite et laissez-nous nous battre pour l'indemnisation que vous méritez."
+            }
+          }
+        }
+      },
+      "slip-fall": {
+        "bannerTitle": "Avocats en glissades et chutes à New York",
+        "bannerSubtitle": "Tenir les propriétaires responsables des conditions dangereuses",
+        "contentTitle": "Avocats en glissades et chutes à New York",
+        "sections": {
+          "0": {
+            "heading": "Que faire après une glissade et chute",
+            "intro": "Si vous vous êtes blessé dans une glissade et chute, ces étapes peuvent aider à protéger votre demande :",
+            "orderedSteps": {
+              "0": { "strong": "Consultez un médecin :", "text": "Faites-vous examiner et traiter. Documentez vos blessures et suivez les conseils de votre médecin." },
+              "1": { "strong": "Déclarez l'incident :", "text": "Signalez au propriétaire ou au gestionnaire et demandez un rapport d'incident écrit." },
+              "2": { "strong": "Documentez les lieux :", "text": "Prenez des photos de la condition qui a causé la chute (p. ex. sol mouillé, surface inégale) et de vos blessures." },
+              "3": { "strong": "Obtenez les coordonnées des témoins :", "text": "Recueillez les noms et coordonnées de toute personne ayant vu la chute ou la condition." },
+              "4": { "strong": "Préservez les preuves :", "text": "Conservez vos vêtements et chaussures s'ils ont été endommagés. Gardez toute la paperasse médicale et d'incident." },
+              "5": { "strong": "Contactez un avocat en glissades et chutes :", "text": "Les demandes en responsabilité des locaux exigent de prouver que le propriétaire savait ou aurait dû savoir du danger ; nous pouvons vous aider." }
+            }
+          },
+          "1": {
+            "heading": "Comment déposer une demande",
+            "intro": "Nos avocats expérimentés peuvent vous guider à chaque étape de la procédure. Nous vous aidons à :",
+            "listItems": {
+              "0": "Rassembler les preuves et la documentation",
+              "1": "Déposer des demandes auprès de toutes les parties et compagnies d'assurance concernées",
+              "2": "Négocier avec les experts en sinistres des assureurs",
+              "3": "Calculer les dommages, y compris les frais médicaux, la perte de revenus et la douleur et la souffrance",
+              "4": "Vous représenter devant les tribunaux si aucun règlement équitable ne peut être obtenu"
+            }
+          },
+          "2": {
+            "heading": "Causes courantes des glissades et chutes",
+            "intro": "Les accidents de glissade et chute sont souvent causés par :",
+            "listItems": {
+              "0": "Sols mouillés ou glissants",
+              "1": "Surfaces inégales et pavage endommagé",
+              "2": "Éclairage insuffisant dans les escaliers et couloirs",
+              "3": "Tapis ou câbles non fixés",
+              "4": "Verglas et neige sur les trottoirs et parkings",
+              "5": "Marches non signalées ou changements de niveau"
+            }
+          },
+          "3": {
+            "heading": "Types de blessures que nous traitons",
+            "intro": "Nous représentons des clients qui ont subi des blessures graves, notamment :",
+            "listItems": {
+              "0": "Blessures à la tête et traumatismes crânio-cérébraux",
+              "1": "Blessures au cou et au dos",
+              "2": "Lésions de la moelle épinière et paralysie",
+              "3": "Fractures et os brisés",
+              "4": "Atteintes aux organes internes",
+              "5": "Coupures, lacérations et cicatrices",
+              "6": "Traumatisme émotionnel et trouble de stress post-traumatique (TSPT)",
+              "7": "Décès par négligence"
+            }
+          },
+          "4": {
+            "heading": "Pourquoi choisir Ahmed Law Firm",
+            "paragraphs": {
+              "0": "Avec plus de 40 ans d'expérience à représenter des victimes de blessures dans tout l'État de New York, Ahmed Law Firm dispose des connaissances, des ressources et du dévouement nécessaires pour obtenir le meilleur résultat possible pour votre affaire. Nous comprenons les défis auxquels vous faites face et nous nous engageons à vous offrir une attention personnalisée et une représentation énergique.",
+              "1": "Notre bilan parle de lui-même : nous avons représenté avec succès des milliers de clients et récupéré des millions de dollars en indemnisation. Nous travaillons sur la base d'honoraires conditionnels, de sorte que vous ne payez rien à moins que nous ne gagnions votre affaire. Contactez-nous dès aujourd'hui pour une consultation gratuite et laissez-nous nous battre pour l'indemnisation que vous méritez."
+            }
+          }
+        }
+      },
+      "premises-liability": {
+        "bannerTitle": "Avocats en responsabilité des locaux à New York",
+        "bannerSubtitle": "Défendre les personnes blessées par des conditions de propriété dangereuses",
+        "contentTitle": "Avocats en responsabilité des locaux à New York",
+        "sections": {
+          "0": {
+            "heading": "Que faire après une blessure dans un local",
+            "intro": "Si vous avez été blessé sur la propriété d'autrui en raison d'une condition dangereuse, envisagez ces étapes :",
+            "orderedSteps": {
+              "0": { "strong": "Consultez un médecin :", "text": "Obtenez un traitement et documentez toutes les blessures et les soins de suivi." },
+              "1": { "strong": "Signalez l'incident :", "text": "Signalez au propriétaire ou au gestionnaire et demandez un rapport d'incident écrit." },
+              "2": { "strong": "Documentez le danger :", "text": "Prenez des photos de la condition qui a causé votre blessure (p. ex. marche cassée, mauvais éclairage, débris)." },
+              "3": { "strong": "Obtenez les coordonnées des témoins :", "text": "Recueillez les noms et coordonnées de toute personne ayant vu la condition ou votre chute." },
+              "4": { "strong": "Préservez les preuves :", "text": "Conservez les vêtements, chaussures et toute documentation d'incident ou médicale." },
+              "5": { "strong": "Contactez un avocat en responsabilité des locaux :", "text": "Nous pouvons vous aider à prouver que le propriétaire savait ou aurait dû savoir du danger et à obtenir une indemnisation complète." }
+            }
+          },
+          "1": {
+            "heading": "Comment déposer une réclamation",
+            "intro": "Nos avocats expérimentés peuvent vous guider à chaque étape. Nous aidons à :",
+            "listItems": {
+              "0": "Rassembler les preuves et la documentation",
+              "1": "Déposer des réclamations auprès de toutes les parties et assureurs concernés",
+              "2": "Négocier avec les assureurs",
+              "3": "Calculer les dommages (frais médicaux, salaires perdus, douleur et souffrance)",
+              "4": "Vous représenter en justice si un règlement équitable est impossible"
+            }
+          },
+          "2": {
+            "heading": "Causes courantes et facteurs contributifs",
+            "intro": "Les blessures dans ce domaine peuvent résulter de diverses causes. Nos avocats enquêtent sur les faits de votre affaire pour identifier les responsables et les tenir pour comptables.",
+            "listItems": {
+              "0": "Négligence d'autrui",
+              "1": "Conditions dangereuses",
+              "2": "Manque de formation ou de supervision adéquate",
+              "3": "Non-respect des règles et réglementations de sécurité",
+              "4": "Produits ou équipements défectueux"
+            }
+          },
+          "3": {
+            "heading": "Types de blessures que nous traitons",
+            "intro": "Nous représentons des clients ayant subi des blessures graves, notamment :",
+            "listItems": {
+              "0": "Blessures à la tête et traumatismes crânio-cérébraux",
+              "1": "Blessures au cou et au dos",
+              "2": "Lésions de la moelle épinière et paralysie",
+              "3": "Fractures et os brisés",
+              "4": "Atteintes aux organes internes",
+              "5": "Coupures, lacérations et cicatrices",
+              "6": "Traumatisme émotionnel et TSPT",
+              "7": "Décès par négligence"
+            }
+          },
+          "4": {
+            "heading": "Pourquoi choisir Ahmed Law Firm",
+            "paragraphs": {
+              "0": "Avec plus de 40 ans d'expérience à représenter des victimes de blessures dans tout l'État de New York, Ahmed Law Firm dispose des connaissances, des ressources et du dévouement nécessaires pour obtenir le meilleur résultat possible pour votre affaire. Nous comprenons les défis auxquels vous faites face et nous nous engageons à vous offrir une attention personnalisée et une représentation énergique.",
+              "1": "Notre bilan parle de lui-même : nous avons représenté avec succès des milliers de clients et récupéré des millions de dollars en indemnisation. Nous travaillons sur la base d'honoraires conditionnels, de sorte que vous ne payez rien à moins que nous ne gagnions votre affaire. Contactez-nous dès aujourd'hui pour une consultation gratuite et laissez-nous nous battre pour l'indemnisation que vous méritez."
+            }
+          }
+        }
+      },
+      "workplace-injuries": {
+        "bannerTitle": "Avocats en accidents du travail à New York",
+        "bannerSubtitle": "Aider les travailleurs blessés à obtenir une indemnisation et plus",
+        "contentTitle": "Avocats en accidents du travail à New York",
+        "sections": {
+          "0": {
+            "heading": "Que faire après une blessure au travail",
+            "intro": "Pour protéger votre droit à l'indemnisation des accidentés du travail et à tout autre recours, suivez ces étapes :",
+            "orderedSteps": {
+              "0": { "strong": "Signalez la blessure :", "text": "Informez votre employeur dès que possible. La loi de l'État de New York exige un avis en temps utile." },
+              "1": { "strong": "Consultez un médecin :", "text": "Obtenez les soins nécessaires. Respectez les règles de votre employeur concernant les fournisseurs autorisés le cas échéant." },
+              "2": { "strong": "Documentez l'incident :", "text": "Notez ce qui s'est passé, où et qui était présent. Prenez des photos si possible." },
+              "3": { "strong": "Déposez une réclamation d'indemnisation :", "text": "Soumettez le formulaire C-3 à la Workers' Compensation Board. Des délais s'appliquent." },
+              "4": { "strong": "Conservez les dossiers :", "text": "Gardez toutes les factures médicales, bulletins de paie et correspondance avec votre employeur et l'assureur." },
+              "5": { "strong": "Consultez un avocat en indemnisation des accidentés du travail :", "text": "Nous pouvons vous aider à déposer, faire appel des refus et obtenir les prestations auxquelles vous avez droit." }
+            }
+          },
+          "1": {
+            "heading": "Comment déposer une réclamation",
+            "intro": "Nos avocats expérimentés peuvent vous guider à chaque étape. Nous aidons à :",
+            "listItems": {
+              "0": "Rassembler les preuves et la documentation",
+              "1": "Déposer des réclamations auprès de toutes les parties et assureurs concernés",
+              "2": "Négocier avec les assureurs",
+              "3": "Calculer les dommages (frais médicaux, salaires perdus, douleur et souffrance)",
+              "4": "Vous représenter en justice si un règlement équitable est impossible"
+            }
+          },
+          "2": {
+            "heading": "Causes courantes et facteurs contributifs",
+            "intro": "Les blessures dans ce domaine peuvent résulter de diverses causes. Nos avocats enquêtent sur les faits de votre affaire pour identifier les responsables et les tenir pour comptables.",
+            "listItems": {
+              "0": "Négligence d'autrui",
+              "1": "Conditions dangereuses",
+              "2": "Manque de formation ou de supervision adéquate",
+              "3": "Non-respect des règles et réglementations de sécurité",
+              "4": "Produits ou équipements défectueux"
+            }
+          },
+          "3": {
+            "heading": "Types de blessures que nous traitons",
+            "intro": "Nous représentons des clients ayant subi des blessures graves, notamment :",
+            "listItems": {
+              "0": "Blessures à la tête et traumatismes crânio-cérébraux",
+              "1": "Blessures au cou et au dos",
+              "2": "Lésions de la moelle épinière et paralysie",
+              "3": "Fractures et os brisés",
+              "4": "Atteintes aux organes internes",
+              "5": "Coupures, lacérations et cicatrices",
+              "6": "Traumatisme émotionnel et TSPT",
+              "7": "Décès par négligence"
+            }
+          },
+          "4": {
+            "heading": "Pourquoi choisir Ahmed Law Firm",
+            "paragraphs": {
+              "0": "Avec plus de 40 ans d'expérience à représenter des victimes de blessures dans tout l'État de New York, Ahmed Law Firm dispose des connaissances, des ressources et du dévouement nécessaires pour obtenir le meilleur résultat possible pour votre affaire. Nous comprenons les défis auxquels vous faites face et nous nous engageons à vous offrir une attention personnalisée et une représentation énergique.",
+              "1": "Notre bilan parle de lui-même : nous avons représenté avec succès des milliers de clients et récupéré des millions de dollars en indemnisation. Nous travaillons sur la base d'honoraires conditionnels, de sorte que vous ne payez rien à moins que nous ne gagnions votre affaire. Contactez-nous dès aujourd'hui pour une consultation gratuite et laissez-nous nous battre pour l'indemnisation que vous méritez."
+            }
+          }
+        }
+      },
+      "workers-compensation": {
+        "bannerTitle": "Avocats en indemnisation des accidentés du travail à New York",
+        "bannerSubtitle": "Aider les travailleurs blessés à obtenir les prestations auxquelles ils ont droit",
+        "contentTitle": "Avocats en indemnisation des accidentés du travail à New York",
+        "sections": {
+          "0": {
+            "heading": "Que faire après une blessure au travail",
+            "intro": "Pour protéger votre droit aux prestations d'indemnisation des accidentés du travail à New York, suivez ces étapes :",
+            "orderedSteps": {
+              "0": { "strong": "Signalez la blessure :", "text": "Informez votre employeur dès que possible. La loi de l'État de New York exige un avis en temps utile." },
+              "1": { "strong": "Consultez un médecin :", "text": "Obtenez les soins nécessaires. Votre employeur ou l'assureur peut avoir une liste de fournisseurs autorisés." },
+              "2": { "strong": "Documentez l'incident :", "text": "Notez ce qui s'est passé, où, quand et qui était présent. Prenez des photos si possible." },
+              "3": { "strong": "Déposez une réclamation :", "text": "Soumettez le formulaire C-3 (Réclamation du salarié) à la Workers' Compensation Board de New York. Des délais s'appliquent." },
+              "4": { "strong": "Conservez les dossiers :", "text": "Gardez toutes les factures médicales, bulletins de paie et correspondance avec votre employeur et l'assureur." },
+              "5": { "strong": "Consultez un avocat en indemnisation des accidentés du travail :", "text": "Un avocat peut vous aider à déposer correctement, faire appel des refus et maximiser vos prestations." }
+            }
+          },
+          "1": {
+            "heading": "Comment déposer une réclamation d'indemnisation",
+            "intro": "Naviguer dans le processus de réclamation peut être complexe. Nous aidons à :",
+            "listItems": {
+              "0": "Déposer votre formulaire C-3 et autres formulaires auprès de la Workers' Compensation Board",
+              "1": "Communiquer avec votre employeur et l'assureur",
+              "2": "Faire appel des refus et obtenir les prestations médicales et salariales",
+              "3": "Négocier des règlements forfaitaires lorsque c'est approprié",
+              "4": "Vous représenter aux audiences et devant la Commission"
+            }
+          },
+          "2": {
+            "heading": "Causes courantes et facteurs contributifs",
+            "intro": "Les blessures dans ce domaine peuvent résulter de diverses causes. Nos avocats enquêtent sur les faits de votre affaire pour identifier les responsables et les tenir pour comptables.",
+            "listItems": {
+              "0": "Négligence d'autrui",
+              "1": "Conditions dangereuses",
+              "2": "Manque de formation ou de supervision adéquate",
+              "3": "Non-respect des règles et réglementations de sécurité",
+              "4": "Produits ou équipements défectueux"
+            }
+          },
+          "3": {
+            "heading": "Types de blessures au travail que nous traitons",
+            "intro": "Nous aidons les travailleurs blessés pour une large gamme de blessures et maladies liées au travail, notamment :",
+            "listItems": {
+              "0": "Fractures et blessures orthopédiques",
+              "1": "Blessures au dos et au cou",
+              "2": "Stress répétitif et maladies professionnelles",
+              "3": "Amputations et blessures par écrasement",
+              "4": "Brûlures et blessures électriques",
+              "5": "Exposition à des substances toxiques"
+            }
+          },
+          "4": {
+            "heading": "Pourquoi choisir Ahmed Law Firm",
+            "paragraphs": {
+              "0": "Avec plus de 40 ans d'expérience à représenter des victimes de blessures dans tout l'État de New York, Ahmed Law Firm dispose des connaissances, des ressources et du dévouement nécessaires pour obtenir le meilleur résultat possible pour votre affaire. Nous comprenons les défis auxquels vous faites face et nous nous engageons à vous offrir une attention personnalisée et une représentation énergique.",
+              "1": "Notre bilan parle de lui-même : nous avons représenté avec succès des milliers de clients et récupéré des millions de dollars en indemnisation. Nous travaillons sur la base d'honoraires conditionnels, de sorte que vous ne payez rien à moins que nous ne gagnions votre affaire. Contactez-nous dès aujourd'hui pour une consultation gratuite et laissez-nous nous battre pour l'indemnisation que vous méritez."
+            }
+          }
+        }
+      }
     }
   },
   "banner": {

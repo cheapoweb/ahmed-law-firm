@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { PRACTICE_AREAS_CATEGORIES, getCategorySlugForPage } from '../../../practiceAreasConfig'
 import './PracticeAreaSidebar.css'
 
@@ -11,6 +12,7 @@ interface PracticeAreaSidebarProps {
 }
 
 export const PracticeAreaSidebar = ({ currentSlug, category }: PracticeAreaSidebarProps) => {
+  const { t } = useTranslation()
   const location = useLocation()
   const pathSlug = location.pathname.replace('/practice-areas/', '').split('/')[0] ?? ''
   const slug = currentSlug ?? category ?? pathSlug
@@ -42,7 +44,7 @@ export const PracticeAreaSidebar = ({ currentSlug, category }: PracticeAreaSideb
   return (
     <aside className="practice-area-sidebar">
       <div className="sidebar-section sidebar-navigation">
-        <h2 className="sidebar-section-title">Practice Areas</h2>
+        <h2 className="sidebar-section-title">{t('sections.practiceAreaSidebar.title', { defaultValue: 'Practice Areas' })}</h2>
         <nav className="sidebar-nav">
           {PRACTICE_AREAS_CATEGORIES.map((cat) => {
             const isExpanded = expandedSections[cat.slug] ?? false
@@ -55,7 +57,7 @@ export const PracticeAreaSidebar = ({ currentSlug, category }: PracticeAreaSideb
                   onClick={() => toggleSection(cat.slug)}
                   aria-expanded={isExpanded}
                 >
-                  <span>{cat.title}</span>
+                  <span>{t(`practiceAreas.${cat.slug}`, { defaultValue: cat.title })}</span>
                   <span className="dropdown-chevron">▼</span>
                 </button>
                 {isExpanded && (
@@ -64,7 +66,7 @@ export const PracticeAreaSidebar = ({ currentSlug, category }: PracticeAreaSideb
                       to={cat.path}
                       className={`sidebar-nav-link ${isCategoryActive ? 'active' : ''}`}
                     >
-                      Overview
+                      {t('sections.practiceAreaSidebar.overview', { defaultValue: 'Overview' })}
                     </Link>
                     {cat.items.map((item) => {
                       const isItemActive = location.pathname === item.path
@@ -74,7 +76,7 @@ export const PracticeAreaSidebar = ({ currentSlug, category }: PracticeAreaSideb
                           to={item.path}
                           className={`sidebar-nav-link ${isItemActive ? 'active' : ''}`}
                         >
-                          {item.label}
+                          {t(`practiceAreas.${item.slug}`, { defaultValue: item.label })}
                         </Link>
                       )
                     })}

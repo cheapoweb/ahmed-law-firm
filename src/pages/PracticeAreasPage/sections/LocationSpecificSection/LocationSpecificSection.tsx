@@ -10,7 +10,14 @@ const locationAreaKeys = [
   { titleKey: 'practiceAreas.wrongful-death', locationsKey: 'sections.locationSpecific.locations1' },
 ]
 
-const LOCATIONS = ['Manhattan', 'Brooklyn', 'Long Island', 'Queens', 'Bronx', 'Staten Island']
+const LOCATION_KEYS = [
+  'sections.locationSpecific.manhattan',
+  'sections.locationSpecific.brooklyn',
+  'sections.locationSpecific.longIsland',
+  'sections.locationSpecific.queens',
+  'sections.locationSpecific.bronx',
+  'sections.locationSpecific.statenIsland',
+]
 
 export const LocationSpecificSection = () => {
   const { t } = useTranslation()
@@ -32,8 +39,8 @@ export const LocationSpecificSection = () => {
               </div>
               <h3 className="card-title">{t(area.titleKey)}</h3>
               <ul className="card-items">
-                {LOCATIONS.map((loc, i) => (
-                  <li key={i}>{loc}</li>
+                {LOCATION_KEYS.map((key, i) => (
+                  <li key={i}>{t(key)}</li>
                 ))}
               </ul>
             </div>

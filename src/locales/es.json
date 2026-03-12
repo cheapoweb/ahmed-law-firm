@@ -97,6 +97,10 @@
     "phone": "(718) 848-9595"
   },
   "sections": {
+    "practiceAreaSidebar": {
+      "title": "Áreas de práctica",
+      "overview": "Resumen"
+    },
     "awards": {
       "label": "NUESTROS PREMIOS",
       "heading": "Reconocidos por",
@@ -151,12 +155,12 @@
       "heading": "Lo que dicen",
       "headingEm": "nuestros clientes",
       "showTestimonial": "Mostrar testimonio {{n}}",
-      "review1Text": "Ahmed Law Firm me ayudó a recuperar $450,000 después de mi accidente automovilístico. Su equipo fue profesional, atento y luchó arduamente por mis derechos.",
-      "review1Name": "María Rodríguez",
-      "review2Text": "Después de mi lesión por resbalón y caída, Ahmed Law obtuvo un acuerdo de $275,000 para mí. Se encargaron de todo mientras yo me enfocaba en recuperarme.",
-      "review2Name": "John Thompson",
-      "review3Text": "Caso de negligencia médica resultó en una recuperación de $850,000. El equipo de Ahmed Law Firm son abogados excepcionales que realmente se preocupan.",
-      "review3Name": "Patricia Williams"
+      "review1Text": "Ahmed Law Firm me ayudó a recuperar {{amount}} después de mi accidente automovilístico. Su equipo fue profesional, atento y luchó arduamente por mis derechos.",
+      "review1Name": "M. R.",
+      "review2Text": "Después de mi lesión por resbalón y caída, Ahmed Law obtuvo un acuerdo de {{amount}} para mí. Se encargaron de todo mientras yo me enfocaba en recuperarme.",
+      "review2Name": "J. T.",
+      "review3Text": "Caso de negligencia médica resultó en una recuperación de {{amount}}. El equipo de Ahmed Law Firm son abogados excepcionales que realmente se preocupan.",
+      "review3Name": "P. W."
     },
     "faq": {
       "label": "PREGUNTAS FRECUENTES",
@@ -221,7 +225,13 @@
     },
     "locationSpecific": {
       "heading": "Páginas por ubicación",
-      "subheading": "Representación legal dedicada en los cinco condados de Nueva York y Long Island"
+      "subheading": "Representación legal dedicada en los cinco condados de Nueva York y Long Island",
+      "manhattan": "Manhattan",
+      "brooklyn": "Brooklyn",
+      "longIsland": "Long Island",
+      "queens": "Queens",
+      "bronx": "Bronx",
+      "statenIsland": "Staten Island"
     }
   },
   "pages": {
@@ -237,8 +247,32 @@
       "attorneysPara": "Nuestro equipo legal reúne experiencia diversa y un compromiso compartido con la excelencia. Cada abogado de Ahmed Law Firm aporta habilidades y experiencia únicas para lograr los mejores resultados para nuestros clientes.",
       "commitmentHeading": "Nuestro compromiso con nuestros clientes",
       "commitmentPara": "En Ahmed Law Firm creemos que cada cliente merece atención personalizada y representación agresiva.",
+      "experienceTitle": "Nuestra experiencia",
+      "experienceIntro": "Con más de 40 años de experiencia combinada, nuestros abogados han representado con éxito a miles de clientes en todo Nueva York.",
+      "experienceItem1": "Casos de lesiones catastróficas",
+      "experienceItem2": "Accidentes automovilísticos",
+      "experienceItem3": "Accidentes en obras de construcción",
+      "experienceItem4": "Negligencia médica",
+      "experienceItem5": "Reclamaciones de compensación laboral",
+      "experienceItem6": "Responsabilidad por locales",
+      "commitmentTitle": "Nuestro compromiso",
+      "commitmentIntro": "Estamos comprometidos a brindar atención personalizada y representación diligente a cada cliente.",
+      "commitmentItem1": "Sin honorarios si no ganamos",
+      "commitmentItem2": "Resultados comprobados",
+      "commitmentItem3": "Atención personal",
+      "commitmentItem4": "Disponibilidad 24/7",
+      "commitmentItem5": "Abogados experimentados",
+      "sidebarTitle": "¿Cómo podemos ayudarle?",
+      "sidebarSubtitle": "Conozca más sobre nuestros servicios",
+      "sidebarArea1Title": "Compensación laboral",
+      "sidebarArea1Desc": "Accidentes de construcción, caídas en el trabajo, accidentes con equipos y más",
+      "sidebarArea2Title": "Lesiones personales",
+      "sidebarArea2Desc": "Accidentes de auto, resbalones y caídas, responsabilidad por locales, productos peligrosos y lesiones graves",
+      "meetTeamHeading": "Conozca a nuestro equipo legal",
+      "meetTeamDesc": "Conozca a nuestros abogados y socios experimentados, dedicados a luchar por sus derechos y lograr los mejores resultados para su caso.",
+      "meetTeamButton": "VER TODOS LOS ABOGADOS",
       "ctaHeading": "¿Listo para trabajar con los abogados de lesiones más confiables de Nueva York?",
-      "ctaDesc": "Con más de 40 años de experiencia y más de $100M recuperados, nuestro equipo está listo para luchar por sus derechos. Obtenga su evaluación gratuita de caso hoy.",
+      "ctaDesc": "Con más de 40 años de experiencia y {{amount}} recuperados, nuestro equipo está listo para luchar por sus derechos. Obtenga su evaluación gratuita de caso hoy.",
       "ctaButton": "AGENDAR CONSULTA GRATUITA"
     },
     "attorneys": {
@@ -256,6 +290,61 @@
       "ctaDesc": "Con décadas de experiencia combinada y un historial comprobado de éxito, nuestro equipo legal está listo para ayudarle a obtener la compensación que merece.",
       "ctaButton": "AGENDAR CONSULTA GRATUITA",
       "ctaCall": "LLAMAR (718) 848-9595"
+    },
+    "attorneyProfile": {
+      "notFoundTitle": "Abogado no encontrado",
+      "notFoundSubtitle": "El perfil del abogado que busca no pudo ser encontrado.",
+      "scheduleConsultation": "Agendar consulta",
+      "aboutHeading": "Sobre {{name}}",
+      "educationHeading": "Formación académica",
+      "barAdmissionsHeading": "Colegiaciones",
+      "practiceAreasHeading": "Áreas de práctica",
+      "whyWorkWithHeading": "¿Por qué trabajar con {{name}}?",
+      "esquire": "Abogado",
+      "abu-ahmed": {
+        "tagline": "Abogado fundador con más de cuatro décadas de experiencia luchando por neoyorquinos lesionados.",
+        "bio1": "Abu Ahmed fundó Ahmed Law Firm en 1981 con una misión singular: brindar una representación legal excepcional a personas y familias que han sido lesionadas sin culpa propia. Durante más de cuarenta años, ha sido un defensor constante de las víctimas de negligencia en todo Nueva York, incluyendo Long Island, condado de Nassau, condado de Queens, El Bronx, Brooklyn, NYC y condado de Suffolk.",
+        "bio2": "El Sr. Ahmed cree que cada cliente merece atención personalizada y representación diligente. Ha construido la firma sobre una base de confianza, integridad y un compromiso inquebrantable con obtener la compensación que sus clientes necesitan para seguir adelante después de lesiones que cambian la vida.",
+        "bio3": "Bajo su liderazgo, Ahmed Law Firm ha recuperado millones de dólares para clientes en casos de lesiones personales, negligencia médica, compensación laboral y muerte por negligencia. Se enorgullece de la estructura de honorarios contingentes de la firma: los clientes no pagan a menos que la firma gane su caso.",
+        "education1School": "Juris Doctor",
+        "education1Degree": "Escuela de Derecho acreditada",
+        "education2School": "Estudios universitarios",
+        "education2Degree": "Artes liberales y pre-derecho",
+        "bar1": "Estado de Nueva York",
+        "bar2": "Tribunales federales en Nueva York",
+        "practiceArea1": "Lesiones personales",
+        "practiceArea2": "Negligencia médica",
+        "practiceArea3": "Compensación laboral",
+        "practiceArea4": "Muerte por negligencia",
+        "practiceArea5": "Accidentes de vehículos y transporte",
+        "practiceArea6": "Responsabilidad por instalaciones",
+        "highlight1": "Fundó Ahmed Law Firm en 1981",
+        "highlight2": "Más de 40 años de experiencia representando a víctimas de lesiones",
+        "highlight3": "Millones recuperados para clientes en todo Nueva York",
+        "highlight4": "Honorarios contingentes: no paga a menos que ganemos"
+      },
+      "usman-ahmed": {
+        "tagline": "Defensor dedicado de víctimas de lesiones, comprometido con la justicia y una indemnización completa.",
+        "bio1": "Usman Ahmed aporta una aguda mente jurídica y un profundo compromiso con la representación centrada en el cliente en Ahmed Law Firm. Trabaja junto al abogado fundador de la firma para atender a personas lesionadas y sus familias en toda el área metropolitana de Nueva York, incluyendo Long Island, condado de Nassau, condado de Queens, condado de Kings, El Bronx, Brooklyn, NYC y condado de Suffolk.",
+        "bio2": "El Sr. Ahmed comprende el costo físico, emocional y financiero que las lesiones graves pueden causar. Se enfoca en la comunicación clara, la preparación exhaustiva del caso y la defensa diligente para que los clientes puedan concentrarse en recuperarse mientras la firma lucha por la compensación que merecen.",
+        "bio3": "Su práctica abarca todo el espectro de lesiones personales y asuntos relacionados, desde accidentes automovilísticos y casos de resbalones y caídas hasta negligencia médica y compensación laboral. Está comprometido con los valores fundamentales de la firma: sin honorarios a menos que ganemos, y ningún cliente sin voz.",
+        "education1School": "Juris Doctor",
+        "education1Degree": "Escuela de Derecho acreditada",
+        "education2School": "Título universitario",
+        "education2Degree": "Pre-derecho y ciencias políticas",
+        "bar1": "Estado de Nueva York",
+        "bar2": "Tribunales federales en Nueva York",
+        "practiceArea1": "Lesiones personales",
+        "practiceArea2": "Accidentes de auto y vehículos motorizados",
+        "practiceArea3": "Resbalones y caídas / Responsabilidad por instalaciones",
+        "practiceArea4": "Compensación laboral",
+        "practiceArea5": "Lesiones de construcción y en el lugar de trabajo",
+        "practiceArea6": "Casos catastróficos y de abuso",
+        "highlight1": "Práctica enfocada en lesiones personales y derechos laborales",
+        "highlight2": "Comprometido con la representación por honorarios contingentes",
+        "highlight3": "Atendiendo a clientes en toda el área metropolitana de Nueva York",
+        "highlight4": "Dedicado a obtener la máxima compensación para las víctimas"
+      }
     },
     "contact": {
       "bannerTitle": "Contáctenos",
@@ -346,6 +435,406 @@
     "legalBlog": {
       "bannerTitle": "Blog de Ahmed Law Firm",
       "bannerSubtitle": "Perspectivas sobre derecho de lesiones personales, sus derechos y cómo ayudamos a clientes en todo Nueva York"
+    },
+    "practiceArea": {
+      "notFoundTitle": "Área de práctica",
+      "notFoundSubtitle": "La página que busca no se pudo encontrar.",
+      "genericIntro1": "Si ha sufrido una lesión en Nueva York, necesita una representación legal experimentada que le ayude a navegar el proceso legal y obtener la compensación que merece. En Ahmed Law Firm llevamos representando a víctimas de lesiones en todo Nueva York —incluyendo Long Island, condado de Nassau, condado de Queens, El Bronx, Brooklyn, NYC y condado de Suffolk— desde 1981.",
+      "genericIntro2": "Nuestros abogados trabajan con honorarios contingentes, lo que significa que usted no paga a menos que ganemos su caso. Estamos comprometidos a luchar por sus derechos y a asegurarnos de que reciba la máxima compensación posible por sus lesiones, gastos médicos, salarios perdidos y dolor y sufrimiento.",
+      "genericPoint1": "Agendar una consulta gratuita",
+      "genericPoint2": "Sin honorarios a menos que ganemos",
+      "genericPoint3": "Abogados experimentados en lesiones personales",
+      "genericPoint4": "Millones recuperados para nuestros clientes",
+      "personal-injury": {
+        "bannerTitle": "Abogados de lesiones personales en Nueva York",
+        "bannerSubtitle": "Representación experimentada para víctimas de lesiones en todo Nueva York desde 1981",
+        "contentTitle": "Abogados de lesiones personales en Nueva York",
+        "sections": {
+          "0": {
+            "heading": "Qué hacer después de una lesión",
+            "intro": "Si ha resultado lesionado por la negligencia de otra persona, seguir los pasos correctos puede proteger su salud y su reclamación:",
+            "orderedSteps": {
+              "0": {
+                "strong": "Busque atención médica:",
+                "text": "Hágase evaluar y siga el plan de tratamiento de su médico. Documente todas las visitas y diagnósticos."
+              },
+              "1": {
+                "strong": "Informe del incidente:",
+                "text": "Informe al propietario del lugar, empleador o policía según corresponda (por ejemplo, resbalón y caída, accidente de auto)."
+              },
+              "2": {
+                "strong": "Documente todo:",
+                "text": "Tome fotos del lugar, de sus lesiones y de cualquier daño material. Lleve un diario de cómo se siente."
+              },
+              "3": {
+                "strong": "Reúna pruebas:",
+                "text": "Obtenga nombres y datos de contacto de testigos, informes de incidentes y cualquier correspondencia."
+              },
+              "4": {
+                "strong": "Evite dar declaraciones:",
+                "text": "No dé una declaración grabada al seguro de la otra parte sin hablar primero con un abogado."
+              },
+              "5": {
+                "strong": "Contacte a un abogado:",
+                "text": "Comuníquese lo antes posible con un abogado experimentado en lesiones personales para proteger sus derechos."
+              }
+            }
+          },
+          "1": {
+            "heading": "Cómo presentar una reclamación",
+            "intro": "Nuestros abogados experimentados pueden guiarle en cada etapa del proceso. Le ayudamos con:",
+            "listItems": {
+              "0": "Reunir pruebas y documentación",
+              "1": "Presentar reclamaciones ante todas las partes e aseguradoras pertinentes",
+              "2": "Negociar con los ajustadores de seguros",
+              "3": "Calcular daños, incluidos gastos médicos, salarios perdidos y dolor y sufrimiento",
+              "4": "Representarle en el tribunal si no se puede lograr un acuerdo justo"
+            }
+          },
+          "2": {
+            "heading": "Causas y factores contribuyentes comunes",
+            "intro": "Las lesiones en esta área pueden deberse a una variedad de causas. Nuestros abogados investigan los hechos de su caso para identificar a los responsables y hacerlos rendir cuentas.",
+            "listItems": {
+              "0": "Negligencia de otras personas",
+              "1": "Condiciones inseguras",
+              "2": "Falta de capacitación o supervisión adecuadas",
+              "3": "Incumplimiento de las normas y reglamentos de seguridad",
+              "4": "Productos o equipos defectuosos"
+            }
+          },
+          "3": {
+            "heading": "Tipos de lesiones que manejamos",
+            "intro": "Representamos a clientes que han sufrido lesiones graves, entre ellas:",
+            "listItems": {
+              "0": "Lesiones de cabeza y traumatismos craneoencefálicos",
+              "1": "Lesiones de cuello y espalda",
+              "2": "Daño de la médula espinal y parálisis",
+              "3": "Huesos rotos y fracturas",
+              "4": "Daño a órganos internos",
+              "5": "Cortes, laceraciones y cicatrices",
+              "6": "Trauma emocional y trastorno de estrés postraumático (TEPT)",
+              "7": "Muerte por negligencia"
+            }
+          },
+          "4": {
+            "heading": "Por qué elegir Ahmed Law Firm",
+            "paragraphs": {
+              "0": "Con más de 40 años de experiencia representando a víctimas de lesiones en todo Nueva York, Ahmed Law Firm cuenta con el conocimiento, los recursos y la dedicación necesarios para obtener el mejor resultado posible en su caso. Entendemos los desafíos que enfrenta y estamos comprometidos a brindarle atención personalizada y una representación enérgica.",
+              "1": "Nuestro historial habla por sí solo: hemos representado con éxito a miles de clientes y recuperado millones de dólares en compensación. Trabajamos con honorarios contingentes, por lo que usted no paga a menos que ganemos su caso. Contáctenos hoy para una consulta gratuita y permítanos luchar por la compensación que merece."
+            }
+          }
+        }
+      },
+      "construction-accidents": {
+        "bannerTitle": "Abogados de accidentes de construcción en Nueva York",
+        "bannerSubtitle": "Representando a trabajadores de la construcción y visitantes lesionados en obras",
+        "contentTitle": "Abogados de accidentes de construcción en Nueva York",
+        "sections": {
+          "0": {
+            "heading": "Qué hacer después de un accidente de construcción",
+            "intro": "Las lesiones en obras pueden darle derecho a compensación laboral y a veces a una demanda contra terceros. Considere estos pasos:",
+            "orderedSteps": {
+              "0": { "strong": "Informe la lesión:", "text": "Notifique a su empleador y, si corresponde, al dueño del sitio o al contratista general según lo requiera la ley." },
+              "1": { "strong": "Busque atención médica:", "text": "Reciba tratamiento y siga las indicaciones de su médico. Documente todas las visitas y restricciones." },
+              "2": { "strong": "Documente el lugar:", "text": "Si es posible, tome fotos del área, el equipo y sus lesiones. Anote qué causó el accidente." },
+              "3": { "strong": "Presente compensación laboral:", "text": "Presente una reclamación ante la Junta de Compensación de Trabajadores. Hay plazos que cumplir." },
+              "4": { "strong": "Preserve las pruebas:", "text": "Conserve todos los registros médicos, comprobantes de pago y correspondencia con empleadores y aseguradoras." },
+              "5": { "strong": "Contacte a un abogado de accidentes de construcción:", "text": "Puede tener reclamaciones contra varias partes; podemos evaluar su caso." }
+            }
+          },
+          "1": {
+            "heading": "Cómo presentar una reclamación",
+            "intro": "Nuestros abogados experimentados pueden guiarle en cada etapa del proceso. Le ayudamos con:",
+            "listItems": {
+              "0": "Reunir pruebas y documentación",
+              "1": "Presentar reclamaciones ante todas las partes e aseguradoras pertinentes",
+              "2": "Negociar con los ajustadores de seguros",
+              "3": "Calcular daños, incluidos gastos médicos, salarios perdidos y dolor y sufrimiento",
+              "4": "Representarle en el tribunal si no se puede lograr un acuerdo justo"
+            }
+          },
+          "2": {
+            "heading": "Causas comunes de accidentes de construcción",
+            "intro": "Las lesiones en obras a menudo resultan de:",
+            "listItems": {
+              "0": "Caídas desde altura (escaleras, andamios, techos)",
+              "1": "Golpes por objetos o equipo que caen",
+              "2": "Electrocución y riesgos eléctricos",
+              "3": "Atrapamiento (zanjas, maquinaria)",
+              "4": "Capacitación o equipo de seguridad inadecuados",
+              "5": "Herramientas o equipo defectuosos"
+            }
+          },
+          "3": {
+            "heading": "Tipos de lesiones que manejamos",
+            "intro": "Representamos a clientes que han sufrido lesiones graves, entre ellas:",
+            "listItems": {
+              "0": "Lesiones de cabeza y traumatismos craneoencefálicos",
+              "1": "Lesiones de cuello y espalda",
+              "2": "Daño de la médula espinal y parálisis",
+              "3": "Huesos rotos y fracturas",
+              "4": "Daño a órganos internos",
+              "5": "Cortes, laceraciones y cicatrices",
+              "6": "Trauma emocional y trastorno de estrés postraumático (TEPT)",
+              "7": "Muerte por negligencia"
+            }
+          },
+          "4": {
+            "heading": "Por qué elegir Ahmed Law Firm",
+            "paragraphs": {
+              "0": "Con más de 40 años de experiencia representando a víctimas de lesiones en todo Nueva York, Ahmed Law Firm cuenta con el conocimiento, los recursos y la dedicación necesarios para obtener el mejor resultado posible en su caso. Entendemos los desafíos que enfrenta y estamos comprometidos a brindarle atención personalizada y una representación enérgica.",
+              "1": "Nuestro historial habla por sí solo: hemos representado con éxito a miles de clientes y recuperado millones de dólares en compensación. Trabajamos con honorarios contingentes, por lo que usted no paga a menos que ganemos su caso. Contáctenos hoy para una consulta gratuita y permítanos luchar por la compensación que merece."
+            }
+          }
+        }
+      },
+      "slip-fall": {
+        "bannerTitle": "Abogados de resbalones y caídas en Nueva York",
+        "bannerSubtitle": "Responsabilizando a los propietarios por condiciones peligrosas",
+        "contentTitle": "Abogados de resbalones y caídas en Nueva York",
+        "sections": {
+          "0": {
+            "heading": "Qué hacer después de un resbalón y caída",
+            "intro": "Si se lesionó en un resbalón y caída, estos pasos pueden ayudar a proteger su reclamación:",
+            "orderedSteps": {
+              "0": { "strong": "Busque atención médica:", "text": "Hágase evaluar y tratar. Documente sus lesiones y siga el consejo de su médico." },
+              "1": { "strong": "Informe del incidente:", "text": "Informe al propietario o administrador del inmueble y solicite un informe escrito del incidente." },
+              "2": { "strong": "Documente el lugar:", "text": "Tome fotos de la condición que causó la caída (p. ej., piso mojado, superficie irregular) y de sus lesiones." },
+              "3": { "strong": "Obtenga información de testigos:", "text": "Recoja nombres y datos de contacto de quienes vieron la caída o la condición." },
+              "4": { "strong": "Preserve las pruebas:", "text": "Conserve la ropa y el calzado si se dañaron. Guarde toda la documentación médica y del incidente." },
+              "5": { "strong": "Contacte a un abogado de resbalones y caídas:", "text": "Las reclamaciones por responsabilidad de locales requieren probar que el propietario sabía o debía saber del peligro; podemos ayudarle." }
+            }
+          },
+          "1": {
+            "heading": "Cómo presentar una reclamación",
+            "intro": "Nuestros abogados experimentados pueden guiarle en cada etapa del proceso. Le ayudamos con:",
+            "listItems": {
+              "0": "Reunir pruebas y documentación",
+              "1": "Presentar reclamaciones ante todas las partes e aseguradoras pertinentes",
+              "2": "Negociar con los ajustadores de seguros",
+              "3": "Calcular daños, incluidos gastos médicos, salarios perdidos y dolor y sufrimiento",
+              "4": "Representarle en el tribunal si no se puede lograr un acuerdo justo"
+            }
+          },
+          "2": {
+            "heading": "Causas comunes de resbalones y caídas",
+            "intro": "Los accidentes por resbalones y caídas suelen ser causados por:",
+            "listItems": {
+              "0": "Suelos mojados o resbaladizos",
+              "1": "Superficies irregulares y pavimento en mal estado",
+              "2": "Iluminación deficiente en escaleras y pasillos",
+              "3": "Alfombras o cables sueltos",
+              "4": "Hielo y nieve en aceras y estacionamientos",
+              "5": "Escalones sin señalizar o cambios de nivel"
+            }
+          },
+          "3": {
+            "heading": "Tipos de lesiones que manejamos",
+            "intro": "Representamos a clientes que han sufrido lesiones graves, entre ellas:",
+            "listItems": {
+              "0": "Lesiones de cabeza y traumatismos craneoencefálicos",
+              "1": "Lesiones de cuello y espalda",
+              "2": "Daño de la médula espinal y parálisis",
+              "3": "Huesos rotos y fracturas",
+              "4": "Daño a órganos internos",
+              "5": "Cortes, laceraciones y cicatrices",
+              "6": "Trauma emocional y trastorno de estrés postraumático (TEPT)",
+              "7": "Muerte por negligencia"
+            }
+          },
+          "4": {
+            "heading": "Por qué elegir Ahmed Law Firm",
+            "paragraphs": {
+              "0": "Con más de 40 años de experiencia representando a víctimas de lesiones en todo Nueva York, Ahmed Law Firm cuenta con el conocimiento, los recursos y la dedicación necesarios para obtener el mejor resultado posible en su caso. Entendemos los desafíos que enfrenta y estamos comprometidos a brindarle atención personalizada y una representación enérgica.",
+              "1": "Nuestro historial habla por sí solo: hemos representado con éxito a miles de clientes y recuperado millones de dólares en compensación. Trabajamos con honorarios contingentes, por lo que usted no paga a menos que ganemos su caso. Contáctenos hoy para una consulta gratuita y permítanos luchar por la compensación que merece."
+            }
+          }
+        }
+      },
+      "premises-liability": {
+        "bannerTitle": "Abogados de responsabilidad por instalaciones en Nueva York",
+        "bannerSubtitle": "Luchando por quienes resultaron lesionados por condiciones inseguras en propiedades",
+        "contentTitle": "Abogados de responsabilidad por instalaciones en Nueva York",
+        "sections": {
+          "0": {
+            "heading": "Qué hacer después de una lesión en un local",
+            "intro": "Si resultó lesionado en la propiedad de otro debido a una condición peligrosa, considere estos pasos:",
+            "orderedSteps": {
+              "0": { "strong": "Busque atención médica:", "text": "Obtenga tratamiento y documente todas las lesiones y la atención de seguimiento." },
+              "1": { "strong": "Reporte el incidente:", "text": "Informe al propietario o administrador del inmueble y solicite un informe escrito del incidente." },
+              "2": { "strong": "Documente el peligro:", "text": "Tome fotos de la condición que causó su lesión (p. ej., escalón roto, mala iluminación, escombros)." },
+              "3": { "strong": "Obtenga información de testigos:", "text": "Recopile nombres y datos de contacto de quienes vieron la condición o su caída." },
+              "4": { "strong": "Preserve las pruebas:", "text": "Conserve la ropa, el calzado y toda la documentación del incidente o médica." },
+              "5": { "strong": "Contacte a un abogado de responsabilidad por instalaciones:", "text": "Podemos ayudarle a demostrar que el propietario sabía o debía saber del peligro y a buscar una indemnización completa." }
+            }
+          },
+          "1": {
+            "heading": "Cómo presentar un reclamo",
+            "intro": "Nuestros abogados con experiencia pueden guiarle en cada paso del proceso. Ayudamos con:",
+            "listItems": {
+              "0": "Recopilación de pruebas y documentación",
+              "1": "Presentación de reclamos ante todas las partes y aseguradoras relevantes",
+              "2": "Negociación con ajustadores de seguros",
+              "3": "Cálculo de daños, incluidos gastos médicos, salarios perdidos y dolor y sufrimiento",
+              "4": "Representación en tribunales si no se puede alcanzar un acuerdo justo"
+            }
+          },
+          "2": {
+            "heading": "Causas comunes y factores contribuyentes",
+            "intro": "Las lesiones en esta área pueden deberse a diversas causas. Nuestros abogados investigan los hechos de su caso para identificar a los responsables y hacerlos rendir cuentas.",
+            "listItems": {
+              "0": "Negligencia de otros",
+              "1": "Condiciones inseguras",
+              "2": "Falta de capacitación o supervisión adecuadas",
+              "3": "Incumplimiento de normas y reglamentos de seguridad",
+              "4": "Productos o equipos defectuosos"
+            }
+          },
+          "3": {
+            "heading": "Tipos de lesiones que manejamos",
+            "intro": "Representamos a clientes que han sufrido lesiones graves, entre ellas:",
+            "listItems": {
+              "0": "Lesiones de cabeza y traumatismos craneoencefálicos",
+              "1": "Lesiones de cuello y espalda",
+              "2": "Daño de la médula espinal y parálisis",
+              "3": "Huesos rotos y fracturas",
+              "4": "Daño a órganos internos",
+              "5": "Cortes, laceraciones y cicatrices",
+              "6": "Trauma emocional y trastorno de estrés postraumático (TEPT)",
+              "7": "Muerte por negligencia"
+            }
+          },
+          "4": {
+            "heading": "Por qué elegir Ahmed Law Firm",
+            "paragraphs": {
+              "0": "Con más de 40 años de experiencia representando a víctimas de lesiones en todo Nueva York, Ahmed Law Firm cuenta con el conocimiento, los recursos y la dedicación necesarios para obtener el mejor resultado posible en su caso. Entendemos los desafíos que enfrenta y estamos comprometidos a brindarle atención personalizada y una representación enérgica.",
+              "1": "Nuestro historial habla por sí solo: hemos representado con éxito a miles de clientes y recuperado millones de dólares en compensación. Trabajamos con honorarios contingentes, por lo que usted no paga a menos que ganemos su caso. Contáctenos hoy para una consulta gratuita y permítanos luchar por la compensación que merece."
+            }
+          }
+        }
+      },
+      "workplace-injuries": {
+        "bannerTitle": "Abogados de lesiones laborales en Nueva York",
+        "bannerSubtitle": "Ayudando a trabajadores lesionados a obtener compensación laboral y más",
+        "contentTitle": "Abogados de lesiones laborales en Nueva York",
+        "sections": {
+          "0": {
+            "heading": "Qué hacer después de una lesión laboral",
+            "intro": "Para proteger su derecho a la compensación laboral y cualquier otro reclamo, siga estos pasos:",
+            "orderedSteps": {
+              "0": { "strong": "Reporte la lesión:", "text": "Notifique a su empleador lo antes posible. La ley de Nueva York exige aviso oportuno." },
+              "1": { "strong": "Busque atención médica:", "text": "Obtenga la atención que necesite. Siga las reglas de su empleador sobre proveedores autorizados si aplica." },
+              "2": { "strong": "Documente el incidente:", "text": "Anote qué ocurrió, dónde y quién estuvo presente. Tome fotos si puede." },
+              "3": { "strong": "Presente un reclamo de compensación laboral:", "text": "Envíe el formulario C-3 a la Junta de Compensación Laboral. Aplican plazos." },
+              "4": { "strong": "Conserve registros:", "text": "Guarde todas las facturas médicas, comprobantes de pago y correspondencia con su empleador y la aseguradora." },
+              "5": { "strong": "Consulte a un abogado de compensación laboral:", "text": "Podemos ayudarle a presentar el reclamo, apelar denegaciones y asegurar los beneficios que merece." }
+            }
+          },
+          "1": {
+            "heading": "Cómo presentar un reclamo",
+            "intro": "Nuestros abogados con experiencia pueden guiarle en cada paso del proceso. Ayudamos con:",
+            "listItems": {
+              "0": "Recopilación de pruebas y documentación",
+              "1": "Presentación de reclamos ante todas las partes y aseguradoras relevantes",
+              "2": "Negociación con ajustadores de seguros",
+              "3": "Cálculo de daños, incluidos gastos médicos, salarios perdidos y dolor y sufrimiento",
+              "4": "Representación en tribunales si no se puede alcanzar un acuerdo justo"
+            }
+          },
+          "2": {
+            "heading": "Causas comunes y factores contribuyentes",
+            "intro": "Las lesiones en esta área pueden deberse a diversas causas. Nuestros abogados investigan los hechos de su caso para identificar a los responsables y hacerlos rendir cuentas.",
+            "listItems": {
+              "0": "Negligencia de otros",
+              "1": "Condiciones inseguras",
+              "2": "Falta de capacitación o supervisión adecuadas",
+              "3": "Incumplimiento de normas y reglamentos de seguridad",
+              "4": "Productos o equipos defectuosos"
+            }
+          },
+          "3": {
+            "heading": "Tipos de lesiones que manejamos",
+            "intro": "Representamos a clientes que han sufrido lesiones graves, entre ellas:",
+            "listItems": {
+              "0": "Lesiones de cabeza y traumatismos craneoencefálicos",
+              "1": "Lesiones de cuello y espalda",
+              "2": "Daño de la médula espinal y parálisis",
+              "3": "Huesos rotos y fracturas",
+              "4": "Daño a órganos internos",
+              "5": "Cortes, laceraciones y cicatrices",
+              "6": "Trauma emocional y trastorno de estrés postraumático (TEPT)",
+              "7": "Muerte por negligencia"
+            }
+          },
+          "4": {
+            "heading": "Por qué elegir Ahmed Law Firm",
+            "paragraphs": {
+              "0": "Con más de 40 años de experiencia representando a víctimas de lesiones en todo Nueva York, Ahmed Law Firm cuenta con el conocimiento, los recursos y la dedicación necesarios para obtener el mejor resultado posible en su caso. Entendemos los desafíos que enfrenta y estamos comprometidos a brindarle atención personalizada y una representación enérgica.",
+              "1": "Nuestro historial habla por sí solo: hemos representado con éxito a miles de clientes y recuperado millones de dólares en compensación. Trabajamos con honorarios contingentes, por lo que usted no paga a menos que ganemos su caso. Contáctenos hoy para una consulta gratuita y permítanos luchar por la compensación que merece."
+            }
+          }
+        }
+      },
+      "workers-compensation": {
+        "bannerTitle": "Abogados de compensación laboral en Nueva York",
+        "bannerSubtitle": "Ayudando a trabajadores lesionados a obtener los beneficios que merecen",
+        "contentTitle": "Abogados de compensación laboral en Nueva York",
+        "sections": {
+          "0": {
+            "heading": "Qué hacer después de una lesión laboral",
+            "intro": "Para proteger su derecho a los beneficios de compensación laboral en Nueva York, siga estos pasos:",
+            "orderedSteps": {
+              "0": { "strong": "Reporte la lesión:", "text": "Notifique a su empleador lo antes posible. La ley de Nueva York exige aviso oportuno." },
+              "1": { "strong": "Busque atención médica:", "text": "Obtenga el tratamiento que necesite. Su empleador o su aseguradora pueden tener una lista de proveedores autorizados." },
+              "2": { "strong": "Documente el incidente:", "text": "Anote qué ocurrió, dónde, cuándo y quién estuvo presente. Tome fotos si puede." },
+              "3": { "strong": "Presente un reclamo:", "text": "Envíe el formulario C-3 (Reclamo del empleado) a la Junta de Compensación Laboral de Nueva York. Aplican plazos." },
+              "4": { "strong": "Conserve registros:", "text": "Guarde todas las facturas médicas, comprobantes de pago y correspondencia con su empleador y la aseguradora." },
+              "5": { "strong": "Consulte a un abogado de compensación laboral:", "text": "Un abogado puede ayudarle a presentar correctamente, apelar denegaciones y maximizar sus beneficios." }
+            }
+          },
+          "1": {
+            "heading": "Cómo presentar un reclamo de compensación laboral",
+            "intro": "Navegar el proceso de reclamos puede ser complejo. Ayudamos con:",
+            "listItems": {
+              "0": "Presentación del formulario C-3 y otros formularios ante la Junta de Compensación Laboral",
+              "1": "Comunicación con su empleador y la aseguradora",
+              "2": "Apelación de denegaciones y obtención de beneficios médicos y salariales",
+              "3": "Negociación de acuerdos de suma global cuando corresponda",
+              "4": "Representación en audiencias y ante la Junta"
+            }
+          },
+          "2": {
+            "heading": "Causas comunes y factores contribuyentes",
+            "intro": "Las lesiones en esta área pueden deberse a diversas causas. Nuestros abogados investigan los hechos de su caso para identificar a los responsables y hacerlos rendir cuentas.",
+            "listItems": {
+              "0": "Negligencia de otros",
+              "1": "Condiciones inseguras",
+              "2": "Falta de capacitación o supervisión adecuadas",
+              "3": "Incumplimiento de normas y reglamentos de seguridad",
+              "4": "Productos o equipos defectuosos"
+            }
+          },
+          "3": {
+            "heading": "Tipos de lesiones laborales que manejamos",
+            "intro": "Ayudamos a trabajadores lesionados con una amplia gama de lesiones y enfermedades relacionadas con el trabajo, entre ellas:",
+            "listItems": {
+              "0": "Fracturas y lesiones ortopédicas",
+              "1": "Lesiones de espalda y cuello",
+              "2": "Estrés repetitivo y enfermedades ocupacionales",
+              "3": "Amputaciones y lesiones por aplastamiento",
+              "4": "Quemaduras y lesiones por electricidad",
+              "5": "Exposición a sustancias tóxicas"
+            }
+          },
+          "4": {
+            "heading": "Por qué elegir Ahmed Law Firm",
+            "paragraphs": {
+              "0": "Con más de 40 años de experiencia representando a víctimas de lesiones en todo Nueva York, Ahmed Law Firm cuenta con el conocimiento, los recursos y la dedicación necesarios para obtener el mejor resultado posible en su caso. Entendemos los desafíos que enfrenta y estamos comprometidos a brindarle atención personalizada y una representación enérgica.",
+              "1": "Nuestro historial habla por sí solo: hemos representado con éxito a miles de clientes y recuperado millones de dólares en compensación. Trabajamos con honorarios contingentes, por lo que usted no paga a menos que ganemos su caso. Contáctenos hoy para una consulta gratuita y permítanos luchar por la compensación que merece."
+            }
+          }
+        }
+      }
     }
   },
   "banner": {

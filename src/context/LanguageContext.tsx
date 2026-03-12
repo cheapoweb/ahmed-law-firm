@@ -53,7 +53,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     i18n.changeLanguage(language)
     document.documentElement.lang = language
-    document.documentElement.setAttribute('dir', language === 'ar' ? 'rtl' : 'ltr')
+    document.documentElement.setAttribute('dir', (language === 'ar' || language === 'ur') ? 'rtl' : 'ltr')
   }, [language])
 
   const setLanguage = useCallback((code: LanguageCode) => {

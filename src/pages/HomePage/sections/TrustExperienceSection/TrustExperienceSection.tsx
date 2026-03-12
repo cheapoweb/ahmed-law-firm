@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
+import { useCurrencyFormat } from '../../../../hooks/useCurrencyFormat'
 import './TrustExperienceSection.css'
 
 export const TrustExperienceSection = () => {
+  const { formatLargeAmount } = useCurrencyFormat()
   const words = ['conversation', 'process', 'system']
   const [currentWordIndex, setCurrentWordIndex] = useState(0)
   const [displayedText, setDisplayedText] = useState('')
@@ -84,7 +86,7 @@ export const TrustExperienceSection = () => {
             </div>
             <h3 className="feature-heading">The Numbers Speak Louder Than Words</h3>
             <p className="feature-description">
-              $100M+ recovered, 40+ years of proven results, zero upfront costs, &lt;2 hour response time. A track record you can trust.
+              {formatLargeAmount(100_000_000, '+')} recovered, 40+ years of proven results, zero upfront costs, &lt;2 hour response time. A track record you can trust.
             </p>
           </div>
 

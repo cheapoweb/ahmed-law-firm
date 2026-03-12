@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import Footer from '../../components/Footer'
+import { useCurrencyFormat } from '../../hooks/useCurrencyFormat'
 // import ShapeDivider from '../../components/ShapeDivider'
 import bannerBuildings from '../../assets/banner-buildings.webp'
 import teamImage from '../../assets/team-full.webp'
@@ -48,6 +49,7 @@ const faqs = [
 
 const HomePage2 = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
+  const { formatLargeAmount } = useCurrencyFormat()
 
   return (
     <div className="home-page-2">
@@ -75,7 +77,7 @@ const HomePage2 = () => {
       {/* Big stat bar */}
       <section className="hp2-stat-bar">
         <div className="hp2-stat-inner">
-          <span className="hp2-stat-number">$100M+</span>
+          <span className="hp2-stat-number">{formatLargeAmount(100_000_000, '+')}</span>
           <span className="hp2-stat-label">Recovered for Our Clients</span>
         </div>
       </section>
